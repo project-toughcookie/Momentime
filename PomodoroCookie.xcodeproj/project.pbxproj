@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1372555A422A6341890F4A91 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 137254F557028739C7CAF3A7 /* .gitignore */; };
 		276DD5A3259DA0C700237DDF /* PomodoroCookieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276DD5A2259DA0C700237DDF /* PomodoroCookieApp.swift */; };
 		276DD5A5259DA0C700237DDF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276DD5A4259DA0C700237DDF /* ContentView.swift */; };
 		276DD5A7259DA0C900237DDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 276DD5A6259DA0C900237DDF /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		137254F557028739C7CAF3A7 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = file.gitignore; path = .gitignore; sourceTree = "<group>"; };
 		276DD59F259DA0C700237DDF /* PomodoroCookie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PomodoroCookie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		276DD5A2259DA0C700237DDF /* PomodoroCookieApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroCookieApp.swift; sourceTree = "<group>"; };
 		276DD5A4259DA0C700237DDF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -39,6 +41,7 @@
 			children = (
 				276DD5A1259DA0C700237DDF /* PomodoroCookie */,
 				276DD5A0259DA0C700237DDF /* Products */,
+				137254F557028739C7CAF3A7 /* .gitignore */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,6 +133,7 @@
 			files = (
 				276DD5AA259DA0C900237DDF /* Preview Assets.xcassets in Resources */,
 				276DD5A7259DA0C900237DDF /* Assets.xcassets in Resources */,
+				1372555A422A6341890F4A91 /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
