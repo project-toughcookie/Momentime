@@ -2,8 +2,8 @@ on: pull_request
 name: Unit Test
 jobs:
   test:
-    name: Test
-    runs-on: macOS-11.0
+    name: Full
+    runs-on: macOS-latest
     strategy:
         matrix:
           destination: ['platform=macOS,arch=x86_64']
