@@ -45,10 +45,6 @@ struct UpToBigSurApp: App {
 enum OldApp {
     static func main() {
         NSApplication.shared.setActivationPolicy(.regular)
-
-        let nib = NSNib(nibNamed: NSNib.Name("Pomodoro Cookie"), bundle: Bundle.main)
-        nib?.instantiate(withOwner: NSApplication.shared, topLevelObjects: nil)
-
         NSApp.delegate = appDelegate
         NSApp.activate(ignoringOtherApps: true)
         NSApp.run()
