@@ -4,4 +4,20 @@
 
 import Foundation
 
-class MemoryPersistent {}
+class MemoryPersistent: Persistent {
+    static let shared = MemoryPersistent()
+
+    private var data: [String: Any] = [:]
+
+    func set(_ value: Any?, forKey key: String) {
+        data.updateValue(value!, forKey: key)
+    }
+
+    func getObject(forKey key: String) throws -> Any {
+        guard let value = data[key] else {
+            throw CookieError.NotExists(target: key)
+        }
+
+        return value
+    }
+}

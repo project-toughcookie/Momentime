@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		137250AA568C74AB4FC4A06F /* SettingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725AAB083B9CF7E7ACBF7C /* SettingManager.swift */; };
+		13725135763359E5D3F0F80B /* SettingManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725DEBD78ADA9BDBEC6132 /* SettingManagerTests.swift */; };
 		137251AE97907DA72FD7F4CD /* UserDefaultsPersistentTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725545530FD7FD54F63ADD /* UserDefaultsPersistentTest.swift */; };
 		13725395FCDB80F080270AD0 /* UserDefaultsPersistent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725DF0B7733556E17E62E5 /* UserDefaultsPersistent.swift */; };
 		137253E98F412B298B6C36F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137251D85E2AA2DB9627E3DD /* AppDelegate.swift */; };
@@ -23,7 +24,6 @@
 		273DC1E5259F61CE00438BDA /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273DC1E4259F61CE00438BDA /* TutorialView.swift */; };
 		273DC1F0259F6F8000438BDA /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273DC1EF259F6F8000438BDA /* Application.swift */; };
 		273DC1F8259F729D00438BDA /* SettingContextMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273DC1F7259F729D00438BDA /* SettingContextMenu.swift */; };
-		276C4813259DE22000024FBB /* SettingManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276C4812259DE22000024FBB /* SettingManagerTests.swift */; };
 		276DD5A7259DA0C900237DDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 276DD5A6259DA0C900237DDF /* Assets.xcassets */; };
 		276DD5AA259DA0C900237DDF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 276DD5A9259DA0C900237DDF /* Preview Assets.xcassets */; };
 		277E4240259DB27200E8979B /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277E423F259DB27200E8979B /* SettingView.swift */; };
@@ -53,11 +53,11 @@
 		13725ADB34EEE6799BE2FC2B /* TutorialManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialManager.swift; sourceTree = "<group>"; };
 		13725B487EBA7886A1E721D1 /* Persistent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistent.swift; sourceTree = "<group>"; };
 		13725D39DF539EC4D9D2E93D /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		13725DEBD78ADA9BDBEC6132 /* SettingManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingManagerTests.swift; sourceTree = "<group>"; };
 		13725DF0B7733556E17E62E5 /* UserDefaultsPersistent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsPersistent.swift; sourceTree = "<group>"; };
 		273DC1E4259F61CE00438BDA /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
 		273DC1EF259F6F8000438BDA /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		273DC1F7259F729D00438BDA /* SettingContextMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingContextMenu.swift; sourceTree = "<group>"; };
-		276C4812259DE22000024FBB /* SettingManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingManagerTests.swift; sourceTree = "<group>"; };
 		276DD59F259DA0C700237DDF /* PomodoroCookie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PomodoroCookie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		276DD5A6259DA0C900237DDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		276DD5A9259DA0C900237DDF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -118,6 +118,14 @@
 				273DC1E4259F61CE00438BDA /* TutorialView.swift */,
 			);
 			path = Tutorial;
+			sourceTree = "<group>";
+		};
+		1372552DD2392C601DD6B38E /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				13725DEBD78ADA9BDBEC6132 /* SettingManagerTests.swift */,
+			);
+			path = Setting;
 			sourceTree = "<group>";
 		};
 		13725693895C6E86F9A5E8B7 /* Tutorial */ = {
@@ -195,7 +203,7 @@
 		276C4811259DE20900024FBB /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				276C4812259DE22000024FBB /* SettingManagerTests.swift */,
+				1372552DD2392C601DD6B38E /* Setting */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -401,9 +409,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				276C4813259DE22000024FBB /* SettingManagerTests.swift in Sources */,
 				27B41604259DE1B100269E37 /* PomodoroCookieTests.swift in Sources */,
 				137251AE97907DA72FD7F4CD /* UserDefaultsPersistentTest.swift in Sources */,
+				13725135763359E5D3F0F80B /* SettingManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
