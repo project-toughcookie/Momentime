@@ -8,10 +8,10 @@ enum CookieError: Error {
     case NotExists(target: String)
 }
 
-class ErrorHandler {
+enum ErrorHandler {
     public static func handle(error: Error) {
         switch error {
-        case CookieError.NotExists(let target):
+        case let CookieError.NotExists(target):
             printError("\(target) is not exists")
         default:
             printError("unknown error")

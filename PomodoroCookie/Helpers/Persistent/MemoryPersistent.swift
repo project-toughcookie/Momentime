@@ -4,5 +4,4 @@
 
 import Foundation
 
-class MemoryPersistent {
-}
+class MemoryPersistent {}

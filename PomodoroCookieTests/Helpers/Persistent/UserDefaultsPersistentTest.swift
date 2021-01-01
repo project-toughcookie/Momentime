@@ -5,8 +5,8 @@
 //  Created by 성준영 on 2020/12/31.
 //
 
-import XCTest
 @testable import PomodoroCookie
+import XCTest
 
 class UserDefaultsPersistentTests: XCTestCase {
     let userDefaultsPersistent = UserDefaultsPersistent()
@@ -32,17 +32,15 @@ class UserDefaultsPersistentTests: XCTestCase {
         let testNotExistsKey = "notExists"
 
         do {
-            let _ = try userDefaultsPersistent.getObject(forKey: testNotExistsKey) as! Bool
+            _ = try userDefaultsPersistent.getObject(forKey: testNotExistsKey) as! Bool
             XCTFail("value must be not exists")
-        } catch {
-        }
+        } catch {}
     }
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
-        self.measure {
+        measure {
             // Put the code you want to measure the time of here.
         }
     }
-
 }

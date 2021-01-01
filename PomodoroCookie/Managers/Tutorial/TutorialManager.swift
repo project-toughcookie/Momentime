@@ -6,12 +6,9 @@ import Foundation
 
 let TUTORIAL_SHOWN = "tutorialShown"
 
-final class AppConfig: ObservableObject {
-    static let shared = AppConfig(UserDefaultsPersistent())
-
-    var persistent: Persistent
+class TutorialManager: ObservableObject {
+    private var persistent: Persistent
     @Published var tutorialShown: Bool = false
-    @Published var settingPageAppeared: Bool = false
 
     init(_ persistent: Persistent) {
         self.persistent = persistent
@@ -22,7 +19,7 @@ final class AppConfig: ObservableObject {
         }
     }
 
-    public func setTutorialShownTrue() {
+    public func SetTutorialToShown() {
         persistent.set(true, forKey: TUTORIAL_SHOWN)
         tutorialShown = true
     }

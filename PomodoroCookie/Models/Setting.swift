@@ -10,8 +10,8 @@ struct Setting: Codable {
     var timerAutoStarted: Bool
 
     static let `default` = Setting(
-            eventTitleChangedIfDone: true,
-            timerSoundEnabled: true,
-            timerAutoStarted: true
+        eventTitleChangedIfDone: true,
+        timerSoundEnabled: true,
+        timerAutoStarted: true
     )
 }

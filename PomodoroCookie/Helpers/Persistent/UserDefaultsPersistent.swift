@@ -2,8 +2,8 @@
 // Created by 성준영 on 2020/12/31.
 //
 
-import Foundation
 import Combine
+import Foundation
 
 var INITIALIZED = "initialized"
 
@@ -25,5 +25,4 @@ class UserDefaultsPersistent: Persistent {
     private func isKeyExists(_ key: String) -> Bool {
         userDefault.object(forKey: key) != nil
     }
-
 }
