@@ -26,13 +26,14 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "27B415D9259DDF0100269E37"
+               BlueprintIdentifier = "27B41600259DE1B100269E37"
                BuildableName = "PomodoroCookieTests.xctest"
                BlueprintName = "PomodoroCookieTests"
                ReferencedContainer = "container:PomodoroCookie.xcodeproj">
