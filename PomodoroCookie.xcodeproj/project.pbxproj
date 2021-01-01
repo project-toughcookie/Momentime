@@ -14,6 +14,7 @@
 		137253E98F412B298B6C36F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137251D85E2AA2DB9627E3DD /* AppDelegate.swift */; };
 		1372540F9A7C4260D703E7BF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725A5CE405F51F9F5B2413 /* ContentView.swift */; };
 		1372555A422A6341890F4A91 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 137254F557028739C7CAF3A7 /* .gitignore */; };
+		13725AA458703F4E225393FA /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 13725D7976C75E11F87C1CA2 /* README.md */; };
 		13725ADE9C22EE9B093BF5CA /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725D39DF539EC4D9D2E93D /* Errors.swift */; };
 		13725BC9551E191142D50DC5 /* MemoryPersistent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1372502719C754327A4D1D41 /* MemoryPersistent.swift */; };
 		13725EC844C1CF103CECDCC3 /* Persistent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725B487EBA7886A1E721D1 /* Persistent.swift */; };
@@ -53,6 +54,7 @@
 		13725ADB34EEE6799BE2FC2B /* TutorialManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialManager.swift; sourceTree = "<group>"; };
 		13725B487EBA7886A1E721D1 /* Persistent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistent.swift; sourceTree = "<group>"; };
 		13725D39DF539EC4D9D2E93D /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		13725D7976C75E11F87C1CA2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		13725DEBD78ADA9BDBEC6132 /* SettingManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingManagerTests.swift; sourceTree = "<group>"; };
 		13725DF0B7733556E17E62E5 /* UserDefaultsPersistent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsPersistent.swift; sourceTree = "<group>"; };
 		273DC1E4259F61CE00438BDA /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 				27B41602259DE1B100269E37 /* PomodoroCookieTests */,
 				276DD5A0259DA0C700237DDF /* Products */,
 				137254F557028739C7CAF3A7 /* .gitignore */,
+				13725D7976C75E11F87C1CA2 /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -402,6 +405,7 @@
 				273DC1E5259F61CE00438BDA /* TutorialView.swift in Sources */,
 				273DC1F0259F6F8000438BDA /* Application.swift in Sources */,
 				13725F7694D6AC72F1140059 /* TutorialManager.swift in Sources */,
+				13725AA458703F4E225393FA /* README.md in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
