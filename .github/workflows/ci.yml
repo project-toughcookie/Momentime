@@ -1,8 +1,8 @@
 on: pull_request
-name: Unit Test
+name: CI
 jobs:
   test:
-    name: Full
+    name: Unit Test
     runs-on: macOS-latest
     strategy:
         matrix:
@@ -13,6 +13,6 @@ jobs:
       - name: Build and test
         run: |
           xcodebuild clean test -project PomodoroCookie.xcodeproj -scheme PomodoroCookie -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
-          bash <(curl -s https://codecov.io/bash)
+          bash <(curl -s https://codecov.io/bash) -t b5d8eba3-62ac-4d0a-bec4-59dde08cbd02
         env: 
          destination: ${{ matrix.destination }}
