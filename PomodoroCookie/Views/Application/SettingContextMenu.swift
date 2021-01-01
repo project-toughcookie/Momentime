@@ -10,7 +10,7 @@ import SwiftUI
 struct SettingContextMenu: View {
     var body: some View {
         MenuButton(
-            label: Label("", systemImage: "gearshape"),
+            label: Text("⚙️"),
             content: {
                 Button(action: {
                     NSApp.sendAction(#selector(AppDelegate.openSettingWindow), to: nil, from: nil)
@@ -30,7 +30,7 @@ struct SettingContextMenu: View {
             }
         )
         .menuButtonStyle(BorderlessButtonMenuButtonStyle())
-        .frame(width: 30, height: 30, alignment: .center)
+        .frame(width: 20, height: 20, alignment: .center)
     }
 }
 
