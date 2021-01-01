@@ -3,7 +3,7 @@ name: Unit Test
 jobs:
   test:
     name: Test
-    runs-on: macOS-latest
+    runs-on: macOS-11.0
     strategy:
         matrix:
           destination: ['platform=macOS,arch=x86_64']
