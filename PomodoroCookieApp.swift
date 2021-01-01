@@ -4,14 +4,17 @@
 //
 //  Created by 성준영 on 2020/12/31.
 //
+
 import SwiftUI
-import UIKit
+import Cocoa
 
 @main
 struct PomodoroCookieApp: App {
+    @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TutorialRoot().environmentObject(AppConfig.shared)
         }
     }
 }

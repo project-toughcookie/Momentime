@@ -7,22 +7,64 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		137250AA568C74AB4FC4A06F /* SettingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725AAB083B9CF7E7ACBF7C /* SettingManager.swift */; };
+		137251AE97907DA72FD7F4CD /* UserDefaultsPersistentTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725545530FD7FD54F63ADD /* UserDefaultsPersistentTest.swift */; };
+		13725395FCDB80F080270AD0 /* UserDefaultsPersistent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725DF0B7733556E17E62E5 /* UserDefaultsPersistent.swift */; };
+		137253E98F412B298B6C36F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137251D85E2AA2DB9627E3DD /* AppDelegate.swift */; };
+		1372540F9A7C4260D703E7BF /* MenuBarRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725A5CE405F51F9F5B2413 /* MenuBarRoot.swift */; };
 		1372555A422A6341890F4A91 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 137254F557028739C7CAF3A7 /* .gitignore */; };
-		276DD5A3259DA0C700237DDF /* PomodoroCookieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276DD5A2259DA0C700237DDF /* PomodoroCookieApp.swift */; };
-		276DD5A5259DA0C700237DDF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276DD5A4259DA0C700237DDF /* ContentView.swift */; };
+		137256D73719245E861DB046 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725766EA2BD867B2C276E4 /* AppConfig.swift */; };
+		13725ADE9C22EE9B093BF5CA /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725D39DF539EC4D9D2E93D /* Errors.swift */; };
+		13725BC9551E191142D50DC5 /* MemoryPersistent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1372502719C754327A4D1D41 /* MemoryPersistent.swift */; };
+		13725EC844C1CF103CECDCC3 /* Persistent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725B487EBA7886A1E721D1 /* Persistent.swift */; };
+		13725EDDE50C4E4F275E681A /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1372592AA7C3430925023154 /* Setting.swift */; };
+		13725EF4905FB56A9E650EFA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137252D1DC7713CF9833EFF9 /* Constants.swift */; };
+		13725EF4AD30E29F5B3B01D1 /* PomodoroCookieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725838DE11B98A70186515 /* PomodoroCookieApp.swift */; };
+		273DC1DB259F5C3200438BDA /* TutorialRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273DC1DA259F5C3200438BDA /* TutorialRoot.swift */; };
+		273DC1E5259F61CE00438BDA /* TutorialPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273DC1E4259F61CE00438BDA /* TutorialPage.swift */; };
+		276C4813259DE22000024FBB /* SettingManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276C4812259DE22000024FBB /* SettingManagerTests.swift */; };
 		276DD5A7259DA0C900237DDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 276DD5A6259DA0C900237DDF /* Assets.xcassets */; };
 		276DD5AA259DA0C900237DDF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 276DD5A9259DA0C900237DDF /* Preview Assets.xcassets */; };
+		277E4240259DB27200E8979B /* SettingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277E423F259DB27200E8979B /* SettingPage.swift */; };
+		27B41604259DE1B100269E37 /* PomodoroCookieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B41603259DE1B100269E37 /* PomodoroCookieTests.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		27B41606259DE1B100269E37 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 276DD597259DA0C700237DDF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 276DD59E259DA0C700237DDF;
+			remoteInfo = PomodoroCookie;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		1372502719C754327A4D1D41 /* MemoryPersistent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryPersistent.swift; sourceTree = "<group>"; };
+		137251D85E2AA2DB9627E3DD /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		137252D1DC7713CF9833EFF9 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		137254F557028739C7CAF3A7 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = file.gitignore; path = .gitignore; sourceTree = "<group>"; };
+		13725545530FD7FD54F63ADD /* UserDefaultsPersistentTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsPersistentTest.swift; sourceTree = "<group>"; };
+		13725766EA2BD867B2C276E4 /* AppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		13725838DE11B98A70186515 /* PomodoroCookieApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PomodoroCookieApp.swift; sourceTree = SOURCE_ROOT; };
+		1372592AA7C3430925023154 /* Setting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		13725A5CE405F51F9F5B2413 /* MenuBarRoot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuBarRoot.swift; sourceTree = "<group>"; };
+		13725AAB083B9CF7E7ACBF7C /* SettingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingManager.swift; sourceTree = "<group>"; };
+		13725B487EBA7886A1E721D1 /* Persistent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistent.swift; sourceTree = "<group>"; };
+		13725D39DF539EC4D9D2E93D /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		13725DF0B7733556E17E62E5 /* UserDefaultsPersistent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsPersistent.swift; sourceTree = "<group>"; };
+		273DC1DA259F5C3200438BDA /* TutorialRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialRoot.swift; sourceTree = "<group>"; };
+		273DC1E4259F61CE00438BDA /* TutorialPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialPage.swift; sourceTree = "<group>"; };
+		276C4812259DE22000024FBB /* SettingManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingManagerTests.swift; sourceTree = "<group>"; };
 		276DD59F259DA0C700237DDF /* PomodoroCookie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PomodoroCookie.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		276DD5A2259DA0C700237DDF /* PomodoroCookieApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroCookieApp.swift; sourceTree = "<group>"; };
-		276DD5A4259DA0C700237DDF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		276DD5A6259DA0C900237DDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		276DD5A9259DA0C900237DDF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		276DD5AB259DA0C900237DDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		276DD5AC259DA0C900237DDF /* PomodoroCookie.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PomodoroCookie.entitlements; sourceTree = "<group>"; };
+		277E423F259DB27200E8979B /* SettingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingPage.swift; sourceTree = "<group>"; };
+		27B41601259DE1B100269E37 /* PomodoroCookieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PomodoroCookieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		27B41603259DE1B100269E37 /* PomodoroCookieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroCookieTests.swift; sourceTree = "<group>"; };
+		27B41605259DE1B100269E37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,13 +75,124 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		27B415FE259DE1B100269E37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		137250BCCAB53625E2010D9E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				13725935D5A57698B187FAFA /* Persistent */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		1372540EF453797F074EA94B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				13725CCA93AB4D327C1FAECD /* Persistent */,
+				137252D1DC7713CF9833EFF9 /* Constants.swift */,
+				13725D39DF539EC4D9D2E93D /* Errors.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		1372545DE41FCFA42DE893FF /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		1372548D9317652C3BDE801F /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				273DC1E4259F61CE00438BDA /* TutorialPage.swift */,
+			);
+			path = Tutorial;
+			sourceTree = "<group>";
+		};
+		1372576AF9D352A53737DB1C /* Pomodoro */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pomodoro;
+			sourceTree = "<group>";
+		};
+		137257B2C7FBA6B466EAEEF8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1372592AA7C3430925023154 /* Setting.swift */,
+				13725766EA2BD867B2C276E4 /* AppConfig.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		13725935D5A57698B187FAFA /* Persistent */ = {
+			isa = PBXGroup;
+			children = (
+				13725545530FD7FD54F63ADD /* UserDefaultsPersistentTest.swift */,
+			);
+			path = Persistent;
+			sourceTree = "<group>";
+		};
+		137259A211F3B499D1BCCA4E /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				27B415C1259DB71100269E37 /* Setting */,
+				1372576AF9D352A53737DB1C /* Pomodoro */,
+				1372545DE41FCFA42DE893FF /* Calendar */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		13725CBC0CD6A34D6DDDB729 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1372548D9317652C3BDE801F /* Tutorial */,
+				27B415D0259DD7A600269E37 /* Setting */,
+				13725A5CE405F51F9F5B2413 /* MenuBarRoot.swift */,
+				273DC1DA259F5C3200438BDA /* TutorialRoot.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		13725CCA93AB4D327C1FAECD /* Persistent */ = {
+			isa = PBXGroup;
+			children = (
+				13725B487EBA7886A1E721D1 /* Persistent.swift */,
+				13725DF0B7733556E17E62E5 /* UserDefaultsPersistent.swift */,
+				1372502719C754327A4D1D41 /* MemoryPersistent.swift */,
+			);
+			path = Persistent;
+			sourceTree = "<group>";
+		};
+		276C4811259DE20900024FBB /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				276C4812259DE22000024FBB /* SettingManagerTests.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		276C481A259DE26300024FBB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		276DD596259DA0C700237DDF = {
 			isa = PBXGroup;
 			children = (
 				276DD5A1259DA0C700237DDF /* PomodoroCookie */,
+				27B41602259DE1B100269E37 /* PomodoroCookieTests */,
 				276DD5A0259DA0C700237DDF /* Products */,
 				137254F557028739C7CAF3A7 /* .gitignore */,
 			);
@@ -49,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				276DD59F259DA0C700237DDF /* PomodoroCookie.app */,
+				27B41601259DE1B100269E37 /* PomodoroCookieTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,12 +210,16 @@
 		276DD5A1259DA0C700237DDF /* PomodoroCookie */ = {
 			isa = PBXGroup;
 			children = (
-				276DD5A2259DA0C700237DDF /* PomodoroCookieApp.swift */,
-				276DD5A4259DA0C700237DDF /* ContentView.swift */,
+				137259A211F3B499D1BCCA4E /* Managers */,
+				137257B2C7FBA6B466EAEEF8 /* Models */,
+				1372540EF453797F074EA94B /* Helpers */,
+				13725CBC0CD6A34D6DDDB729 /* Views */,
+				276DD5A8259DA0C900237DDF /* Preview Content */,
+				13725838DE11B98A70186515 /* PomodoroCookieApp.swift */,
+				137251D85E2AA2DB9627E3DD /* AppDelegate.swift */,
 				276DD5A6259DA0C900237DDF /* Assets.xcassets */,
 				276DD5AB259DA0C900237DDF /* Info.plist */,
 				276DD5AC259DA0C900237DDF /* PomodoroCookie.entitlements */,
-				276DD5A8259DA0C900237DDF /* Preview Content */,
 			);
 			path = PomodoroCookie;
 			sourceTree = "<group>";
@@ -72,6 +230,34 @@
 				276DD5A9259DA0C900237DDF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		27B415C1259DB71100269E37 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				13725AAB083B9CF7E7ACBF7C /* SettingManager.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		27B415D0259DD7A600269E37 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				277E423F259DB27200E8979B /* SettingPage.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		27B41602259DE1B100269E37 /* PomodoroCookieTests */ = {
+			isa = PBXGroup;
+			children = (
+				276C4811259DE20900024FBB /* Managers */,
+				276C481A259DE26300024FBB /* Models */,
+				137250BCCAB53625E2010D9E /* Helpers */,
+				27B41603259DE1B100269E37 /* PomodoroCookieTests.swift */,
+				27B41605259DE1B100269E37 /* Info.plist */,
+			);
+			path = PomodoroCookieTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -94,6 +280,24 @@
 			productReference = 276DD59F259DA0C700237DDF /* PomodoroCookie.app */;
 			productType = "com.apple.product-type.application";
 		};
+		27B41600259DE1B100269E37 /* PomodoroCookieTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27B41608259DE1B100269E37 /* Build configuration list for PBXNativeTarget "PomodoroCookieTests" */;
+			buildPhases = (
+				27B415FD259DE1B100269E37 /* Sources */,
+				27B415FE259DE1B100269E37 /* Frameworks */,
+				27B415FF259DE1B100269E37 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				27B41607259DE1B100269E37 /* PBXTargetDependency */,
+			);
+			name = PomodoroCookieTests;
+			productName = PomodoroCookieTests;
+			productReference = 27B41601259DE1B100269E37 /* PomodoroCookieTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -105,6 +309,10 @@
 				TargetAttributes = {
 					276DD59E259DA0C700237DDF = {
 						CreatedOnToolsVersion = 12.3;
+					};
+					27B41600259DE1B100269E37 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 276DD59E259DA0C700237DDF;
 					};
 				};
 			};
@@ -122,6 +330,7 @@
 			projectRoot = "";
 			targets = (
 				276DD59E259DA0C700237DDF /* PomodoroCookie */,
+				27B41600259DE1B100269E37 /* PomodoroCookieTests */,
 			);
 		};
 /* End PBXProject section */
@@ -137,6 +346,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		27B415FF259DE1B100269E37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -144,12 +360,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				276DD5A5259DA0C700237DDF /* ContentView.swift in Sources */,
-				276DD5A3259DA0C700237DDF /* PomodoroCookieApp.swift in Sources */,
+				137253E98F412B298B6C36F7 /* AppDelegate.swift in Sources */,
+				273DC1DB259F5C3200438BDA /* TutorialRoot.swift in Sources */,
+				1372540F9A7C4260D703E7BF /* MenuBarRoot.swift in Sources */,
+				277E4240259DB27200E8979B /* SettingPage.swift in Sources */,
+				13725EF4AD30E29F5B3B01D1 /* PomodoroCookieApp.swift in Sources */,
+				13725EF4905FB56A9E650EFA /* Constants.swift in Sources */,
+				137250AA568C74AB4FC4A06F /* SettingManager.swift in Sources */,
+				13725EDDE50C4E4F275E681A /* Setting.swift in Sources */,
+				13725EC844C1CF103CECDCC3 /* Persistent.swift in Sources */,
+				13725395FCDB80F080270AD0 /* UserDefaultsPersistent.swift in Sources */,
+				13725ADE9C22EE9B093BF5CA /* Errors.swift in Sources */,
+				13725BC9551E191142D50DC5 /* MemoryPersistent.swift in Sources */,
+				273DC1E5259F61CE00438BDA /* TutorialPage.swift in Sources */,
+				137256D73719245E861DB046 /* AppConfig.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27B415FD259DE1B100269E37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				276C4813259DE22000024FBB /* SettingManagerTests.swift in Sources */,
+				27B41604259DE1B100269E37 /* PomodoroCookieTests.swift in Sources */,
+				137251AE97907DA72FD7F4CD /* UserDefaultsPersistentTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		27B41607259DE1B100269E37 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 276DD59E259DA0C700237DDF /* PomodoroCookie */;
+			targetProxy = 27B41606259DE1B100269E37 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		276DD5AD259DA0C900237DDF /* Debug */ = {
@@ -273,6 +519,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = PomodoroCookie/PomodoroCookie.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"PomodoroCookie/Preview Content\"";
@@ -297,6 +544,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = PomodoroCookie/PomodoroCookie.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"PomodoroCookie/Preview Content\"";
@@ -312,6 +560,46 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.toughcookie.PomodoroCookie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		27B41609259DE1B100269E37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = LK42RRLFBQ;
+				INFOPLIST_FILE = PomodoroCookieTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.toughcookie.PomodoroCookieTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PomodoroCookie.app/Contents/MacOS/PomodoroCookie";
+			};
+			name = Debug;
+		};
+		27B4160A259DE1B100269E37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = LK42RRLFBQ;
+				INFOPLIST_FILE = PomodoroCookieTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.toughcookie.PomodoroCookieTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PomodoroCookie.app/Contents/MacOS/PomodoroCookie";
 			};
 			name = Release;
 		};
@@ -332,6 +620,15 @@
 			buildConfigurations = (
 				276DD5B0259DA0C900237DDF /* Debug */,
 				276DD5B1259DA0C900237DDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27B41608259DE1B100269E37 /* Build configuration list for PBXNativeTarget "PomodoroCookieTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27B41609259DE1B100269E37 /* Debug */,
+				27B4160A259DE1B100269E37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
