@@ -6,7 +6,7 @@ jobs:
     runs-on: macOS-latest
     strategy:
         matrix:
-          destination: ['platform=OS X,arch=x86_64']
+          destination: ['platform=macOS 11.1,arch=x86_64']
     steps:
       - name: Checkout
         uses: actions/checkout@master
