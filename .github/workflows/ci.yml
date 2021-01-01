@@ -3,7 +3,7 @@ name: CI
 jobs:
   test:
     name: Unit Test
-    runs-on: macOS-latest
+    runs-on: macos-latest
     strategy:
         matrix:
           destination: ['platform=macOS,arch=x86_64']
@@ -12,7 +12,7 @@ jobs:
         uses: actions/checkout@master
       - name: Build and test
         run: |
-          xcodebuild clean test -project PomodoroCookie.xcodeproj -scheme PomodoroCookie -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
+          xcodebuild -project PomodoroCookie.xcodeproj -scheme PomodoroCookie -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO -enableCodeCoverage YES build test
           bash <(curl -s https://codecov.io/bash) -t b5d8eba3-62ac-4d0a-bec4-59dde08cbd02
         env: 
          destination: ${{ matrix.destination }}
