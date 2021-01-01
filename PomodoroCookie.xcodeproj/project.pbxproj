@@ -13,6 +13,7 @@
 		13725395FCDB80F080270AD0 /* UserDefaultsPersistent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725DF0B7733556E17E62E5 /* UserDefaultsPersistent.swift */; };
 		137253E98F412B298B6C36F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137251D85E2AA2DB9627E3DD /* AppDelegate.swift */; };
 		1372540F9A7C4260D703E7BF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725A5CE405F51F9F5B2413 /* ContentView.swift */; };
+		137254C8BE18C1C0641A3A55 /* codecov.yml in Resources */ = {isa = PBXBuildFile; fileRef = 13725B3B14F442E4D311F39C /* codecov.yml */; };
 		1372555A422A6341890F4A91 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 137254F557028739C7CAF3A7 /* .gitignore */; };
 		13725ADE9C22EE9B093BF5CA /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725D39DF539EC4D9D2E93D /* Errors.swift */; };
 		13725BC9551E191142D50DC5 /* MemoryPersistent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1372502719C754327A4D1D41 /* MemoryPersistent.swift */; };
@@ -51,6 +52,7 @@
 		13725A5CE405F51F9F5B2413 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		13725AAB083B9CF7E7ACBF7C /* SettingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingManager.swift; sourceTree = "<group>"; };
 		13725ADB34EEE6799BE2FC2B /* TutorialManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialManager.swift; sourceTree = "<group>"; };
+		13725B3B14F442E4D311F39C /* codecov.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = codecov.yml; sourceTree = "<group>"; };
 		13725B487EBA7886A1E721D1 /* Persistent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistent.swift; sourceTree = "<group>"; };
 		13725D39DF539EC4D9D2E93D /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		13725D7976C75E11F87C1CA2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 				276DD5A0259DA0C700237DDF /* Products */,
 				137254F557028739C7CAF3A7 /* .gitignore */,
 				13725D7976C75E11F87C1CA2 /* README.md */,
+				13725B3B14F442E4D311F39C /* codecov.yml */,
 			);
 			sourceTree = "<group>";
 		};
@@ -372,6 +375,7 @@
 				276DD5AA259DA0C900237DDF /* Preview Assets.xcassets in Resources */,
 				276DD5A7259DA0C900237DDF /* Assets.xcassets in Resources */,
 				1372555A422A6341890F4A91 /* .gitignore in Resources */,
+				137254C8BE18C1C0641A3A55 /* codecov.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -566,6 +570,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = com.toughcookie.PomodoroCookie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -591,6 +596,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = com.toughcookie.PomodoroCookie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;

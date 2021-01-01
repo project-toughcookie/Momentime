@@ -1,0 +1,4 @@
+ignore:
+  - "PomodoroCookieTests/**/*"
+  - "PomodoroCookie/Views/**/*"
+  - "PomodoroCookie/AppDelegate.swift"
