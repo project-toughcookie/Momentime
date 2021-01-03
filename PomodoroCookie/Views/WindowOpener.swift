@@ -5,8 +5,8 @@
 import SwiftUI
 
 class WindowOpener {
-    static var tutorialWindow: NSWindow!
-    static var settingWindow: NSWindow!
+    private static var tutorialWindow: NSWindow!
+    private static var settingWindow: NSWindow!
 
     static func openTutorialWindow() {
         if tutorialWindow == nil {
