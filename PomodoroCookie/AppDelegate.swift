@@ -15,7 +15,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     private func initializePopover() {
         let rootView = ContentView()
-
         let popover = NSPopover()
         popover.contentSize.width = Constants.MENUBAR_VIEW_WIDTH
         popover.contentSize.height = Constants.MENUBAR_VIEW_HEIGHT
@@ -26,7 +25,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     private func initializeStatusBarItem() {
         statusBarItem = NSStatusBar.system.statusItem(withLength: CGFloat(NSStatusItem.variableLength))
-
         if let button = statusBarItem.button {
             button.image = NSImage(named: "MenuBarIcon")
             button.action = #selector(togglePopover(_:))
@@ -41,13 +39,5 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
             }
         }
-    }
-
-    @objc func openTutorialWindow() {
-        WindowOpener.openTutorialWindow()
-    }
-
-    @objc func openSettingWindow() {
-        WindowOpener.openSettingWindow()
     }
 }

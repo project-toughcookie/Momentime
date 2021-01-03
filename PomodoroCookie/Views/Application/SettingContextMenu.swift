@@ -8,16 +8,12 @@
 import SwiftUI
 
 struct SettingContextMenu: View {
-    func openSettingWindow() {
-        NSApp.sendAction(#selector(AppDelegate.openSettingWindow), to: nil, from: nil)
-    }
-
     var body: some View {
         MenuButton(
             label: Text("⚙️"),
             content: {
                 Button(action: {
-                    openSettingWindow()
+                    WindowOpener.openSettingWindow()
                 }) {
                     Text("Setting".localized)
                 }

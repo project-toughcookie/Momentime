@@ -5,16 +5,16 @@
 import SwiftUI
 
 class WindowOpener {
-    private static var settingWindow: NSWindow!
-    private static var tutorialWindow: NSWindow!
+    static var tutorialWindow: NSWindow!
+    static var settingWindow: NSWindow!
 
-    @objc static func openTutorialWindow() {
+    static func openTutorialWindow() {
         if tutorialWindow == nil {
             tutorialWindow = NSWindow(
-                    contentRect: NSRect(),
-                    styleMask: [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView],
-                    backing: .buffered,
-                    defer: false
+                contentRect: NSRect(),
+                styleMask: [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView],
+                backing: .buffered,
+                defer: false
             )
             tutorialWindow.center()
             tutorialWindow.setFrameAutosaveName("Tutorial")
@@ -25,13 +25,13 @@ class WindowOpener {
         tutorialWindow.makeKeyAndOrderFront(nil)
     }
 
-    @objc static func openSettingWindow() {
+    static func openSettingWindow() {
         if settingWindow == nil {
             settingWindow = NSWindow(
-                    contentRect: NSRect(),
-                    styleMask: [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView],
-                    backing: .buffered,
-                    defer: false
+                contentRect: NSRect(),
+                styleMask: [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView],
+                backing: .buffered,
+                defer: false
             )
             settingWindow.center()
             settingWindow.setFrameAutosaveName("Preferences")
