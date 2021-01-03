@@ -20,6 +20,7 @@
 		13725EDDE50C4E4F275E681A /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1372592AA7C3430925023154 /* Setting.swift */; };
 		13725EF4905FB56A9E650EFA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137252D1DC7713CF9833EFF9 /* Constants.swift */; };
 		13725EF4AD30E29F5B3B01D1 /* PomodoroCookieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725838DE11B98A70186515 /* PomodoroCookieApp.swift */; };
+		13725F313CA20AF77478E204 /* WindowOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725613FCC1FB9D38EADBE9 /* WindowOpener.swift */; };
 		13725F7694D6AC72F1140059 /* TutorialManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725ADB34EEE6799BE2FC2B /* TutorialManager.swift */; };
 		2732A13D25A1A2A600F596AB /* I18N.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2732A13C25A1A2A600F596AB /* I18N.swift */; };
 		2732A15025A1A74500F596AB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2732A15225A1A74500F596AB /* Localizable.strings */; };
@@ -52,6 +53,7 @@
 		137252D1DC7713CF9833EFF9 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		137254F557028739C7CAF3A7 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = file.gitignore; path = .gitignore; sourceTree = "<group>"; };
 		13725545530FD7FD54F63ADD /* UserDefaultsPersistentTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsPersistentTests.swift; sourceTree = "<group>"; };
+		13725613FCC1FB9D38EADBE9 /* WindowOpener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowOpener.swift; sourceTree = "<group>"; };
 		13725838DE11B98A70186515 /* PomodoroCookieApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PomodoroCookieApp.swift; sourceTree = SOURCE_ROOT; };
 		1372592AA7C3430925023154 /* Setting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		13725A5CE405F51F9F5B2413 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -292,6 +294,7 @@
 				276DD5A6259DA0C900237DDF /* Assets.xcassets */,
 				276DD5AB259DA0C900237DDF /* Info.plist */,
 				276DD5AC259DA0C900237DDF /* PomodoroCookie.entitlements */,
+				13725613FCC1FB9D38EADBE9 /* WindowOpener.swift */,
 			);
 			path = PomodoroCookie;
 			sourceTree = "<group>";
@@ -451,6 +454,7 @@
 				273DC1E5259F61CE00438BDA /* TutorialView.swift in Sources */,
 				273DC1F0259F6F8000438BDA /* Application.swift in Sources */,
 				13725F7694D6AC72F1140059 /* TutorialManager.swift in Sources */,
+				13725F313CA20AF77478E204 /* WindowOpener.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

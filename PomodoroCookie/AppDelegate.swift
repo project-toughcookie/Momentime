@@ -43,40 +43,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
 
-    private var settingWindow: NSWindow!
-    private var tutorialWindow: NSWindow!
-
     @objc func openTutorialWindow() {
-        if tutorialWindow == nil {
-            tutorialWindow = NSWindow(
-                contentRect: NSRect(),
-                styleMask: [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView],
-                backing: .buffered,
-                defer: false
-            )
-            tutorialWindow.center()
-            tutorialWindow.setFrameAutosaveName("Tutorial")
-            tutorialWindow.isReleasedWhenClosed = false
-            tutorialWindow.contentView = NSHostingView(rootView: TutorialView())
-        }
-        NSApplication.shared.activate(ignoringOtherApps: true)
-        tutorialWindow.makeKeyAndOrderFront(nil)
+        WindowOpener.openTutorialWindow()
     }
 
     @objc func openSettingWindow() {
-        if settingWindow == nil {
-            settingWindow = NSWindow(
-                contentRect: NSRect(),
-                styleMask: [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView],
-                backing: .buffered,
-                defer: false
-            )
-            settingWindow.center()
-            settingWindow.setFrameAutosaveName("Preferences")
-            settingWindow.isReleasedWhenClosed = false
-            settingWindow.contentView = NSHostingView(rootView: SettingView())
-        }
-        NSApplication.shared.activate(ignoringOtherApps: true)
-        settingWindow.makeKeyAndOrderFront(nil)
+        WindowOpener.openSettingWindow()
     }
 }
