@@ -26,10 +26,11 @@ struct SettingContextMenu: View {
                 }) {
                     Text("Temp1")
                 }
+                Divider()
                 Button(action: {
-                    print("Temp2 clicked")
+                    print("App terminated")
                 }) {
-                    Text("Temp2")
+                    Text("Exit App".localized)
                 }
             }
         )
