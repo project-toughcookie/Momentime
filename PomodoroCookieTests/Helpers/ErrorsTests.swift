@@ -6,7 +6,6 @@
 import XCTest
 
 class ErrorsTests: XCTestCase {
-
     func testUnknownPrint() {
         let unknownError = CocoaError(CocoaError.coderInvalidValue)
 
