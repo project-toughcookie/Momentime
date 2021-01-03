@@ -23,13 +23,6 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
-		<key>UserDefaultsPersistentTests.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false />
-			<key>orderHint</key>
-			<integer>4</integer>
-		</dict>
 		<key>SettingManagerTests.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -40,28 +33,42 @@
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
-			<integer>5</integer>
+			<integer>4</integer>
 		</dict>
 		<key>All in UserDefaultsPersistentTest.swift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
-			<integer>6</integer>
+			<integer>5</integer>
 		</dict>
 		<key>ErrorsTests.testNotExistsPrint.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
-			<integer>7</integer>
+			<integer>6</integer>
 		</dict>
 		<key>ErrorsTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
+		<key>I18NTests.testI18NLocalize.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false />
+			<key>orderHint</key>
 			<integer>8</integer>
+		</dict>
+		<key>I18NTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false />
+			<key>orderHint</key>
+			<integer>9</integer>
 		</dict>
 	</dict>
 </dict>
