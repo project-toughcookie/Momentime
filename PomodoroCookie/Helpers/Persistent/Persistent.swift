@@ -6,5 +6,5 @@ import Foundation
 
 protocol Persistent {
     func set(_ value: Any?, forKey key: String)
-    func getObject(forKey key: String) throws -> Any
+    func getBool(forKey key: String) throws -> Bool
 }

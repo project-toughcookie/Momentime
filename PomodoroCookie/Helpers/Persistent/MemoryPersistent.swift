@@ -13,11 +13,11 @@ class MemoryPersistent: Persistent {
         data.updateValue(value!, forKey: key)
     }
 
-    func getObject(forKey key: String) throws -> Any {
+    func getBool(forKey key: String) throws -> Bool {
         guard let value = data[key] else {
             throw CookieError.NotExists(target: key)
         }
 
-        return value
+        return value as! Bool
     }
 }

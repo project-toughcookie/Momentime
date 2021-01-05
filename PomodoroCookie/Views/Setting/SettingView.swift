@@ -8,13 +8,17 @@
 import SwiftUI
 
 struct SettingView: View {
-    @ObservedObject var settingManager = SettingManager(UserDefaultsPersistent())
+    @EnvironmentObject var svm: SettingViewModel
 
     var body: some View {
         VStack {
-            Text("Event title changed if on: \(String(settingManager.setting.eventTitleChangedIfDone))")
-            Text("Timer sound enabled: \(String(settingManager.setting.timerSoundEnabled))")
-            Text("Timer auto started: \(String(settingManager.setting.eventTitleChangedIfDone))")
+            Text("Event title changed if on: \(String(svm.eventTitleChangedIfDone))")
+            Text("Timer sound enabled: \(String(svm.timerSoundEnabled))")
+            Text("Timer auto started: \(String(svm.timerAutoStarted))")
+                .onHover(perform: { _ in
+                    print("hovering")
+                    svm.setEventTitleChangedIfDone(false)
+                })
         }
         .frame(width: Constants.SETTING_VIEW_WIDTH,
                height: Constants.SETTING_VIEW_HEIGHT,
@@ -25,5 +29,6 @@ struct SettingView: View {
 struct SettingView_Previews: PreviewProvider {
     static var previews: some View {
         SettingView()
+            .environmentObject(SettingViewModel(persistent: MemoryPersistent()))
     }
 }

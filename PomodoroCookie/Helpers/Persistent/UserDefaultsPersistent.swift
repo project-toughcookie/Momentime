@@ -14,12 +14,12 @@ class UserDefaultsPersistent: Persistent {
         userDefault.setValue(value, forKey: key)
     }
 
-    public func getObject(forKey key: String) throws -> Any {
+    public func getBool(forKey key: String) throws -> Bool {
         if !isKeyExists(key) {
             throw CookieError.NotExists(target: key)
         }
 
-        return userDefault.object(forKey: key)!
+        return userDefault.bool(forKey: key)
     }
 
     private func isKeyExists(_ key: String) -> Bool {

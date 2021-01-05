@@ -8,6 +8,11 @@
 import Cocoa
 import SwiftUI
 
+struct modelData {
+    static var setting = SettingViewModel(persistent: UserDefaultsPersistent())
+    static var permission = PermissionViewModel()
+}
+
 var appDelegate = AppDelegate()
 
 @main

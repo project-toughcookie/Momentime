@@ -15,6 +15,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     private func initializePopover() {
         let rootView = ContentView()
+            .environmentObject(modelData.setting)
+            .environmentObject(modelData.permission)
+
         let popover = NSPopover()
         popover.contentSize.width = Constants.MENUBAR_VIEW_WIDTH
         popover.contentSize.height = Constants.MENUBAR_VIEW_HEIGHT

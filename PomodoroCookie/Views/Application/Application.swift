@@ -8,14 +8,23 @@
 import SwiftUI
 
 struct ApplicationView: View {
+    @EnvironmentObject var svm: SettingViewModel
+    @EnvironmentObject var pvm: PermissionViewModel
+
     var body: some View {
         VStack {
             Text("Hello, world!")
+            Text("Granted: \(String(pvm.granted))")
+            Text("Timer AutoStarted: \(String(svm.timerAutoStarted))")
+
             Spacer()
             HStack {
                 Spacer()
                 SettingContextMenu()
             }
+        }
+        .onAppear {
+            pvm.request()
         }
         .padding()
         .frame(width: Constants.MENUBAR_VIEW_WIDTH,
@@ -27,5 +36,7 @@ struct ApplicationView: View {
 struct ApplicationView_Previews: PreviewProvider {
     static var previews: some View {
         ApplicationView()
+            .environmentObject(SettingViewModel(persistent: MemoryPersistent()))
+            .environmentObject(PermissionViewModel())
     }
 }

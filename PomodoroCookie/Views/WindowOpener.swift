@@ -19,7 +19,10 @@ class WindowOpener {
             tutorialWindow.center()
             tutorialWindow.setFrameAutosaveName("Tutorial")
             tutorialWindow.isReleasedWhenClosed = false
-            tutorialWindow.contentView = NSHostingView(rootView: TutorialView())
+            tutorialWindow.contentView = NSHostingView(
+                rootView: TutorialView()
+                    .environmentObject(modelData.setting)
+            )
         }
         NSApplication.shared.activate(ignoringOtherApps: true)
         tutorialWindow.makeKeyAndOrderFront(nil)
@@ -36,7 +39,10 @@ class WindowOpener {
             settingWindow.center()
             settingWindow.setFrameAutosaveName("Preferences")
             settingWindow.isReleasedWhenClosed = false
-            settingWindow.contentView = NSHostingView(rootView: SettingView())
+            settingWindow.contentView = NSHostingView(
+                rootView: SettingView()
+                    .environmentObject(modelData.setting)
+            )
         }
         NSApplication.shared.activate(ignoringOtherApps: true)
         settingWindow.makeKeyAndOrderFront(nil)

@@ -9,15 +9,30 @@
 import XCTest
 
 class SettingManagerTests: XCTestCase {
-    func testSetSettingSuccess() {
-        let memoryPersistent = MemoryPersistent.shared
+    func testEventTitleChangedIfDoneGetSet() {
+        let memoryPersistent = MemoryPersistent()
         let settingManager = SettingManager(memoryPersistent)
-        let testSetting = Setting(eventTitleChangedIfDone: false, timerSoundEnabled: false, timerAutoStarted: false)
 
-        settingManager.setSetting(setting: testSetting)
+        XCTAssertTrue(settingManager.eventTitleChangedIfDone)
+        settingManager.eventTitleChangedIfDone = false
+        XCTAssertFalse(settingManager.eventTitleChangedIfDone)
+    }
 
-        XCTAssertEqual(settingManager.setting.eventTitleChangedIfDone, testSetting.eventTitleChangedIfDone)
-        XCTAssertEqual(settingManager.setting.timerSoundEnabled, testSetting.timerSoundEnabled)
-        XCTAssertEqual(settingManager.setting.timerAutoStarted, testSetting.timerAutoStarted)
+    func testTimerSoundEnabledGetSet() {
+        let memoryPersistent = MemoryPersistent()
+        let settingManager = SettingManager(memoryPersistent)
+
+        XCTAssertTrue(settingManager.timerSoundEnabled)
+        settingManager.timerSoundEnabled = false
+        XCTAssertFalse(settingManager.timerSoundEnabled)
+    }
+
+    func testTimerAutoStartedGetSet() {
+        let memoryPersistent = MemoryPersistent()
+        let settingManager = SettingManager(memoryPersistent)
+
+        XCTAssertTrue(settingManager.timerAutoStarted)
+        settingManager.timerAutoStarted = false
+        XCTAssertFalse(settingManager.timerAutoStarted)
     }
 }

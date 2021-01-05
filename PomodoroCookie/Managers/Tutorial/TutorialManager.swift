@@ -4,23 +4,27 @@
 
 import Foundation
 
-let TUTORIAL_SHOWN = "tutorialShown"
+let TUTORIAL = "tutorial"
+let TUTORIAL_SHOWN = "\(TUTORIAL).tutorialShown"
 
-class TutorialManager: ObservableObject {
+class TutorialManager {
     private var persistent: Persistent
-    @Published var tutorialShown: Bool = false
+    private var tutorialShownDefault: Bool = false
 
-    init(_ persistent: Persistent) {
-        self.persistent = persistent
-        do {
-            tutorialShown = try persistent.getObject(forKey: TUTORIAL_SHOWN) as! Bool
-        } catch {
-            tutorialShown = false
+    public var tutorialShown: Bool {
+        get {
+            do {
+                return try persistent.getBool(forKey: TUTORIAL_SHOWN)
+            } catch {
+                return tutorialShownDefault
+            }
+        }
+        set(newTutorialShown) {
+            persistent.set(newTutorialShown, forKey: TUTORIAL_SHOWN)
         }
     }
 
-    public func SetTutorialToShown() {
-        persistent.set(true, forKey: TUTORIAL_SHOWN)
-        tutorialShown = true
+    init(_ persistent: Persistent) {
+        self.persistent = persistent
     }
 }
