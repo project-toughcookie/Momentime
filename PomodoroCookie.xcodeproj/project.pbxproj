@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		137250AA568C74AB4FC4A06F /* SettingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725AAB083B9CF7E7ACBF7C /* SettingManager.swift */; };
 		137251AE97907DA72FD7F4CD /* UserDefaultsPersistentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725545530FD7FD54F63ADD /* UserDefaultsPersistentTests.swift */; };
+		1372529375205187EECCB965 /* EventStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137255BC333298D193585581 /* EventStore.swift */; };
 		13725395FCDB80F080270AD0 /* UserDefaultsPersistent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725DF0B7733556E17E62E5 /* UserDefaultsPersistent.swift */; };
 		137253E98F412B298B6C36F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137251D85E2AA2DB9627E3DD /* AppDelegate.swift */; };
 		1372540F9A7C4260D703E7BF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725A5CE405F51F9F5B2413 /* ContentView.swift */; };
@@ -62,6 +63,7 @@
 		137253BF4EACC8C14A4B6AA2 /* MemoryPersistentTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryPersistentTests.swift; sourceTree = "<group>"; };
 		137254F557028739C7CAF3A7 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = file.gitignore; path = .gitignore; sourceTree = "<group>"; };
 		13725545530FD7FD54F63ADD /* UserDefaultsPersistentTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsPersistentTests.swift; sourceTree = "<group>"; };
+		137255BC333298D193585581 /* EventStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventStore.swift; sourceTree = "<group>"; };
 		13725838DE11B98A70186515 /* PomodoroCookieApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PomodoroCookieApp.swift; sourceTree = SOURCE_ROOT; };
 		1372592AA7C3430925023154 /* Setting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		137259ECF2964B9C45E28A9A /* WindowOpener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowOpener.swift; sourceTree = "<group>"; };
@@ -334,6 +336,7 @@
 			children = (
 				2784FE5225A346D30075FD57 /* CalendarManager.swift */,
 				2784FE5625A346E00075FD57 /* AppleCalendarManager.swift */,
+				137255BC333298D193585581 /* EventStore.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -516,6 +519,7 @@
 				273DC275259FBFF200438BDA /* TutorialManagerTests.swift in Sources */,
 				2732A15C25A1AA3700F596AB /* I18NTests.swift in Sources */,
 				1372567EC0C5311E496633F7 /* MemoryPersistentTests.swift in Sources */,
+				1372529375205187EECCB965 /* EventStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
