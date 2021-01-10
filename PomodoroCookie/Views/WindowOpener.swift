@@ -21,7 +21,7 @@ class WindowOpener {
             tutorialWindow.isReleasedWhenClosed = false
             tutorialWindow.contentView = NSHostingView(
                 rootView: TutorialView()
-                    .environmentObject(modelData.setting)
+                    .environmentObject(modelData.svm)
             )
         }
         NSApplication.shared.activate(ignoringOtherApps: true)
@@ -41,7 +41,7 @@ class WindowOpener {
             settingWindow.isReleasedWhenClosed = false
             settingWindow.contentView = NSHostingView(
                 rootView: SettingView()
-                    .environmentObject(modelData.setting)
+                    .environmentObject(modelData.svm)
             )
         }
         NSApplication.shared.activate(ignoringOtherApps: true)

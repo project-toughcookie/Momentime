@@ -9,8 +9,8 @@ import Cocoa
 import SwiftUI
 
 struct modelData {
-    static var setting = SettingViewModel(persistent: UserDefaultsPersistent())
-    static var permission = PermissionViewModel()
+    static var svm = SettingViewModel()
+    static var cvm = CalendarViewModel()
 }
 
 var appDelegate = AppDelegate()

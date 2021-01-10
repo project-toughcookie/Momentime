@@ -9,17 +9,18 @@ import EventKit
 import Foundation
 import os
 
-class PermissionViewModel: ObservableObject {
+class CalendarViewModel: ObservableObject {
+    private let calendarManager: CalendarManager
+
     @Published var granted = false
+    @Published var calendars: [EventCalendar] = []
 
-    private let store: EKEventStore
-
-    init() {
-        store = EKEventStore()
+    init(store: EventStore = EKEventStore()) {
+        calendarManager = CalendarManager(store: store)
     }
 
-    func request() {
-        store.requestAccess(to: .event) { granted, _ in
+    func requestAccess() {
+        calendarManager.requestAccess { granted, _ in
             if granted {
                 os_log("calendar access granted", type: .debug)
                 DispatchQueue.main.async {
@@ -29,5 +30,9 @@ class PermissionViewModel: ObservableObject {
                 os_log("user doesn't want to share calendar", type: .debug)
             }
         }
+    }
+
+    func fetchCalendars() {
+        calendars = calendarManager.getEventCalendars()
     }
 }

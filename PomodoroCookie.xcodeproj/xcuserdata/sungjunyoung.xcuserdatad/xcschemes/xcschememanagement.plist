@@ -49,40 +49,40 @@
 			<key>orderHint</key>
 			<integer>7</integer>
 		</dict>
-		<key>ErrorsTests.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false />
-			<key>orderHint</key>
-			<integer>11</integer>
-		</dict>
-		<key>I18NTests.testI18NLocalize.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false />
-			<key>orderHint</key>
-			<integer>10</integer>
-		</dict>
-		<key>I18NTests.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false />
-			<key>orderHint</key>
-			<integer>9</integer>
-		</dict>
 		<key>MemoryPersistentTests.testSetKeySuccess.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
-		<key>TutorialManagerTests.xcscheme</key>
+		<key>CalendarManagerTests.testGetEventCalendars.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>8</integer>
 		</dict>
-		<key>UserDefaultsPersistentTests.xcscheme</key>
+		<key>SettingViewModelTests.testSettingViewModelInitAndSet.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false />
+			<key>orderHint</key>
+			<integer>9</integer>
+		</dict>
+		<key>SettingViewModelTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false />
+			<key>orderHint</key>
+			<integer>10</integer>
+		</dict>
+		<key>CalendarViewModelTests.testRequestAccess.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false />
+			<key>orderHint</key>
+			<integer>11</integer>
+		</dict>
+		<key>CalendarViewModelTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />

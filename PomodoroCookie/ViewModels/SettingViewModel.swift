@@ -14,7 +14,7 @@ final class SettingViewModel: ObservableObject {
     @Published var timerSoundEnabled: Bool
     @Published var timerAutoStarted: Bool
 
-    init(persistent: Persistent) {
+    init(persistent: Persistent = UserDefaultsPersistent()) {
         settingManager = SettingManager(persistent)
         eventTitleChangedIfDone = settingManager.eventTitleChangedIfDone
         timerSoundEnabled = settingManager.timerSoundEnabled
@@ -25,6 +25,10 @@ final class SettingViewModel: ObservableObject {
         settingManager.eventTitleChangedIfDone = setting.eventTitleChangedIfDone
         settingManager.timerSoundEnabled = setting.timerSoundEnabled
         settingManager.timerAutoStarted = setting.timerAutoStarted
+
+        eventTitleChangedIfDone = setting.eventTitleChangedIfDone
+        timerSoundEnabled = setting.timerSoundEnabled
+        timerAutoStarted = setting.timerAutoStarted
     }
 
     func setEventTitleChangedIfDone(_ eventTitleChangedIfDone: Bool) {

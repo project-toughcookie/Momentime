@@ -15,8 +15,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     private func initializePopover() {
         let rootView = ContentView()
-            .environmentObject(modelData.setting)
-            .environmentObject(modelData.permission)
+            .environmentObject(modelData.svm)
+            .environmentObject(modelData.cvm)
 
         let popover = NSPopover()
         popover.contentSize.width = Constants.MENUBAR_VIEW_WIDTH

@@ -51,7 +51,7 @@ final class SettingManager {
         }
     }
 
-    init(_ persistent: Persistent) {
+    init(_ persistent: Persistent = UserDefaultsPersistent()) {
         self.persistent = persistent
     }
 }

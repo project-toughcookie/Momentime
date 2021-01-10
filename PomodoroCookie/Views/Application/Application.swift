@@ -9,14 +9,17 @@ import SwiftUI
 
 struct ApplicationView: View {
     @EnvironmentObject var svm: SettingViewModel
-    @EnvironmentObject var pvm: PermissionViewModel
+    @EnvironmentObject var cvm: CalendarViewModel
 
     var body: some View {
         VStack {
             Text("Hello, world!")
-            Text("Granted: \(String(pvm.granted))")
+            Text("Granted: \(String(cvm.granted))")
             Text("Timer AutoStarted: \(String(svm.timerAutoStarted))")
 
+            List(cvm.calendars, id: \.id) { calendar in
+                Text(calendar.title)
+            }
             Spacer()
             HStack {
                 Spacer()
@@ -24,7 +27,8 @@ struct ApplicationView: View {
             }
         }
         .onAppear {
-            pvm.request()
+            cvm.requestAccess()
+            cvm.fetchCalendars()
         }
         .padding()
         .frame(width: Constants.MENUBAR_VIEW_WIDTH,
@@ -37,6 +41,6 @@ struct ApplicationView_Previews: PreviewProvider {
     static var previews: some View {
         ApplicationView()
             .environmentObject(SettingViewModel(persistent: MemoryPersistent()))
-            .environmentObject(PermissionViewModel())
+            .environmentObject(CalendarViewModel(store: MockEventStore()))
     }
 }
