@@ -54,35 +54,35 @@
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
-		<key>CalendarManagerTests.testGetEventCalendars.xcscheme</key>
+		<key>SettingViewModelTests.testSettingViewModelInitAndSet.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>8</integer>
 		</dict>
-		<key>SettingViewModelTests.testSettingViewModelInitAndSet.xcscheme</key>
+		<key>SettingViewModelTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>9</integer>
 		</dict>
-		<key>SettingViewModelTests.xcscheme</key>
+		<key>CalendarViewModelTests.testRequestAccess.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>10</integer>
 		</dict>
-		<key>CalendarViewModelTests.testRequestAccess.xcscheme</key>
+		<key>CalendarViewModelTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />
 			<key>orderHint</key>
 			<integer>11</integer>
 		</dict>
-		<key>CalendarViewModelTests.xcscheme</key>
+		<key>CalendarManagerTests.testIsAuthorized.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false />

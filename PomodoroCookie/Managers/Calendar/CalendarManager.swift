@@ -20,7 +20,7 @@ class CalendarManager {
     }
 
     func isAuthorized() -> Bool {
-        let status = EKEventStore.authorizationStatus(for: .event)
+        let status = store.eventAuthorizationStatus()
         switch status {
         case .authorized:
             return true
