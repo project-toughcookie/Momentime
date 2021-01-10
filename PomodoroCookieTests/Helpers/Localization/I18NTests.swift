@@ -9,6 +9,10 @@ class I18NTests: XCTestCase {
     func testI18NLocalize() throws {
         let testStr = "Unit Test".localized
 
-        XCTAssertEqual(testStr, "Unit Test")
+        if NSLocale.current.languageCode == "ko" {
+            XCTAssertEqual(testStr, "유닛 테스트")
+        } else {
+            XCTAssertEqual(testStr, "Unit Test")
+        }
     }
 }

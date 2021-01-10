@@ -9,12 +9,12 @@
 import XCTest
 
 class TutorialManagerTests: XCTestCase {
-    func testSetTutorialToShownSuccess() {
-        let memoryPersistent = MemoryPersistent.shared
+    func testTutorialShownGetSet() {
+        let memoryPersistent = MemoryPersistent()
         let tutorialManager = TutorialManager(memoryPersistent)
 
-        tutorialManager.SetTutorialToShown()
-
-        XCTAssertEqual(tutorialManager.tutorialShown, true)
+        XCTAssertFalse(tutorialManager.tutorialShown)
+        tutorialManager.tutorialShown = true
+        XCTAssertTrue(tutorialManager.tutorialShown)
     }
 }

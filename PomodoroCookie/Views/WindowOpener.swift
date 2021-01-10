@@ -5,8 +5,8 @@
 import SwiftUI
 
 class WindowOpener {
-    static var tutorialWindow: NSWindow!
-    static var settingWindow: NSWindow!
+    private static var tutorialWindow: NSWindow!
+    private static var settingWindow: NSWindow!
 
     static func openTutorialWindow() {
         if tutorialWindow == nil {
@@ -19,7 +19,10 @@ class WindowOpener {
             tutorialWindow.center()
             tutorialWindow.setFrameAutosaveName("Tutorial")
             tutorialWindow.isReleasedWhenClosed = false
-            tutorialWindow.contentView = NSHostingView(rootView: TutorialView())
+            tutorialWindow.contentView = NSHostingView(
+                rootView: TutorialView()
+                    .environmentObject(modelData.svm)
+            )
         }
         NSApplication.shared.activate(ignoringOtherApps: true)
         tutorialWindow.makeKeyAndOrderFront(nil)
@@ -36,7 +39,10 @@ class WindowOpener {
             settingWindow.center()
             settingWindow.setFrameAutosaveName("Preferences")
             settingWindow.isReleasedWhenClosed = false
-            settingWindow.contentView = NSHostingView(rootView: SettingView())
+            settingWindow.contentView = NSHostingView(
+                rootView: SettingView()
+                    .environmentObject(modelData.svm)
+            )
         }
         NSApplication.shared.activate(ignoringOtherApps: true)
         settingWindow.makeKeyAndOrderFront(nil)

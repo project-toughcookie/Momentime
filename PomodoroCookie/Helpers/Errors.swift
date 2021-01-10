@@ -6,6 +6,7 @@ import Foundation
 
 enum CookieError: Error {
     case NotExists(target: String)
+    case UnAuthorized
 }
 
 enum ErrorHandler {
@@ -13,6 +14,8 @@ enum ErrorHandler {
         switch error {
         case let CookieError.NotExists(target):
             printError("\(target) is not exists")
+        case CookieError.UnAuthorized:
+            printError("unathorized")
         default:
             printError("unknown error")
         }

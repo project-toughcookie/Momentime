@@ -8,6 +8,11 @@
 import Cocoa
 import SwiftUI
 
+struct modelData {
+    static var svm = SettingViewModel()
+    static var cvm = CalendarViewModel()
+}
+
 var appDelegate = AppDelegate()
 
 @main

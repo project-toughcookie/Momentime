@@ -14,9 +14,12 @@ class UserDefaultsPersistentTests: XCTestCase {
         let testKey = "testKey"
 
         userDefaultsPersistent.set(true, forKey: testKey)
-        let value = try userDefaultsPersistent.getObject(forKey: testKey) as! Bool
-
-        XCTAssertTrue(value)
+        do {
+            let value = try userDefaultsPersistent.getBool(forKey: testKey)
+            XCTAssertTrue(value)
+        } catch CookieError.NotExists(target: testKey) {
+            XCTFail("get bool must not be failed")
+        }
     }
 
     func testSetKeyNotExists() {
@@ -24,8 +27,8 @@ class UserDefaultsPersistentTests: XCTestCase {
         let testNotExistsKey = "notExists"
 
         do {
-            _ = try userDefaultsPersistent.getObject(forKey: testNotExistsKey) as! Bool
-            XCTFail("value must be not exists")
+            _ = try userDefaultsPersistent.getBool(forKey: testNotExistsKey)
+            XCTFail("value must not be specified")
         } catch {}
     }
 }

@@ -14,13 +14,18 @@
 		1372540F9A7C4260D703E7BF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725A5CE405F51F9F5B2413 /* ContentView.swift */; };
 		137254C8BE18C1C0641A3A55 /* codecov.yml in Resources */ = {isa = PBXBuildFile; fileRef = 13725B3B14F442E4D311F39C /* codecov.yml */; };
 		1372555A422A6341890F4A91 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 137254F557028739C7CAF3A7 /* .gitignore */; };
+		1372555A7E8696C39536F8B5 /* CalendarViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725904989422433EC7FA39 /* CalendarViewModelTests.swift */; };
+		13725678F2C67E97E4D432C2 /* SettingViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137258093196ACFE0F75C326 /* SettingViewModelTests.swift */; };
+		1372567EC0C5311E496633F7 /* MemoryPersistentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137253BF4EACC8C14A4B6AA2 /* MemoryPersistentTests.swift */; };
 		137259159C2F9E0B60847205 /* WindowOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137259ECF2964B9C45E28A9A /* WindowOpener.swift */; };
+		137259F9AE5E27BF4CC770DB /* EventStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725E833E12F34169DF1586 /* EventStore.swift */; };
 		13725ADE9C22EE9B093BF5CA /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725D39DF539EC4D9D2E93D /* Errors.swift */; };
 		13725BC9551E191142D50DC5 /* MemoryPersistent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1372502719C754327A4D1D41 /* MemoryPersistent.swift */; };
 		13725EC844C1CF103CECDCC3 /* Persistent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725B487EBA7886A1E721D1 /* Persistent.swift */; };
 		13725EDDE50C4E4F275E681A /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1372592AA7C3430925023154 /* Setting.swift */; };
 		13725EF4905FB56A9E650EFA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137252D1DC7713CF9833EFF9 /* Constants.swift */; };
 		13725EF4AD30E29F5B3B01D1 /* PomodoroCookieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725838DE11B98A70186515 /* PomodoroCookieApp.swift */; };
+		13725F39159C8C98AC3C1637 /* CalendarManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137250E36CA996054B4FCAEA /* CalendarManagerTests.swift */; };
 		13725F7694D6AC72F1140059 /* TutorialManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725ADB34EEE6799BE2FC2B /* TutorialManager.swift */; };
 		2732A13D25A1A2A600F596AB /* I18N.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2732A13C25A1A2A600F596AB /* I18N.swift */; };
 		2732A15025A1A74500F596AB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2732A15225A1A74500F596AB /* Localizable.strings */; };
@@ -34,6 +39,12 @@
 		276DD5A7259DA0C900237DDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 276DD5A6259DA0C900237DDF /* Assets.xcassets */; };
 		276DD5AA259DA0C900237DDF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 276DD5A9259DA0C900237DDF /* Preview Assets.xcassets */; };
 		277E4240259DB27200E8979B /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277E423F259DB27200E8979B /* SettingView.swift */; };
+		2784FE4B25A346770075FD57 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2784FE4A25A346770075FD57 /* Task.swift */; };
+		2784FE5325A346D30075FD57 /* CalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2784FE5225A346D30075FD57 /* CalendarManager.swift */; };
+		2784FE5B25A347BF0075FD57 /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2784FE5A25A347BF0075FD57 /* TaskManager.swift */; };
+		2784FE6525A3573A0075FD57 /* EventCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2784FE6425A3573A0075FD57 /* EventCalendar.swift */; };
+		2784FE7725A3699F0075FD57 /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2784FE7625A3699F0075FD57 /* SettingViewModel.swift */; };
+		2784FE8125A371EB0075FD57 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2784FE8025A371EB0075FD57 /* CalendarViewModel.swift */; };
 		27B41604259DE1B100269E37 /* PomodoroCookieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B41603259DE1B100269E37 /* PomodoroCookieTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,11 +60,15 @@
 
 /* Begin PBXFileReference section */
 		1372502719C754327A4D1D41 /* MemoryPersistent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryPersistent.swift; sourceTree = "<group>"; };
+		137250E36CA996054B4FCAEA /* CalendarManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarManagerTests.swift; sourceTree = "<group>"; };
 		137251D85E2AA2DB9627E3DD /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		137252D1DC7713CF9833EFF9 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		137253BF4EACC8C14A4B6AA2 /* MemoryPersistentTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryPersistentTests.swift; sourceTree = "<group>"; };
 		137254F557028739C7CAF3A7 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = file.gitignore; path = .gitignore; sourceTree = "<group>"; };
 		13725545530FD7FD54F63ADD /* UserDefaultsPersistentTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsPersistentTests.swift; sourceTree = "<group>"; };
+		137258093196ACFE0F75C326 /* SettingViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewModelTests.swift; sourceTree = "<group>"; };
 		13725838DE11B98A70186515 /* PomodoroCookieApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PomodoroCookieApp.swift; sourceTree = SOURCE_ROOT; };
+		13725904989422433EC7FA39 /* CalendarViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewModelTests.swift; sourceTree = "<group>"; };
 		1372592AA7C3430925023154 /* Setting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		137259ECF2964B9C45E28A9A /* WindowOpener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowOpener.swift; sourceTree = "<group>"; };
 		13725A5CE405F51F9F5B2413 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -66,6 +81,7 @@
 		13725D39DF539EC4D9D2E93D /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		13725D7976C75E11F87C1CA2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		13725DF0B7733556E17E62E5 /* UserDefaultsPersistent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsPersistent.swift; sourceTree = "<group>"; };
+		13725E833E12F34169DF1586 /* EventStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventStore.swift; sourceTree = "<group>"; };
 		2732A13C25A1A2A600F596AB /* I18N.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = I18N.swift; sourceTree = "<group>"; };
 		2732A15125A1A74500F596AB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2732A15525A1A74800F596AB /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -80,6 +96,12 @@
 		276DD5AB259DA0C900237DDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		276DD5AC259DA0C900237DDF /* PomodoroCookie.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PomodoroCookie.entitlements; sourceTree = "<group>"; };
 		277E423F259DB27200E8979B /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		2784FE4A25A346770075FD57 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		2784FE5225A346D30075FD57 /* CalendarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarManager.swift; sourceTree = "<group>"; };
+		2784FE5A25A347BF0075FD57 /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
+		2784FE6425A3573A0075FD57 /* EventCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCalendar.swift; sourceTree = "<group>"; };
+		2784FE7625A3699F0075FD57 /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
+		2784FE8025A371EB0075FD57 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
 		27B41601259DE1B100269E37 /* PomodoroCookieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PomodoroCookieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B41603259DE1B100269E37 /* PomodoroCookieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroCookieTests.swift; sourceTree = "<group>"; };
 		27B41605259DE1B100269E37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -113,6 +135,14 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		137253003484259A9CCF2648 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				137250E36CA996054B4FCAEA /* CalendarManagerTests.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
 		1372540EF453797F074EA94B /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,11 +154,12 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		1372545DE41FCFA42DE893FF /* Calendar */ = {
+		1372545DE41FCFA42DE893FF /* Task */ = {
 			isa = PBXGroup;
 			children = (
+				2784FE5A25A347BF0075FD57 /* TaskManager.swift */,
 			);
-			path = Calendar;
+			path = Task;
 			sourceTree = "<group>";
 		};
 		1372548D9317652C3BDE801F /* Tutorial */ = {
@@ -174,6 +205,8 @@
 			isa = PBXGroup;
 			children = (
 				1372592AA7C3430925023154 /* Setting.swift */,
+				2784FE4A25A346770075FD57 /* Task.swift */,
+				2784FE6425A3573A0075FD57 /* EventCalendar.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -182,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				13725545530FD7FD54F63ADD /* UserDefaultsPersistentTests.swift */,
+				137253BF4EACC8C14A4B6AA2 /* MemoryPersistentTests.swift */,
 			);
 			path = Persistent;
 			sourceTree = "<group>";
@@ -189,12 +223,22 @@
 		137259A211F3B499D1BCCA4E /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				2784FE4F25A346A90075FD57 /* Calendar */,
 				27B415C1259DB71100269E37 /* Setting */,
 				1372576AF9D352A53737DB1C /* Pomodoro */,
-				1372545DE41FCFA42DE893FF /* Calendar */,
+				1372545DE41FCFA42DE893FF /* Task */,
 				13725693895C6E86F9A5E8B7 /* Tutorial */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		13725ADC70367E96A09B0E6A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				137258093196ACFE0F75C326 /* SettingViewModelTests.swift */,
+				13725904989422433EC7FA39 /* CalendarViewModelTests.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		13725CBC0CD6A34D6DDDB729 /* Views */ = {
@@ -250,6 +294,7 @@
 			children = (
 				1372552DD2392C601DD6B38E /* Setting */,
 				13725D9E30F578A2FAE53FE0 /* Tutorial */,
+				137253003484259A9CCF2648 /* Calendar */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -285,9 +330,10 @@
 		276DD5A1259DA0C700237DDF /* PomodoroCookie */ = {
 			isa = PBXGroup;
 			children = (
+				1372540EF453797F074EA94B /* Helpers */,
 				137259A211F3B499D1BCCA4E /* Managers */,
 				137257B2C7FBA6B466EAEEF8 /* Models */,
-				1372540EF453797F074EA94B /* Helpers */,
+				2784FE7525A3698B0075FD57 /* ViewModels */,
 				13725CBC0CD6A34D6DDDB729 /* Views */,
 				276DD5A8259DA0C900237DDF /* Preview Content */,
 				13725838DE11B98A70186515 /* PomodoroCookieApp.swift */,
@@ -305,6 +351,24 @@
 				276DD5A9259DA0C900237DDF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2784FE4F25A346A90075FD57 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				2784FE5225A346D30075FD57 /* CalendarManager.swift */,
+				13725E833E12F34169DF1586 /* EventStore.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		2784FE7525A3698B0075FD57 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				2784FE7625A3699F0075FD57 /* SettingViewModel.swift */,
+				2784FE8025A371EB0075FD57 /* CalendarViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		27B415C1259DB71100269E37 /* Setting */ = {
@@ -331,6 +395,7 @@
 				137250BCCAB53625E2010D9E /* Helpers */,
 				27B41603259DE1B100269E37 /* PomodoroCookieTests.swift */,
 				27B41605259DE1B100269E37 /* Info.plist */,
+				13725ADC70367E96A09B0E6A /* ViewModels */,
 			);
 			path = PomodoroCookieTests;
 			sourceTree = "<group>";
@@ -440,21 +505,28 @@
 			files = (
 				137253E98F412B298B6C36F7 /* AppDelegate.swift in Sources */,
 				273DC1F8259F729D00438BDA /* SettingContextMenu.swift in Sources */,
+				2784FE8125A371EB0075FD57 /* CalendarViewModel.swift in Sources */,
 				1372540F9A7C4260D703E7BF /* ContentView.swift in Sources */,
 				277E4240259DB27200E8979B /* SettingView.swift in Sources */,
 				13725EF4AD30E29F5B3B01D1 /* PomodoroCookieApp.swift in Sources */,
 				2732A13D25A1A2A600F596AB /* I18N.swift in Sources */,
 				13725EF4905FB56A9E650EFA /* Constants.swift in Sources */,
+				2784FE4B25A346770075FD57 /* Task.swift in Sources */,
 				137250AA568C74AB4FC4A06F /* SettingManager.swift in Sources */,
 				13725EDDE50C4E4F275E681A /* Setting.swift in Sources */,
 				13725EC844C1CF103CECDCC3 /* Persistent.swift in Sources */,
+				2784FE6525A3573A0075FD57 /* EventCalendar.swift in Sources */,
 				13725395FCDB80F080270AD0 /* UserDefaultsPersistent.swift in Sources */,
+				2784FE7725A3699F0075FD57 /* SettingViewModel.swift in Sources */,
 				13725ADE9C22EE9B093BF5CA /* Errors.swift in Sources */,
+				2784FE5B25A347BF0075FD57 /* TaskManager.swift in Sources */,
 				13725BC9551E191142D50DC5 /* MemoryPersistent.swift in Sources */,
 				273DC1E5259F61CE00438BDA /* TutorialView.swift in Sources */,
 				273DC1F0259F6F8000438BDA /* Application.swift in Sources */,
 				13725F7694D6AC72F1140059 /* TutorialManager.swift in Sources */,
 				137259159C2F9E0B60847205 /* WindowOpener.swift in Sources */,
+				2784FE5325A346D30075FD57 /* CalendarManager.swift in Sources */,
+				137259F9AE5E27BF4CC770DB /* EventStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,6 +540,10 @@
 				137251AE97907DA72FD7F4CD /* UserDefaultsPersistentTests.swift in Sources */,
 				273DC275259FBFF200438BDA /* TutorialManagerTests.swift in Sources */,
 				2732A15C25A1AA3700F596AB /* I18NTests.swift in Sources */,
+				1372567EC0C5311E496633F7 /* MemoryPersistentTests.swift in Sources */,
+				13725F39159C8C98AC3C1637 /* CalendarManagerTests.swift in Sources */,
+				13725678F2C67E97E4D432C2 /* SettingViewModelTests.swift in Sources */,
+				1372555A7E8696C39536F8B5 /* CalendarViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,6 +574,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -560,6 +637,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

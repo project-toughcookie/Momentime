@@ -14,7 +14,11 @@ class ErrorsTests: XCTestCase {
 
     func testNotExistsPrint() {
         let notExistsError = CookieError.NotExists(target: "test")
-
         ErrorHandler.handle(error: notExistsError)
+    }
+
+    func testUnAuthorized() {
+        let unAuthorizedError = CookieError.UnAuthorized
+        ErrorHandler.handle(error: unAuthorizedError)
     }
 }
