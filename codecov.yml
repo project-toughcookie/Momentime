@@ -1,7 +1,7 @@
 ignore:
-  - "PomodoroCookieTests/**/*"
-  - "PomodoroCookie/Views/**/*"
-  - "PomodoroCookie/AppDelegate.swift"
+  - "MomentimeTests/**/*"
+  - "Momentime/Views/**/*"
+  - "Momentime/AppDelegate.swift"
 
 comment:
   layout: "reach, diff, flags, files"
