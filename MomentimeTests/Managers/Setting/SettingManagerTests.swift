@@ -11,7 +11,7 @@ import XCTest
 class SettingManagerTests: XCTestCase {
     func testEventTitleChangedIfDoneGetSet() {
         let memoryPersistent = MemoryPersistent()
-        let settingManager = SettingManager(memoryPersistent)
+        let settingManager = SettingManager(persistent: memoryPersistent)
 
         XCTAssertTrue(settingManager.eventTitleChangedIfDone)
         settingManager.eventTitleChangedIfDone = false
@@ -20,7 +20,7 @@ class SettingManagerTests: XCTestCase {
 
     func testTimerSoundEnabledGetSet() {
         let memoryPersistent = MemoryPersistent()
-        let settingManager = SettingManager(memoryPersistent)
+        let settingManager = SettingManager(persistent: memoryPersistent)
 
         XCTAssertTrue(settingManager.timerSoundEnabled)
         settingManager.timerSoundEnabled = false
@@ -29,7 +29,7 @@ class SettingManagerTests: XCTestCase {
 
     func testTimerAutoStartedGetSet() {
         let memoryPersistent = MemoryPersistent()
-        let settingManager = SettingManager(memoryPersistent)
+        let settingManager = SettingManager(persistent: memoryPersistent)
 
         XCTAssertTrue(settingManager.timerAutoStarted)
         settingManager.timerAutoStarted = false

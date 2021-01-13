@@ -13,22 +13,31 @@ final class SettingViewModel: ObservableObject {
     @Published var eventTitleChangedIfDone: Bool
     @Published var timerSoundEnabled: Bool
     @Published var timerAutoStarted: Bool
+    @Published var defaultCalendar: String
 
     init(persistent: Persistent = UserDefaultsPersistent()) {
-        settingManager = SettingManager(persistent)
+        settingManager = SettingManager(persistent: persistent)
         eventTitleChangedIfDone = settingManager.eventTitleChangedIfDone
         timerSoundEnabled = settingManager.timerSoundEnabled
         timerAutoStarted = settingManager.timerAutoStarted
+        defaultCalendar = settingManager.defaultCalendar
     }
 
     func set(_ setting: Setting) {
         settingManager.eventTitleChangedIfDone = setting.eventTitleChangedIfDone
         settingManager.timerSoundEnabled = setting.timerSoundEnabled
         settingManager.timerAutoStarted = setting.timerAutoStarted
+        settingManager.defaultCalendar = setting.defaultCalendar
 
         eventTitleChangedIfDone = setting.eventTitleChangedIfDone
         timerSoundEnabled = setting.timerSoundEnabled
         timerAutoStarted = setting.timerAutoStarted
+        defaultCalendar = setting.defaultCalendar
+    }
+
+    func setDefaultCalendar(_ defaultCalendar: String) {
+        settingManager.defaultCalendar = defaultCalendar
+        self.defaultCalendar = defaultCalendar
     }
 
     func setEventTitleChangedIfDone(_ eventTitleChangedIfDone: Bool) {

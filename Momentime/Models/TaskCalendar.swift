@@ -8,7 +8,7 @@
 import EventKit
 import Foundation
 
-struct EventCalendar {
+struct TaskCalendar {
     let id: String
     let title: String
     let color: CGColor

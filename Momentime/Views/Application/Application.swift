@@ -18,7 +18,10 @@ struct ApplicationView: View {
             Text("Timer AutoStarted: \(String(svm.timerAutoStarted))")
 
             List(cvm.calendars, id: \.id) { calendar in
-                Text(calendar.title)
+                Text("\(calendar.title)")
+            }
+            List(cvm.todayTasks, id: \.id) { task in
+                Text("\(task.title)")
             }
             Spacer()
             HStack {
@@ -29,6 +32,15 @@ struct ApplicationView: View {
         .onAppear {
             cvm.requestAccess()
             cvm.fetchCalendars()
+        }
+        .onReceive(cvm.$calendars) { calendars in
+            if calendars.count != 0 {
+                do {
+                    try cvm.fetchTodayTasks(calendarId: calendars[1].id)
+                } catch {
+                    print(error)
+                }
+            }
         }
         .padding()
         .frame(width: Constants.MENUBAR_VIEW_WIDTH,
