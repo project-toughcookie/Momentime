@@ -1,13 +1,14 @@
 ignore:
   - "MomentimeTests/**/*"
   - "Momentime/Views/**/*"
+  - "Momentime/Managers/Calendar/EventStore.swift"
   - "Momentime/AppDelegate.swift"
 
 comment:
   layout: "reach, diff, flags, files"
   behavior: default
   require_changes: false
-  require_base: no
-  require_head: yes
+  require_base: false
+  require_head: true
   branches:
     - "master"
