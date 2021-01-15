@@ -21,4 +21,17 @@ class CalendarViewModelTests: XCTestCase {
             XCTAssertEqual(1, calendarViewModel.calendars.count)
         }
     }
+
+    func testFetchTodayTasks() {
+        let calendarViewModel = CalendarViewModel(store: MockEventStore())
+        do {
+            try calendarViewModel.fetchTodayTasks(calendarId: "")
+        } catch {
+            XCTFail("error must not be occured")
+        }
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            XCTAssertEqual(2, calendarViewModel.todayTasks.count)
+        }
+    }
 }

@@ -8,6 +8,8 @@ let SETTING = "setting"
 let EVENT_TITLE_CHANGED_IF_DONE = "\(SETTING).eventTitleChangedIfDone"
 let TIMER_SOUND_ENABLED = "\(SETTING).timerSoundEnabled"
 let TIMER_AUTO_STARTED = "\(SETTING).timerAutoStarted"
+let DEFAULT_CALENDAR = "\(SETTING).defaultCalendar"
+let TUTORIAL_SHOWN = "\(SETTING).tutorialShown"
 
 final class SettingManager {
     private let persistent: Persistent
@@ -51,7 +53,33 @@ final class SettingManager {
         }
     }
 
-    init(_ persistent: Persistent = UserDefaultsPersistent()) {
+    public var defaultCalendar: String {
+        get {
+            do {
+                return try persistent.getString(forKey: DEFAULT_CALENDAR)
+            } catch {
+                return Setting.default.defaultCalendar
+            }
+        }
+        set(newDefaultCalendar) {
+            persistent.set(newDefaultCalendar, forKey: DEFAULT_CALENDAR)
+        }
+    }
+
+    public var tutorialShown: Bool {
+        get {
+            do {
+                return try persistent.getBool(forKey: TUTORIAL_SHOWN)
+            } catch {
+                return Setting.default.tutorialShown
+            }
+        }
+        set(newTutorialShown) {
+            persistent.set(newTutorialShown, forKey: TUTORIAL_SHOWN)
+        }
+    }
+
+    init(persistent: Persistent = UserDefaultsPersistent()) {
         self.persistent = persistent
     }
 }

@@ -11,14 +11,24 @@ import XCTest
 class UserDefaultsPersistentTests: XCTestCase {
     func testSetKeySuccess() throws {
         let userDefaultsPersistent = UserDefaultsPersistent()
-        let testKey = "testKey"
+        let boolTestKey = "boolTestKey"
+        let stringTestKey = "stringTestKey"
+        let stringTestValue = "stringTestValue"
 
-        userDefaultsPersistent.set(true, forKey: testKey)
+        userDefaultsPersistent.set(true, forKey: boolTestKey)
         do {
-            let value = try userDefaultsPersistent.getBool(forKey: testKey)
+            let value = try userDefaultsPersistent.getBool(forKey: boolTestKey)
             XCTAssertTrue(value)
-        } catch CookieError.NotExists(target: testKey) {
+        } catch CookieError.NotExists(target: boolTestKey) {
             XCTFail("get bool must not be failed")
+        }
+
+        userDefaultsPersistent.set(stringTestValue, forKey: stringTestKey)
+        do {
+            let value = try userDefaultsPersistent.getString(forKey: stringTestKey)
+            XCTAssertEqual(value, stringTestValue)
+        } catch CookieError.NotExists(target: stringTestKey) {
+            XCTFail("get string must not be failed")
         }
     }
 

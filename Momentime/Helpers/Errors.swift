@@ -7,6 +7,7 @@ import Foundation
 enum CookieError: Error {
     case NotExists(target: String)
     case UnAuthorized
+    case DateCannotBeConverted
 }
 
 enum ErrorHandler {
@@ -16,6 +17,8 @@ enum ErrorHandler {
             printError("\(target) is not exists")
         case CookieError.UnAuthorized:
             printError("unathorized")
+        case CookieError.DateCannotBeConverted:
+            printError("date cannot be converted")
         default:
             printError("unknown error")
         }

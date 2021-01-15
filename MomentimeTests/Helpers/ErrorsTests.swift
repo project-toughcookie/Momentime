@@ -8,7 +8,6 @@ import XCTest
 class ErrorsTests: XCTestCase {
     func testUnknownPrint() {
         let unknownError = CocoaError(CocoaError.coderInvalidValue)
-
         ErrorHandler.handle(error: unknownError)
     }
 
@@ -20,5 +19,10 @@ class ErrorsTests: XCTestCase {
     func testUnAuthorized() {
         let unAuthorizedError = CookieError.UnAuthorized
         ErrorHandler.handle(error: unAuthorizedError)
+    }
+
+    func testDateCannotBeConverted() {
+        let dateCannotBeCoverted = CookieError.DateCannotBeConverted
+        ErrorHandler.handle(error: dateCannotBeCoverted)
     }
 }

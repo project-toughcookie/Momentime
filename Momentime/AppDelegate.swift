@@ -17,6 +17,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let rootView = ContentView()
             .environmentObject(modelData.svm)
             .environmentObject(modelData.cvm)
+        if !modelData.svm.tutorialShown {
+            WindowOpener.openTutorialWindow()
+        }
 
         let popover = NSPopover()
         popover.contentSize.width = Constants.MENUBAR_VIEW_WIDTH

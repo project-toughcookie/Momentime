@@ -8,15 +8,24 @@ import XCTest
 class MemoryPersistentTests: XCTestCase {
     func testSetKeyAndGetSuccess() throws {
         let memoryPersistent = MemoryPersistent()
-        let testKey = "testKey"
+        let boolTestKey = "boolTestKey"
+        let stringTestKey = "stringTestKey"
+        let stringTestValue = "stringTestValue"
 
-        memoryPersistent.set(true, forKey: testKey)
-
+        memoryPersistent.set(true, forKey: boolTestKey)
         do {
-            let value = try memoryPersistent.getBool(forKey: testKey)
+            let value = try memoryPersistent.getBool(forKey: boolTestKey)
             XCTAssertTrue(value)
-        } catch CookieError.NotExists(target: testKey) {
+        } catch CookieError.NotExists(target: stringTestKey) {
             XCTFail("get bool must not be failed")
+        }
+
+        memoryPersistent.set(stringTestValue, forKey: stringTestKey)
+        do {
+            let value = try memoryPersistent.getString(forKey: stringTestKey)
+            XCTAssertEqual(value, stringTestValue)
+        } catch CookieError.NotExists(target: stringTestKey) {
+            XCTFail("get string must not be failed")
         }
     }
 
