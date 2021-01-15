@@ -48,7 +48,7 @@
 		2784FE6525A3573A0075FD57 /* TaskCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2784FE6425A3573A0075FD57 /* TaskCalendar.swift */; };
 		2784FE7725A3699F0075FD57 /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2784FE7625A3699F0075FD57 /* SettingViewModel.swift */; };
 		2784FE8125A371EB0075FD57 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2784FE8025A371EB0075FD57 /* CalendarViewModel.swift */; };
-		27B41604259DE1B100269E37 /* MomentimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B41603259DE1B100269E37 /* MomentimeTests.swift */; };
+		27ABC5C025B1F36C008620F7 /* MockEventStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ABC5B325B1F2CA008620F7 /* MockEventStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,8 +108,8 @@
 		2784FE6425A3573A0075FD57 /* TaskCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCalendar.swift; sourceTree = "<group>"; };
 		2784FE7625A3699F0075FD57 /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
 		2784FE8025A371EB0075FD57 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
+		27ABC5B325B1F2CA008620F7 /* MockEventStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEventStore.swift; sourceTree = "<group>"; };
 		27B41601259DE1B100269E37 /* MomentimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MomentimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		27B41603259DE1B100269E37 /* MomentimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MomentimeTests.swift; sourceTree = "<group>"; };
 		27B41605259DE1B100269E37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -146,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				137250E36CA996054B4FCAEA /* AppleCalendarManagerTests.swift */,
+				27ABC5B325B1F2CA008620F7 /* MockEventStore.swift */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -378,7 +379,6 @@
 			children = (
 				276C4811259DE20900024FBB /* Managers */,
 				137250BCCAB53625E2010D9E /* Helpers */,
-				27B41603259DE1B100269E37 /* MomentimeTests.swift */,
 				27B41605259DE1B100269E37 /* Info.plist */,
 				13725ADC70367E96A09B0E6A /* ViewModels */,
 			);
@@ -496,6 +496,7 @@
 				13725EF4AD30E29F5B3B01D1 /* MomentimeApp.swift in Sources */,
 				2732A13D25A1A2A600F596AB /* I18N.swift in Sources */,
 				13725EF4905FB56A9E650EFA /* Constants.swift in Sources */,
+				27ABC5C025B1F36C008620F7 /* MockEventStore.swift in Sources */,
 				2784FE4B25A346770075FD57 /* Task.swift in Sources */,
 				137250AA568C74AB4FC4A06F /* SettingManager.swift in Sources */,
 				13725EDDE50C4E4F275E681A /* Setting.swift in Sources */,
@@ -524,7 +525,6 @@
 			files = (
 				273DC27E259FC1BF00438BDA /* ErrorsTests.swift in Sources */,
 				273DC26F259FBFB200438BDA /* SettingManagerTests.swift in Sources */,
-				27B41604259DE1B100269E37 /* MomentimeTests.swift in Sources */,
 				137251AE97907DA72FD7F4CD /* UserDefaultsPersistentTests.swift in Sources */,
 				2732A15C25A1AA3700F596AB /* I18NTests.swift in Sources */,
 				1372567EC0C5311E496633F7 /* MemoryPersistentTests.swift in Sources */,
