@@ -44,13 +44,29 @@ class CalendarViewModel: ObservableObject {
         NotificationCenter.default.publisher(for: .EKEventStoreChanged)
             .sink { _ in
                 DispatchQueue.main.async {
-                    self.sync()
+                    do {
+                        try self.sync()
+                    } catch {
+                        // TODO: error published 변수 추가
+                        print(error)
+                    }
                 }
             }.store(in: &cancellables)
     }
 
-    func sync() {
+    func sync() throws {
         fetchCalendars()
+        if modelData.svm.defaultCalendar != "" {
+            try fetchTodayTasks(calendarId: modelData.svm.defaultCalendar)
+            return
+        }
+
+        if calendars.count != 0 {
+            try fetchTodayTasks(calendarId: calendars[0].id)
+            return
+        }
+
+        todayTasks = []
     }
 
     func fetchCalendars() {
