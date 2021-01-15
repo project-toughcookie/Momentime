@@ -81,8 +81,9 @@ class MockEventStore: EventStore {
     func getCalendars() -> [TaskCalendar] {
         let calendars: [TaskCalendar] = [
             TaskCalendar(id: "1", title: "mock calendar 1", color: CGColor.white, type: .local, allowModification: true),
-            TaskCalendar(id: "2", title: "mock calendar 2", color: CGColor.black, type: .local, allowModification: false),
-            TaskCalendar(id: "3", title: "mock calendar 2", color: CGColor.clear, type: .birthday, allowModification: false),
+            TaskCalendar(id: "2", title: "mock calendar 2", color: CGColor.white, type: .local, allowModification: true),
+            TaskCalendar(id: "3", title: "mock calendar 3", color: CGColor.black, type: .local, allowModification: false),
+            TaskCalendar(id: "4", title: "mock calendar 4", color: CGColor.clear, type: .birthday, allowModification: false),
         ]
         return calendars
     }

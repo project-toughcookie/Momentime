@@ -9,7 +9,7 @@ class AppleCalendarManagerTests: XCTestCase {
     func testGetCalendars() {
         let calendarManager = AppleCalendarManager(store: MockEventStore())
         let calendars = calendarManager.getCalendars()
-        XCTAssertEqual(1, calendars.count)
+        XCTAssertEqual(2, calendars.count)
     }
 
     func testGetTodayTasks() {
