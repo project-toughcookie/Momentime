@@ -9,11 +9,13 @@ struct Setting: Codable {
     var timerSoundEnabled: Bool
     var timerAutoStarted: Bool
     var defaultCalendar: String
+    var tutorialShown: Bool
 
     static let `default` = Setting(
         eventTitleChangedIfDone: true,
         timerSoundEnabled: true,
         timerAutoStarted: true,
-        defaultCalendar: ""
+        defaultCalendar: "",
+        tutorialShown: false
     )
 }
