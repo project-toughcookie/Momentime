@@ -31,7 +31,6 @@
 		13725EF4905FB56A9E650EFA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137252D1DC7713CF9833EFF9 /* Constants.swift */; };
 		13725EF4AD30E29F5B3B01D1 /* MomentimeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725838DE11B98A70186515 /* MomentimeApp.swift */; };
 		13725F39159C8C98AC3C1637 /* AppleCalendarManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137250E36CA996054B4FCAEA /* AppleCalendarManagerTests.swift */; };
-		13725F7694D6AC72F1140059 /* TutorialManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725ADB34EEE6799BE2FC2B /* TutorialManager.swift */; };
 		2732A13D25A1A2A600F596AB /* I18N.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2732A13C25A1A2A600F596AB /* I18N.swift */; };
 		2732A15025A1A74500F596AB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2732A15225A1A74500F596AB /* Localizable.strings */; };
 		2732A15C25A1AA3700F596AB /* I18NTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725BB8BEA677ECA9E16175 /* I18NTests.swift */; };
@@ -39,7 +38,6 @@
 		273DC1F0259F6F8000438BDA /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273DC1EF259F6F8000438BDA /* Application.swift */; };
 		273DC1F8259F729D00438BDA /* SettingContextMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273DC1F7259F729D00438BDA /* SettingContextMenu.swift */; };
 		273DC26F259FBFB200438BDA /* SettingManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273DC26E259FBFB100438BDA /* SettingManagerTests.swift */; };
-		273DC275259FBFF200438BDA /* TutorialManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273DC274259FBFF200438BDA /* TutorialManagerTests.swift */; };
 		273DC27E259FC1BF00438BDA /* ErrorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725BB0CF96E909D05057C1 /* ErrorsTests.swift */; };
 		276DD5A7259DA0C900237DDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 276DD5A6259DA0C900237DDF /* Assets.xcassets */; };
 		276DD5AA259DA0C900237DDF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 276DD5A9259DA0C900237DDF /* Preview Assets.xcassets */; };
@@ -81,7 +79,6 @@
 		137259ECF2964B9C45E28A9A /* WindowOpener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowOpener.swift; sourceTree = "<group>"; };
 		13725A5CE405F51F9F5B2413 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		13725AAB083B9CF7E7ACBF7C /* SettingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingManager.swift; sourceTree = "<group>"; };
-		13725ADB34EEE6799BE2FC2B /* TutorialManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialManager.swift; sourceTree = "<group>"; };
 		13725B3B14F442E4D311F39C /* codecov.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = codecov.yml; sourceTree = "<group>"; };
 		13725B487EBA7886A1E721D1 /* Persistent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistent.swift; sourceTree = "<group>"; };
 		13725BB0CF96E909D05057C1 /* ErrorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorsTests.swift; sourceTree = "<group>"; };
@@ -99,7 +96,6 @@
 		273DC1EF259F6F8000438BDA /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		273DC1F7259F729D00438BDA /* SettingContextMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingContextMenu.swift; sourceTree = "<group>"; };
 		273DC26E259FBFB100438BDA /* SettingManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingManagerTests.swift; sourceTree = "<group>"; };
-		273DC274259FBFF200438BDA /* TutorialManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialManagerTests.swift; sourceTree = "<group>"; };
 		276DD59F259DA0C700237DDF /* Momentime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Momentime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		276DD5A6259DA0C900237DDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		276DD5A9259DA0C900237DDF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -198,14 +194,6 @@
 			path = Localization;
 			sourceTree = "<group>";
 		};
-		13725693895C6E86F9A5E8B7 /* Tutorial */ = {
-			isa = PBXGroup;
-			children = (
-				13725ADB34EEE6799BE2FC2B /* TutorialManager.swift */,
-			);
-			path = Tutorial;
-			sourceTree = "<group>";
-		};
 		1372576AF9D352A53737DB1C /* Pomodoro */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,7 +227,6 @@
 				27B415C1259DB71100269E37 /* Setting */,
 				1372576AF9D352A53737DB1C /* Pomodoro */,
 				1372545DE41FCFA42DE893FF /* Task */,
-				13725693895C6E86F9A5E8B7 /* Tutorial */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -275,14 +262,6 @@
 			path = Persistent;
 			sourceTree = "<group>";
 		};
-		13725D9E30F578A2FAE53FE0 /* Tutorial */ = {
-			isa = PBXGroup;
-			children = (
-				273DC274259FBFF200438BDA /* TutorialManagerTests.swift */,
-			);
-			path = Tutorial;
-			sourceTree = "<group>";
-		};
 		2732A13125A1A21C00F596AB /* Localization */ = {
 			isa = PBXGroup;
 			children = (
@@ -305,7 +284,6 @@
 			isa = PBXGroup;
 			children = (
 				1372552DD2392C601DD6B38E /* Setting */,
-				13725D9E30F578A2FAE53FE0 /* Tutorial */,
 				137253003484259A9CCF2648 /* Calendar */,
 			);
 			path = Managers;
@@ -530,7 +508,6 @@
 				13725BC9551E191142D50DC5 /* MemoryPersistent.swift in Sources */,
 				273DC1E5259F61CE00438BDA /* TutorialView.swift in Sources */,
 				273DC1F0259F6F8000438BDA /* Application.swift in Sources */,
-				13725F7694D6AC72F1140059 /* TutorialManager.swift in Sources */,
 				137259159C2F9E0B60847205 /* WindowOpener.swift in Sources */,
 				2784FE5325A346D30075FD57 /* AppleCalendarManager.swift in Sources */,
 				137259F9AE5E27BF4CC770DB /* EventStore.swift in Sources */,
@@ -549,7 +526,6 @@
 				273DC26F259FBFB200438BDA /* SettingManagerTests.swift in Sources */,
 				27B41604259DE1B100269E37 /* MomentimeTests.swift in Sources */,
 				137251AE97907DA72FD7F4CD /* UserDefaultsPersistentTests.swift in Sources */,
-				273DC275259FBFF200438BDA /* TutorialManagerTests.swift in Sources */,
 				2732A15C25A1AA3700F596AB /* I18NTests.swift in Sources */,
 				1372567EC0C5311E496633F7 /* MemoryPersistentTests.swift in Sources */,
 				13725F39159C8C98AC3C1637 /* AppleCalendarManagerTests.swift in Sources */,

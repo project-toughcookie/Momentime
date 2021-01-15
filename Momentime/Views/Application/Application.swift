@@ -36,12 +36,18 @@ struct ApplicationView: View {
         .onReceive(cvm.$calendars) { calendars in
             if calendars.count != 0 {
                 do {
-                    try cvm.fetchTodayTasks(calendarId: calendars[1].id)
+                    try cvm.fetchTodayTasks(calendarId: calendars[0].id)
                 } catch {
                     print(error)
                 }
             }
         }
+        .onReceive(svm.$defaultCalendar, perform: { defaultCalendar in
+            print(defaultCalendar)
+            do {
+                try cvm.fetchTodayTasks(calendarId: defaultCalendar)
+            } catch {}
+        })
         .padding()
         .frame(width: Constants.MENUBAR_VIEW_WIDTH,
                height: Constants.MENUBAR_VIEW_HEIGHT,

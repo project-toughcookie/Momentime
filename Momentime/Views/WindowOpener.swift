@@ -22,6 +22,7 @@ class WindowOpener {
             tutorialWindow.contentView = NSHostingView(
                 rootView: TutorialView()
                     .environmentObject(modelData.svm)
+                    .environmentObject(modelData.cvm)
             )
         }
         NSApplication.shared.activate(ignoringOtherApps: true)
