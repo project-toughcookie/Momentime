@@ -22,6 +22,12 @@ struct SettingContextMenu: View {
                 }) {
                     Text("Temp1")
                 }
+
+                Button(action: {
+                    WindowOpener.openTutorialWindow()
+                }) {
+                    Text("Show tutorial")
+                }
                 Divider()
                 Button(action: {
                     print("App terminated")
