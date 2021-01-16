@@ -12,46 +12,31 @@ struct ApplicationView: View {
     @EnvironmentObject var cvm: CalendarViewModel
 
     var body: some View {
-        VStack {
-            Text("Hello, world!")
-            Text("Granted: \(String(cvm.granted))")
-            Text("Timer AutoStarted: \(String(svm.timerAutoStarted))")
-
-            List(cvm.calendars, id: \.id) { calendar in
-                Text("\(calendar.title)")
-            }
-            List(cvm.todayTasks, id: \.id) { task in
-                Text("\(task.title)")
-            }
-            Spacer()
-            HStack {
+        ZStack {
+            GradientBackground()
+            VStack {
                 Spacer()
-                SettingContextMenu()
+                VStack {
+                    Text("MOMENTIME")
+                }
+                .frame(width: Constants.MENUBAR_VIEW_WIDTH, height: Constants.MENUBAR_VIEW_HEIGHT - 28)
+                .background(Color("Gray05"))
+                .background(VisualEffectView(
+                    material: NSVisualEffectView.Material.popover,
+                    blendingMode: NSVisualEffectView.BlendingMode.withinWindow
+                )
+                )
+                .cornerRadius(12)
             }
+            .frame(width: Constants.MENUBAR_VIEW_WIDTH,
+                   height: Constants.MENUBAR_VIEW_HEIGHT)
         }
         .onAppear {
             cvm.requestAccess()
             cvm.fetchCalendars()
         }
-        .onReceive(cvm.$calendars) { calendars in
-            if calendars.count != 0 {
-                do {
-                    try cvm.fetchTodayTasks(calendarId: calendars[0].id)
-                } catch {
-                    print(error)
-                }
-            }
-        }
-        .onReceive(svm.$defaultCalendar, perform: { defaultCalendar in
-            print(defaultCalendar)
-            do {
-                try cvm.fetchTodayTasks(calendarId: defaultCalendar)
-            } catch {}
-        })
-        .padding()
         .frame(width: Constants.MENUBAR_VIEW_WIDTH,
-               height: Constants.MENUBAR_VIEW_HEIGHT,
-               alignment: .leading)
+               height: Constants.MENUBAR_VIEW_HEIGHT)
     }
 }
 

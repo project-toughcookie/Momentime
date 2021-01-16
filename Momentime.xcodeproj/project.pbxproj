@@ -11,6 +11,7 @@
 		1372516314D61CF19171B811 /* Permission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1372500426986F93DF3D3C7C /* Permission.swift */; };
 		137251AE97907DA72FD7F4CD /* UserDefaultsPersistentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725545530FD7FD54F63ADD /* UserDefaultsPersistentTests.swift */; };
 		13725395FCDB80F080270AD0 /* UserDefaultsPersistent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725DF0B7733556E17E62E5 /* UserDefaultsPersistent.swift */; };
+		1372539C5779528E798B07F6 /* GradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725479B819BA634D02CF59 /* GradientBackground.swift */; };
 		137253E98F412B298B6C36F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137251D85E2AA2DB9627E3DD /* AppDelegate.swift */; };
 		1372540F9A7C4260D703E7BF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725A5CE405F51F9F5B2413 /* ContentView.swift */; };
 		137254C8BE18C1C0641A3A55 /* codecov.yml in Resources */ = {isa = PBXBuildFile; fileRef = 13725B3B14F442E4D311F39C /* codecov.yml */; };
@@ -34,6 +35,7 @@
 		2732A13D25A1A2A600F596AB /* I18N.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2732A13C25A1A2A600F596AB /* I18N.swift */; };
 		2732A15025A1A74500F596AB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2732A15225A1A74500F596AB /* Localizable.strings */; };
 		2732A15C25A1AA3700F596AB /* I18NTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725BB8BEA677ECA9E16175 /* I18NTests.swift */; };
+		2736F31825B2C555002E00EC /* VisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2736F31725B2C555002E00EC /* VisualEffectView.swift */; };
 		273DC1E5259F61CE00438BDA /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273DC1E4259F61CE00438BDA /* TutorialView.swift */; };
 		273DC1F0259F6F8000438BDA /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273DC1EF259F6F8000438BDA /* Application.swift */; };
 		273DC1F8259F729D00438BDA /* SettingContextMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273DC1F7259F729D00438BDA /* SettingContextMenu.swift */; };
@@ -68,6 +70,7 @@
 		137251D85E2AA2DB9627E3DD /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		137252D1DC7713CF9833EFF9 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		137253BF4EACC8C14A4B6AA2 /* MemoryPersistentTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryPersistentTests.swift; sourceTree = "<group>"; };
+		13725479B819BA634D02CF59 /* GradientBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientBackground.swift; sourceTree = "<group>"; };
 		137254A57DDED41D2AE2A217 /* DateHelperTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHelperTests.swift; sourceTree = "<group>"; };
 		137254F557028739C7CAF3A7 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = file.gitignore; path = .gitignore; sourceTree = "<group>"; };
 		13725545530FD7FD54F63ADD /* UserDefaultsPersistentTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsPersistentTests.swift; sourceTree = "<group>"; };
@@ -92,6 +95,7 @@
 		2732A13C25A1A2A600F596AB /* I18N.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = I18N.swift; sourceTree = "<group>"; };
 		2732A15125A1A74500F596AB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2732A15525A1A74800F596AB /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2736F31725B2C555002E00EC /* VisualEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectView.swift; sourceTree = "<group>"; };
 		273DC1E4259F61CE00438BDA /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
 		273DC1EF259F6F8000438BDA /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		273DC1F7259F729D00438BDA /* SettingContextMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingContextMenu.swift; sourceTree = "<group>"; };
@@ -195,11 +199,12 @@
 			path = Localization;
 			sourceTree = "<group>";
 		};
-		1372576AF9D352A53737DB1C /* Pomodoro */ = {
+		137255B6A2B1D21C54B1FC88 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				2736F31725B2C555002E00EC /* VisualEffectView.swift */,
 			);
-			path = Pomodoro;
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		137257B2C7FBA6B466EAEEF8 /* Models */ = {
@@ -226,7 +231,6 @@
 			children = (
 				2784FE4F25A346A90075FD57 /* Calendar */,
 				27B415C1259DB71100269E37 /* Setting */,
-				1372576AF9D352A53737DB1C /* Pomodoro */,
 				1372545DE41FCFA42DE893FF /* Task */,
 			);
 			path = Managers;
@@ -249,6 +253,7 @@
 				27B415D0259DD7A600269E37 /* Setting */,
 				13725A5CE405F51F9F5B2413 /* ContentView.swift */,
 				137259ECF2964B9C45E28A9A /* WindowOpener.swift */,
+				137255B6A2B1D21C54B1FC88 /* Helper */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -277,6 +282,7 @@
 			children = (
 				273DC1EF259F6F8000438BDA /* Application.swift */,
 				273DC1F7259F729D00438BDA /* SettingContextMenu.swift */,
+				13725479B819BA634D02CF59 /* GradientBackground.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -493,6 +499,7 @@
 				2784FE8125A371EB0075FD57 /* CalendarViewModel.swift in Sources */,
 				1372540F9A7C4260D703E7BF /* ContentView.swift in Sources */,
 				277E4240259DB27200E8979B /* SettingView.swift in Sources */,
+				2736F31825B2C555002E00EC /* VisualEffectView.swift in Sources */,
 				13725EF4AD30E29F5B3B01D1 /* MomentimeApp.swift in Sources */,
 				2732A13D25A1A2A600F596AB /* I18N.swift in Sources */,
 				13725EF4905FB56A9E650EFA /* Constants.swift in Sources */,
@@ -516,6 +523,7 @@
 				137255A68FC3E004FBAE52EB /* UserDefaultsCalendarManager.swift in Sources */,
 				1372516314D61CF19171B811 /* Permission.swift in Sources */,
 				137258721B8D79AFF8A124AE /* DateHelper.swift in Sources */,
+				1372539C5779528E798B07F6 /* GradientBackground.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

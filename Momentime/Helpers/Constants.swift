@@ -8,8 +8,8 @@
 import Foundation
 
 struct Constants {
-    static let MENUBAR_VIEW_WIDTH: CGFloat = 230
-    static let MENUBAR_VIEW_HEIGHT: CGFloat = 202
+    static let MENUBAR_VIEW_WIDTH: CGFloat = 320
+    static let MENUBAR_VIEW_HEIGHT: CGFloat = 430
 
     static let SETTING_VIEW_WIDTH: CGFloat = 300
     static let SETTING_VIEW_HEIGHT: CGFloat = 200
