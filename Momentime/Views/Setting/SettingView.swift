@@ -28,7 +28,9 @@ struct SettingView: View {
 
 struct SettingView_Previews: PreviewProvider {
     static var previews: some View {
+        let settingManager = SettingManager(persistent: MemoryPersistent())
+
         SettingView()
-            .environmentObject(SettingViewModel(persistent: MemoryPersistent()))
+            .environmentObject(SettingViewModel(settingManager: settingManager))
     }
 }

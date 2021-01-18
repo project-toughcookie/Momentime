@@ -5,6 +5,7 @@
 import Foundation
 
 protocol CalendarManager {
+    func getStore() -> EventStore
     func getCalendars() -> [TaskCalendar]
     func getTodayTasks(calendarId: String) throws -> [Task]
 }

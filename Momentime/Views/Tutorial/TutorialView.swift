@@ -34,8 +34,11 @@ struct TutorialView: View {
 
 struct TutorialView_Previews: PreviewProvider {
     static var previews: some View {
+        let settingManager = SettingManager(persistent: MemoryPersistent())
+        let calendarManager = AppleCalendarManager(store: MockEventStore())
+
         TutorialView()
-            .environmentObject(CalendarViewModel(store: MockEventStore()))
-            .environmentObject(SettingViewModel(persistent: MemoryPersistent()))
+            .environmentObject(CalendarViewModel(calendarManager: calendarManager, settingManager: settingManager))
+            .environmentObject(SettingViewModel(settingManager: settingManager))
     }
 }

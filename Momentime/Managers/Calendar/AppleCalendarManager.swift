@@ -15,6 +15,10 @@ class AppleCalendarManager: CalendarManager {
         self.store = store
     }
 
+    func getStore() -> EventStore {
+        store
+    }
+
     func getCalendars() -> [TaskCalendar] {
         let calendars: [TaskCalendar] = store.getCalendars()
 

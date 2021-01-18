@@ -10,6 +10,7 @@ import SwiftUI
 struct ApplicationView: View {
     @EnvironmentObject var svm: SettingViewModel
     @EnvironmentObject var cvm: CalendarViewModel
+    @EnvironmentObject var pvm: PomodoroViewModal
 
     var body: some View {
         ZStack {
@@ -17,15 +18,19 @@ struct ApplicationView: View {
             VStack {
                 Spacer()
                 VStack {
+                    TimerHeader()
                     Text("MOMENTIME")
+                    Text("Remain: \(pvm.remainSeconds)")
                 }
-                .frame(width: Constants.MENUBAR_VIEW_WIDTH, height: Constants.MENUBAR_VIEW_HEIGHT - 28)
-                .background(Color("Gray05"))
+                .frame(
+                    width: Constants.MENUBAR_VIEW_WIDTH,
+                    height: Constants.CONTENT_VIEW_HEIGHT,
+                    alignment: .top
+                )
                 .background(VisualEffectView(
                     material: NSVisualEffectView.Material.popover,
                     blendingMode: NSVisualEffectView.BlendingMode.withinWindow
-                )
-                )
+                ))
                 .cornerRadius(12)
             }
             .frame(width: Constants.MENUBAR_VIEW_WIDTH,
@@ -42,8 +47,12 @@ struct ApplicationView: View {
 
 struct ApplicationView_Previews: PreviewProvider {
     static var previews: some View {
+        let settingManager = SettingManager(persistent: MemoryPersistent())
+        let calendarManager = AppleCalendarManager(store: MockEventStore())
+
         ApplicationView()
-            .environmentObject(SettingViewModel(persistent: MemoryPersistent()))
-            .environmentObject(CalendarViewModel(store: MockEventStore()))
+            .environmentObject(SettingViewModel(settingManager: settingManager))
+            .environmentObject(CalendarViewModel(calendarManager: calendarManager, settingManager: settingManager))
+            .environmentObject(PomodoroViewModal(settingManager: settingManager))
     }
 }

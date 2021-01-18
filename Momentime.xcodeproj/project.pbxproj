@@ -14,6 +14,7 @@
 		1372539C5779528E798B07F6 /* GradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725479B819BA634D02CF59 /* GradientBackground.swift */; };
 		137253E98F412B298B6C36F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137251D85E2AA2DB9627E3DD /* AppDelegate.swift */; };
 		1372540F9A7C4260D703E7BF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725A5CE405F51F9F5B2413 /* ContentView.swift */; };
+		13725439432A889E610EAABE /* PomodoroViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137253C7E6F4C2A7B2530739 /* PomodoroViewModal.swift */; };
 		137254C8BE18C1C0641A3A55 /* codecov.yml in Resources */ = {isa = PBXBuildFile; fileRef = 13725B3B14F442E4D311F39C /* codecov.yml */; };
 		1372555A422A6341890F4A91 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 137254F557028739C7CAF3A7 /* .gitignore */; };
 		1372555A7E8696C39536F8B5 /* CalendarViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725904989422433EC7FA39 /* CalendarViewModelTests.swift */; };
@@ -27,10 +28,12 @@
 		13725ADE9C22EE9B093BF5CA /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725D39DF539EC4D9D2E93D /* Errors.swift */; };
 		13725BC9551E191142D50DC5 /* MemoryPersistent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1372502719C754327A4D1D41 /* MemoryPersistent.swift */; };
 		13725D218CA6F3C323CC15B9 /* DateHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137254A57DDED41D2AE2A217 /* DateHelperTests.swift */; };
+		13725D794CB3C9EA48015252 /* TestUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725DA343E48BBB3B77D3C9 /* TestUtil.swift */; };
 		13725EC844C1CF103CECDCC3 /* Persistent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725B487EBA7886A1E721D1 /* Persistent.swift */; };
 		13725EDDE50C4E4F275E681A /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1372592AA7C3430925023154 /* Setting.swift */; };
 		13725EF4905FB56A9E650EFA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137252D1DC7713CF9833EFF9 /* Constants.swift */; };
 		13725EF4AD30E29F5B3B01D1 /* MomentimeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725838DE11B98A70186515 /* MomentimeApp.swift */; };
+		13725F0E4FFA237512BDC6C3 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725608F9C84D65F59D4D18 /* Status.swift */; };
 		13725F39159C8C98AC3C1637 /* AppleCalendarManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137250E36CA996054B4FCAEA /* AppleCalendarManagerTests.swift */; };
 		2732A13D25A1A2A600F596AB /* I18N.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2732A13C25A1A2A600F596AB /* I18N.swift */; };
 		2732A15025A1A74500F596AB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2732A15225A1A74500F596AB /* Localizable.strings */; };
@@ -51,6 +54,13 @@
 		2784FE7725A3699F0075FD57 /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2784FE7625A3699F0075FD57 /* SettingViewModel.swift */; };
 		2784FE8125A371EB0075FD57 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2784FE8025A371EB0075FD57 /* CalendarViewModel.swift */; };
 		27ABC5C025B1F36C008620F7 /* MockEventStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ABC5B325B1F2CA008620F7 /* MockEventStore.swift */; };
+		27EFD82825B5C9240049B108 /* TimerHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EFD82725B5C9240049B108 /* TimerHeader.swift */; };
+		27EFD84625B5D3AA0049B108 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 27EFD84425B5D3AA0049B108 /* Poppins-SemiBold.ttf */; };
+		27EFD84725B5D3AA0049B108 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 27EFD84525B5D3AA0049B108 /* Poppins-Regular.ttf */; };
+		27EFD84B25B5D3DE0049B108 /* Poppins-Regular.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27EFD84525B5D3AA0049B108 /* Poppins-Regular.ttf */; };
+		27EFD84C25B5D3DE0049B108 /* Poppins-SemiBold.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27EFD84425B5D3AA0049B108 /* Poppins-SemiBold.ttf */; };
+		27EFD85025B5D5530049B108 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 27EFD84F25B5D5530049B108 /* Poppins-Medium.ttf */; };
+		27EFD85325B5D56A0049B108 /* Poppins-Medium.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27EFD84F25B5D5530049B108 /* Poppins-Medium.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +73,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		27EFD84A25B5D3C50049B108 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = Fonts;
+			dstSubfolderSpec = 7;
+			files = (
+				27EFD85325B5D56A0049B108 /* Poppins-Medium.ttf in CopyFiles */,
+				27EFD84B25B5D3DE0049B108 /* Poppins-Regular.ttf in CopyFiles */,
+				27EFD84C25B5D3DE0049B108 /* Poppins-SemiBold.ttf in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		1372500426986F93DF3D3C7C /* Permission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Permission.swift; sourceTree = "<group>"; };
 		1372502719C754327A4D1D41 /* MemoryPersistent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryPersistent.swift; sourceTree = "<group>"; };
@@ -70,10 +95,12 @@
 		137251D85E2AA2DB9627E3DD /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		137252D1DC7713CF9833EFF9 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		137253BF4EACC8C14A4B6AA2 /* MemoryPersistentTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryPersistentTests.swift; sourceTree = "<group>"; };
+		137253C7E6F4C2A7B2530739 /* PomodoroViewModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PomodoroViewModal.swift; sourceTree = "<group>"; };
 		13725479B819BA634D02CF59 /* GradientBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientBackground.swift; sourceTree = "<group>"; };
 		137254A57DDED41D2AE2A217 /* DateHelperTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHelperTests.swift; sourceTree = "<group>"; };
 		137254F557028739C7CAF3A7 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = file.gitignore; path = .gitignore; sourceTree = "<group>"; };
 		13725545530FD7FD54F63ADD /* UserDefaultsPersistentTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsPersistentTests.swift; sourceTree = "<group>"; };
+		13725608F9C84D65F59D4D18 /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		1372566EC8FB853435BC69C0 /* CalendarManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarManager.swift; sourceTree = "<group>"; };
 		137258093196ACFE0F75C326 /* SettingViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewModelTests.swift; sourceTree = "<group>"; };
 		13725838DE11B98A70186515 /* MomentimeApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MomentimeApp.swift; sourceTree = SOURCE_ROOT; };
@@ -88,6 +115,7 @@
 		13725BB8BEA677ECA9E16175 /* I18NTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = I18NTests.swift; sourceTree = "<group>"; };
 		13725D39DF539EC4D9D2E93D /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		13725D7976C75E11F87C1CA2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		13725DA343E48BBB3B77D3C9 /* TestUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestUtil.swift; sourceTree = "<group>"; };
 		13725DA9281481F9EF9657E4 /* UserDefaultsCalendarManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsCalendarManager.swift; sourceTree = "<group>"; };
 		13725DF0B7733556E17E62E5 /* UserDefaultsPersistent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsPersistent.swift; sourceTree = "<group>"; };
 		13725DF7CBA80CF9605E5DB6 /* DateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
@@ -115,6 +143,10 @@
 		27ABC5B325B1F2CA008620F7 /* MockEventStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEventStore.swift; sourceTree = "<group>"; };
 		27B41601259DE1B100269E37 /* MomentimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MomentimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B41605259DE1B100269E37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27EFD82725B5C9240049B108 /* TimerHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerHeader.swift; sourceTree = "<group>"; };
+		27EFD84425B5D3AA0049B108 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		27EFD84525B5D3AA0049B108 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		27EFD84F25B5D5530049B108 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +195,7 @@
 				137252D1DC7713CF9833EFF9 /* Constants.swift */,
 				13725D39DF539EC4D9D2E93D /* Errors.swift */,
 				13725DF7CBA80CF9605E5DB6 /* DateHelper.swift */,
+				13725608F9C84D65F59D4D18 /* Status.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -283,6 +316,7 @@
 				273DC1EF259F6F8000438BDA /* Application.swift */,
 				273DC1F7259F729D00438BDA /* SettingContextMenu.swift */,
 				13725479B819BA634D02CF59 /* GradientBackground.swift */,
+				27EFD82725B5C9240049B108 /* TimerHeader.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -320,6 +354,7 @@
 		276DD5A1259DA0C700237DDF /* Momentime */ = {
 			isa = PBXGroup;
 			children = (
+				27EFD84325B5D36D0049B108 /* Fonts */,
 				1372540EF453797F074EA94B /* Helpers */,
 				137259A211F3B499D1BCCA4E /* Managers */,
 				137257B2C7FBA6B466EAEEF8 /* Models */,
@@ -360,6 +395,7 @@
 			children = (
 				2784FE7625A3699F0075FD57 /* SettingViewModel.swift */,
 				2784FE8025A371EB0075FD57 /* CalendarViewModel.swift */,
+				137253C7E6F4C2A7B2530739 /* PomodoroViewModal.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -387,8 +423,19 @@
 				137250BCCAB53625E2010D9E /* Helpers */,
 				27B41605259DE1B100269E37 /* Info.plist */,
 				13725ADC70367E96A09B0E6A /* ViewModels */,
+				13725DA343E48BBB3B77D3C9 /* TestUtil.swift */,
 			);
 			path = MomentimeTests;
+			sourceTree = "<group>";
+		};
+		27EFD84325B5D36D0049B108 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				27EFD84525B5D3AA0049B108 /* Poppins-Regular.ttf */,
+				27EFD84425B5D3AA0049B108 /* Poppins-SemiBold.ttf */,
+				27EFD84F25B5D5530049B108 /* Poppins-Medium.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -401,6 +448,7 @@
 				276DD59B259DA0C700237DDF /* Sources */,
 				276DD59C259DA0C700237DDF /* Frameworks */,
 				276DD59D259DA0C700237DDF /* Resources */,
+				27EFD84A25B5D3C50049B108 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -474,7 +522,10 @@
 			files = (
 				2732A15025A1A74500F596AB /* Localizable.strings in Resources */,
 				276DD5AA259DA0C900237DDF /* Preview Assets.xcassets in Resources */,
+				27EFD84725B5D3AA0049B108 /* Poppins-Regular.ttf in Resources */,
 				276DD5A7259DA0C900237DDF /* Assets.xcassets in Resources */,
+				27EFD84625B5D3AA0049B108 /* Poppins-SemiBold.ttf in Resources */,
+				27EFD85025B5D5530049B108 /* Poppins-Medium.ttf in Resources */,
 				1372555A422A6341890F4A91 /* .gitignore in Resources */,
 				137254C8BE18C1C0641A3A55 /* codecov.yml in Resources */,
 			);
@@ -503,6 +554,7 @@
 				13725EF4AD30E29F5B3B01D1 /* MomentimeApp.swift in Sources */,
 				2732A13D25A1A2A600F596AB /* I18N.swift in Sources */,
 				13725EF4905FB56A9E650EFA /* Constants.swift in Sources */,
+				27EFD82825B5C9240049B108 /* TimerHeader.swift in Sources */,
 				27ABC5C025B1F36C008620F7 /* MockEventStore.swift in Sources */,
 				2784FE4B25A346770075FD57 /* Task.swift in Sources */,
 				137250AA568C74AB4FC4A06F /* SettingManager.swift in Sources */,
@@ -524,6 +576,8 @@
 				1372516314D61CF19171B811 /* Permission.swift in Sources */,
 				137258721B8D79AFF8A124AE /* DateHelper.swift in Sources */,
 				1372539C5779528E798B07F6 /* GradientBackground.swift in Sources */,
+				13725439432A889E610EAABE /* PomodoroViewModal.swift in Sources */,
+				13725F0E4FFA237512BDC6C3 /* Status.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,6 +594,7 @@
 				13725678F2C67E97E4D432C2 /* SettingViewModelTests.swift in Sources */,
 				1372555A7E8696C39536F8B5 /* CalendarViewModelTests.swift in Sources */,
 				13725D218CA6F3C323CC15B9 /* DateHelperTests.swift in Sources */,
+				13725D794CB3C9EA48015252 /* TestUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

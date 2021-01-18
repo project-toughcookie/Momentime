@@ -30,6 +30,13 @@ class UserDefaultsPersistent: Persistent {
         return userDefault.string(forKey: "\(PREFIX)\(key)")!
     }
 
+    public func getInt(forKey key: String) throws -> Int {
+        if !isKeyExists(key) {
+            throw CookieError.NotExists(target: "\(PREFIX)\(key)")
+        }
+        return userDefault.integer(forKey: "\(PREFIX)\(key)")
+    }
+
     private func isKeyExists(_ key: String) -> Bool {
         userDefault.object(forKey: "\(PREFIX)\(key)") != nil
     }

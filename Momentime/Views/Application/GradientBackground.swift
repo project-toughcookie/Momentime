@@ -6,18 +6,19 @@ import Foundation
 import SwiftUI
 
 struct GradientBackground: View {
-    @State var ratio: CGFloat = 0.7
+    @EnvironmentObject var pvm: PomodoroViewModal
+
     var body: some View {
         VStack {
             GeometryReader { metrics in
                 HStack(spacing: 0) {
                     Rectangle()
                         .fill(LinearGradient(
-                            gradient: Gradient(colors: [Color("PlayFrom"), Color("PlayTo")]),
+                            gradient: pvm.status.ColorGradient(),
                             startPoint: .leading,
                             endPoint: .trailing
                         ))
-                        .frame(width: metrics.size.width * ratio)
+                        .frame(width: metrics.size.width * pvm.remainRatio)
                 }
             }
             .frame(width: Constants.MENUBAR_VIEW_WIDTH, height: 60)
@@ -34,6 +35,8 @@ struct GradientBackground: View {
 
 struct GradientBackground_Previews: PreviewProvider {
     static var previews: some View {
+        let settingManager = SettingManager(persistent: MemoryPersistent())
         GradientBackground()
+            .environmentObject(PomodoroViewModal(settingManager: settingManager))
     }
 }

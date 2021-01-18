@@ -17,6 +17,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let rootView = ContentView()
             .environmentObject(modelData.svm)
             .environmentObject(modelData.cvm)
+            .environmentObject(modelData.pvm)
         if !modelData.svm.tutorialShown {
             WindowOpener.openTutorialWindow()
         }

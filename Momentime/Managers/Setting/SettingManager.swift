@@ -10,6 +10,8 @@ let TIMER_SOUND_ENABLED = "\(SETTING).timerSoundEnabled"
 let TIMER_AUTO_STARTED = "\(SETTING).timerAutoStarted"
 let DEFAULT_CALENDAR = "\(SETTING).defaultCalendar"
 let TUTORIAL_SHOWN = "\(SETTING).tutorialShown"
+let POMODORO_MINUTES = "\(SETTING).pomodoroMinutes"
+let BREAK_TIME_MINUTES = "\(SETTING).breakTimeMinutes"
 
 final class SettingManager {
     private let persistent: Persistent
@@ -76,6 +78,32 @@ final class SettingManager {
         }
         set(newTutorialShown) {
             persistent.set(newTutorialShown, forKey: TUTORIAL_SHOWN)
+        }
+    }
+
+    public var playSeconds: Int {
+        get {
+            do {
+                return try persistent.getInt(forKey: POMODORO_MINUTES)
+            } catch {
+                return Setting.default.playSeconds
+            }
+        }
+        set(newPomodoroMinutes) {
+            persistent.set(newPomodoroMinutes, forKey: POMODORO_MINUTES)
+        }
+    }
+
+    public var breakSeconds: Int {
+        get {
+            do {
+                return try persistent.getInt(forKey: BREAK_TIME_MINUTES)
+            } catch {
+                return Setting.default.breakSeconds
+            }
+        }
+        set(newBreakTimeMinutes) {
+            persistent.set(newBreakTimeMinutes, forKey: BREAK_TIME_MINUTES)
         }
     }
 

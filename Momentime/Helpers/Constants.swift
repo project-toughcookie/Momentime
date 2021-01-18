@@ -6,10 +6,13 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct Constants {
     static let MENUBAR_VIEW_WIDTH: CGFloat = 320
     static let MENUBAR_VIEW_HEIGHT: CGFloat = 430
+    static let CONTENT_VIEW_HEIGHT: CGFloat = 402
+    static let TIMERHEADER_VIEW_HEIGHT: CGFloat = 74
 
     static let SETTING_VIEW_WIDTH: CGFloat = 300
     static let SETTING_VIEW_HEIGHT: CGFloat = 200
