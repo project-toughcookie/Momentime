@@ -61,6 +61,8 @@
 		27EFD84C25B5D3DE0049B108 /* Poppins-SemiBold.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27EFD84425B5D3AA0049B108 /* Poppins-SemiBold.ttf */; };
 		27EFD85025B5D5530049B108 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 27EFD84F25B5D5530049B108 /* Poppins-Medium.ttf */; };
 		27EFD85325B5D56A0049B108 /* Poppins-Medium.ttf in CopyFiles */ = {isa = PBXBuildFile; fileRef = 27EFD84F25B5D5530049B108 /* Poppins-Medium.ttf */; };
+		27F2675225BD98D60008C7BD /* TaskList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F2675125BD98D60008C7BD /* TaskList.swift */; };
+		27F2675A25BD9F490008C7BD /* TaskRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F2675925BD9F490008C7BD /* TaskRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,6 +149,8 @@
 		27EFD84425B5D3AA0049B108 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		27EFD84525B5D3AA0049B108 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		27EFD84F25B5D5530049B108 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		27F2675125BD98D60008C7BD /* TaskList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskList.swift; sourceTree = "<group>"; };
+		27F2675925BD9F490008C7BD /* TaskRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -317,6 +321,8 @@
 				273DC1F7259F729D00438BDA /* SettingContextMenu.swift */,
 				13725479B819BA634D02CF59 /* GradientBackground.swift */,
 				27EFD82725B5C9240049B108 /* TimerHeader.swift */,
+				27F2675125BD98D60008C7BD /* TaskList.swift */,
+				27F2675925BD9F490008C7BD /* TaskRow.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -550,6 +556,7 @@
 				2784FE8125A371EB0075FD57 /* CalendarViewModel.swift in Sources */,
 				1372540F9A7C4260D703E7BF /* ContentView.swift in Sources */,
 				277E4240259DB27200E8979B /* SettingView.swift in Sources */,
+				27F2675A25BD9F490008C7BD /* TaskRow.swift in Sources */,
 				2736F31825B2C555002E00EC /* VisualEffectView.swift in Sources */,
 				13725EF4AD30E29F5B3B01D1 /* MomentimeApp.swift in Sources */,
 				2732A13D25A1A2A600F596AB /* I18N.swift in Sources */,
@@ -577,6 +584,7 @@
 				137258721B8D79AFF8A124AE /* DateHelper.swift in Sources */,
 				1372539C5779528E798B07F6 /* GradientBackground.swift in Sources */,
 				13725439432A889E610EAABE /* PomodoroViewModal.swift in Sources */,
+				27F2675225BD98D60008C7BD /* TaskList.swift in Sources */,
 				13725F0E4FFA237512BDC6C3 /* Status.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

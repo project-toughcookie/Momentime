@@ -21,14 +21,14 @@ struct GradientBackground: View {
                         .frame(width: metrics.size.width * pvm.remainRatio)
                 }
             }
-            .frame(width: Constants.MENUBAR_VIEW_WIDTH, height: 60)
+            .frame(width: Constants.MENUBAR_WIDTH, height: 60)
             .background(Color("Gray05"))
             Spacer()
         }
         .cornerRadius(12)
         .frame(
-            width: Constants.MENUBAR_VIEW_WIDTH,
-            height: Constants.MENUBAR_VIEW_HEIGHT
+            width: Constants.MENUBAR_WIDTH,
+            height: Constants.MENUBAR_HEIGHT
         )
     }
 }

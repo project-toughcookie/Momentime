@@ -19,6 +19,7 @@ class CalendarViewModel: ObservableObject {
     @Published var granted = false
     @Published var calendars: [TaskCalendar] = []
     @Published var todayTasks: [Task] = []
+    @Published var todayDoneTasks: [Task] = []
 
     init(calendarManager: CalendarManager = AppleCalendarManager(), settingManager: SettingManager = SettingManager()) {
         self.calendarManager = calendarManager
@@ -75,5 +76,8 @@ class CalendarViewModel: ObservableObject {
 
     func fetchTodayTasks(calendarId: String) throws {
         todayTasks = try calendarManager.getTodayTasks(calendarId: calendarId)
+        todayDoneTasks = todayTasks.filter { task in
+            task.done
+        }
     }
 }

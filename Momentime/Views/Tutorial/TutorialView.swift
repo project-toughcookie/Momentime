@@ -23,8 +23,8 @@ struct TutorialView: View {
             }
             Text("Tutorial !")
         }
-        .frame(width: Constants.TUTORIAL_VIEW_WIDTH,
-               height: Constants.TUTORIAL_VIEW_HEIGHT,
+        .frame(width: Constants.TUTORIAL_WIDTH,
+               height: Constants.TUTORIAL_HEIGHT,
                alignment: .leading)
         .onAppear {
             cvm.fetchCalendars()

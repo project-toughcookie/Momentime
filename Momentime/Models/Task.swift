@@ -24,7 +24,7 @@ struct Task: Codable, Identifiable {
         self.isAllDay = isAllDay
         self.start = start
         self.end = end
-        done = notes != nil ? notes!.contains("Done".localized) : false
+        done = notes != nil ? notes!.contains("[\("Done".localized)]") : false
         workInProgress = start < now && end > now ? true : false
     }
 }

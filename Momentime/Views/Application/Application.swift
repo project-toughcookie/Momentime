@@ -17,14 +17,15 @@ struct ApplicationView: View {
             GradientBackground()
             VStack {
                 Spacer()
-                VStack {
+                VStack(spacing: 0) {
                     TimerHeader()
-                    Text("MOMENTIME")
-                    Text("Remain: \(pvm.remainSeconds)")
+                    //                        .border(Color.yellow)
+                    TaskList()
+                    //                        .border(Color.red)
                 }
                 .frame(
-                    width: Constants.MENUBAR_VIEW_WIDTH,
-                    height: Constants.CONTENT_VIEW_HEIGHT,
+                    width: Constants.MENUBAR_WIDTH,
+                    height: Constants.CONTENT_HEIGHT,
                     alignment: .top
                 )
                 .background(VisualEffectView(
@@ -33,15 +34,15 @@ struct ApplicationView: View {
                 ))
                 .cornerRadius(12)
             }
-            .frame(width: Constants.MENUBAR_VIEW_WIDTH,
-                   height: Constants.MENUBAR_VIEW_HEIGHT)
+            .frame(width: Constants.MENUBAR_WIDTH,
+                   height: Constants.MENUBAR_HEIGHT)
         }
         .onAppear {
             cvm.requestAccess()
             cvm.fetchCalendars()
         }
-        .frame(width: Constants.MENUBAR_VIEW_WIDTH,
-               height: Constants.MENUBAR_VIEW_HEIGHT)
+        .frame(width: Constants.MENUBAR_WIDTH,
+               height: Constants.MENUBAR_HEIGHT)
     }
 }
 

@@ -35,7 +35,7 @@ struct TimerHeader: View {
                     pvm.setStatus(status: .pause)
                 }
             }) {
-                Image("TimerPause")
+                pvm.status.TimerButton()
                     .resizable()
                     .frame(width: 30, height: 30)
             }
@@ -63,8 +63,8 @@ struct TimerHeader: View {
                 .padding([.top], 31)
         }
         .frame(
-            width: Constants.MENUBAR_VIEW_WIDTH,
-            height: Constants.TIMERHEADER_VIEW_HEIGHT,
+            width: Constants.MENUBAR_WIDTH,
+            height: Constants.TIMERHEADER_HEIGHT,
             alignment: .topLeading
         )
     }

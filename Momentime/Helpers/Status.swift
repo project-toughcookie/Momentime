@@ -76,4 +76,30 @@ enum Status {
             return "Break Time... 😌"
         }
     }
+
+    func TimerButton() -> Image {
+        switch self {
+        case .stop:
+            return Image("icon_timer_play")
+        case .pause:
+            return Image("icon_timer_play")
+        case .play:
+            return Image("icon_timer_pause_focus")
+        case .break:
+            return Image("icon_timer_pause_break")
+        }
+    }
+
+    func CheckButton(checked: Bool) -> Image {
+        switch self {
+        case .stop:
+            return checked ? Image("icon_list_check_checked") : Image("icon_list_check_default")
+        case .pause:
+            return checked ? Image("icon_list_check_checked") : Image("icon_list_check_default")
+        case .play:
+            return checked ? Image("icon_list_check_checked") : Image("icon_list_check_default")
+        case .break:
+            return checked ? Image("icon_list_check_checked") : Image("icon_list_check_default")
+        }
+    }
 }
