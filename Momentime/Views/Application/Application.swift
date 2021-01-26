@@ -10,55 +10,50 @@ import SwiftUI
 struct ApplicationView: View {
     @EnvironmentObject var svm: SettingViewModel
     @EnvironmentObject var cvm: CalendarViewModel
+    @EnvironmentObject var pvm: PomodoroViewModal
 
     var body: some View {
-        VStack {
-            Text("Hello, world!")
-            Text("Granted: \(String(cvm.granted))")
-            Text("Timer AutoStarted: \(String(svm.timerAutoStarted))")
-
-            List(cvm.calendars, id: \.id) { calendar in
-                Text("\(calendar.title)")
-            }
-            List(cvm.todayTasks, id: \.id) { task in
-                Text("\(task.title)")
-            }
-            Spacer()
-            HStack {
+        ZStack {
+            GradientBackground()
+            VStack {
                 Spacer()
-                SettingContextMenu()
+                VStack(spacing: 0) {
+                    TimerHeader()
+                    //                        .border(Color.yellow)
+                    TaskList()
+                    //                        .border(Color.red)
+                }
+                .frame(
+                    width: Constants.MENUBAR_WIDTH,
+                    height: Constants.CONTENT_HEIGHT,
+                    alignment: .top
+                )
+                .background(VisualEffectView(
+                    material: NSVisualEffectView.Material.popover,
+                    blendingMode: NSVisualEffectView.BlendingMode.withinWindow
+                ))
+                .cornerRadius(12)
             }
+            .frame(width: Constants.MENUBAR_WIDTH,
+                   height: Constants.MENUBAR_HEIGHT)
         }
         .onAppear {
             cvm.requestAccess()
             cvm.fetchCalendars()
         }
-        .onReceive(cvm.$calendars) { calendars in
-            if calendars.count != 0 {
-                do {
-                    try cvm.fetchTodayTasks(calendarId: calendars[0].id)
-                } catch {
-                    print(error)
-                }
-            }
-        }
-        .onReceive(svm.$defaultCalendar, perform: { defaultCalendar in
-            print(defaultCalendar)
-            do {
-                try cvm.fetchTodayTasks(calendarId: defaultCalendar)
-            } catch {}
-        })
-        .padding()
-        .frame(width: Constants.MENUBAR_VIEW_WIDTH,
-               height: Constants.MENUBAR_VIEW_HEIGHT,
-               alignment: .leading)
+        .frame(width: Constants.MENUBAR_WIDTH,
+               height: Constants.MENUBAR_HEIGHT)
     }
 }
 
 struct ApplicationView_Previews: PreviewProvider {
     static var previews: some View {
+        let settingManager = SettingManager(persistent: MemoryPersistent())
+        let calendarManager = AppleCalendarManager(store: MockEventStore())
+
         ApplicationView()
-            .environmentObject(SettingViewModel(persistent: MemoryPersistent()))
-            .environmentObject(CalendarViewModel(store: MockEventStore()))
+            .environmentObject(SettingViewModel(settingManager: settingManager))
+            .environmentObject(CalendarViewModel(calendarManager: calendarManager, settingManager: settingManager))
+            .environmentObject(PomodoroViewModal(settingManager: settingManager))
     }
 }

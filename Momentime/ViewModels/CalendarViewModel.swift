@@ -11,7 +11,7 @@ import Foundation
 import os
 
 class CalendarViewModel: ObservableObject {
-    private let calendarManager: AppleCalendarManager
+    private let calendarManager: CalendarManager
     private let settingManager: SettingManager
     private let permission: Permission
     private var cancellables = Set<AnyCancellable>()
@@ -19,11 +19,12 @@ class CalendarViewModel: ObservableObject {
     @Published var granted = false
     @Published var calendars: [TaskCalendar] = []
     @Published var todayTasks: [Task] = []
+    @Published var todayDoneTasks: [Task] = []
 
-    init(store: EventStore = EKEventStore(), persistent: Persistent = UserDefaultsPersistent()) {
-        calendarManager = AppleCalendarManager(store: store)
-        settingManager = SettingManager(persistent: persistent)
-        permission = Permission(store: store)
+    init(calendarManager: CalendarManager = AppleCalendarManager(), settingManager: SettingManager = SettingManager()) {
+        self.calendarManager = calendarManager
+        self.settingManager = settingManager
+        permission = Permission(store: calendarManager.getStore())
     }
 
     func requestAccess() {
@@ -75,5 +76,8 @@ class CalendarViewModel: ObservableObject {
 
     func fetchTodayTasks(calendarId: String) throws {
         todayTasks = try calendarManager.getTodayTasks(calendarId: calendarId)
+        todayDoneTasks = todayTasks.filter { task in
+            task.done
+        }
     }
 }

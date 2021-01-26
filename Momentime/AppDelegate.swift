@@ -17,13 +17,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let rootView = ContentView()
             .environmentObject(modelData.svm)
             .environmentObject(modelData.cvm)
+            .environmentObject(modelData.pvm)
         if !modelData.svm.tutorialShown {
             WindowOpener.openTutorialWindow()
         }
 
         let popover = NSPopover()
-        popover.contentSize.width = Constants.MENUBAR_VIEW_WIDTH
-        popover.contentSize.height = Constants.MENUBAR_VIEW_HEIGHT
+        popover.contentSize.width = Constants.MENUBAR_WIDTH
+        popover.contentSize.height = Constants.MENUBAR_HEIGHT
         popover.behavior = .transient
         popover.contentViewController = NSHostingController(rootView: rootView)
         self.popover = popover

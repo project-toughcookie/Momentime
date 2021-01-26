@@ -28,4 +28,12 @@ class MemoryPersistent: Persistent {
 
         return value as! String
     }
+
+    func getInt(forKey key: String) throws -> Int {
+        guard let value = data[key] else {
+            throw CookieError.NotExists(target: key)
+        }
+
+        return value as! Int
+    }
 }

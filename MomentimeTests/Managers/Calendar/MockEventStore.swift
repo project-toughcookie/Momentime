@@ -38,8 +38,8 @@ class MockEventStore: EventStore {
         }
 
         let tasks: [Task] = [
-            Task(id: "1", title: "mock task 1", isAllDay: false, start: start, end: end, notes: ""),
-            Task(id: "2", title: "mock task 2", isAllDay: false, start: start, end: end, notes: ""),
+            Task(id: "1", title: "mock task 1", isAllDay: false, start: start, end: end, notes: "[완료]"),
+            Task(id: "2", title: "mock task 2", isAllDay: false, start: start, end: end, notes: "[Done]"),
         ]
         return tasks
     }

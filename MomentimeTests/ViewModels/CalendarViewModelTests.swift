@@ -7,15 +7,34 @@ import XCTest
 
 class CalendarViewModelTests: XCTestCase {
     func testRequestAccess() {
-        let calendarViewModel = CalendarViewModel(store: MockEventStore())
+        let settingManager = SettingManager(persistent: MemoryPersistent())
+        let calendarManager = AppleCalendarManager(store: MockEventStore())
+        let calendarViewModel = CalendarViewModel(calendarManager: calendarManager, settingManager: settingManager)
         calendarViewModel.requestAccess()
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             XCTAssertTrue(calendarViewModel.granted)
         }
     }
 
+    func testSync() {
+        let settingManager = SettingManager(persistent: MemoryPersistent())
+        let calendarManager = AppleCalendarManager(store: MockEventStore())
+        let calendarViewModel = CalendarViewModel(calendarManager: calendarManager, settingManager: settingManager)
+        do {
+            try calendarViewModel.sync()
+        } catch {
+            XCTFail("error must not be occured")
+        }
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            XCTAssertEqual(2, calendarViewModel.todayTasks.count)
+        }
+    }
+
     func testFetchCalendars() {
-        let calendarViewModel = CalendarViewModel(store: MockEventStore())
+        let settingManager = SettingManager(persistent: MemoryPersistent())
+        let calendarManager = AppleCalendarManager(store: MockEventStore())
+        let calendarViewModel = CalendarViewModel(calendarManager: calendarManager, settingManager: settingManager)
         calendarViewModel.fetchCalendars()
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             XCTAssertEqual(1, calendarViewModel.calendars.count)
@@ -23,7 +42,9 @@ class CalendarViewModelTests: XCTestCase {
     }
 
     func testFetchTodayTasks() {
-        let calendarViewModel = CalendarViewModel(store: MockEventStore())
+        let settingManager = SettingManager(persistent: MemoryPersistent())
+        let calendarManager = AppleCalendarManager(store: MockEventStore())
+        let calendarViewModel = CalendarViewModel(calendarManager: calendarManager, settingManager: settingManager)
         do {
             try calendarViewModel.fetchTodayTasks(calendarId: "")
         } catch {

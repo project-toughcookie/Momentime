@@ -11,6 +11,7 @@ import SwiftUI
 struct modelData {
     static var svm = SettingViewModel()
     static var cvm = CalendarViewModel()
+    static var pvm = PomodoroViewModal()
 }
 
 var appDelegate = AppDelegate()

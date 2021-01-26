@@ -15,14 +15,18 @@ final class SettingViewModel: ObservableObject {
     @Published var timerAutoStarted: Bool
     @Published var defaultCalendar: String
     @Published var tutorialShown: Bool
+    @Published var playSeconds: Int
+    @Published var breakSeconds: Int
 
-    init(persistent: Persistent = UserDefaultsPersistent()) {
-        settingManager = SettingManager(persistent: persistent)
+    init(settingManager: SettingManager = SettingManager()) {
+        self.settingManager = settingManager
         eventTitleChangedIfDone = settingManager.eventTitleChangedIfDone
         timerSoundEnabled = settingManager.timerSoundEnabled
         timerAutoStarted = settingManager.timerAutoStarted
         defaultCalendar = settingManager.defaultCalendar
         tutorialShown = settingManager.tutorialShown
+        playSeconds = settingManager.playSeconds
+        breakSeconds = settingManager.breakSeconds
     }
 
     func set(_ setting: Setting) {
@@ -31,12 +35,16 @@ final class SettingViewModel: ObservableObject {
         settingManager.timerAutoStarted = setting.timerAutoStarted
         settingManager.defaultCalendar = setting.defaultCalendar
         settingManager.tutorialShown = setting.tutorialShown
+        settingManager.playSeconds = setting.playSeconds
+        settingManager.breakSeconds = setting.breakSeconds
 
         eventTitleChangedIfDone = setting.eventTitleChangedIfDone
         timerSoundEnabled = setting.timerSoundEnabled
         timerAutoStarted = setting.timerAutoStarted
         defaultCalendar = setting.defaultCalendar
         tutorialShown = setting.tutorialShown
+        playSeconds = setting.playSeconds
+        breakSeconds = setting.breakSeconds
     }
 
     func setDefaultCalendar(_ defaultCalendar: String) {
