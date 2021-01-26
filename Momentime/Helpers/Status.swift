@@ -25,19 +25,6 @@ enum Status {
     case play
     case `break`
 
-    func String() -> String {
-        switch self {
-        case .stop:
-            return "Stop"
-        case .pause:
-            return "Pause"
-        case .play:
-            return "Play"
-        case .break:
-            return "Break"
-        }
-    }
-
     func ColorWithOpacity(opacity: Opacity) -> Color {
         switch self {
         case .stop:

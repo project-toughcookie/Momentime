@@ -16,6 +16,21 @@ class CalendarViewModelTests: XCTestCase {
         }
     }
 
+    func testSync() {
+        let settingManager = SettingManager(persistent: MemoryPersistent())
+        let calendarManager = AppleCalendarManager(store: MockEventStore())
+        let calendarViewModel = CalendarViewModel(calendarManager: calendarManager, settingManager: settingManager)
+        do {
+            try calendarViewModel.sync()
+        } catch {
+            XCTFail("error must not be occured")
+        }
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            XCTAssertEqual(2, calendarViewModel.todayTasks.count)
+        }
+    }
+
     func testFetchCalendars() {
         let settingManager = SettingManager(persistent: MemoryPersistent())
         let calendarManager = AppleCalendarManager(store: MockEventStore())

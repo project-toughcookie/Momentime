@@ -22,6 +22,7 @@
 		13725678F2C67E97E4D432C2 /* SettingViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137258093196ACFE0F75C326 /* SettingViewModelTests.swift */; };
 		1372567EC0C5311E496633F7 /* MemoryPersistentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137253BF4EACC8C14A4B6AA2 /* MemoryPersistentTests.swift */; };
 		137256F2A9274FBDDB9F7396 /* CalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1372566EC8FB853435BC69C0 /* CalendarManager.swift */; };
+		1372575ABC380F6A170562E3 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137257E4DC3276592D15ADB2 /* Status.swift */; };
 		137258721B8D79AFF8A124AE /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725DF7CBA80CF9605E5DB6 /* DateHelper.swift */; };
 		137259159C2F9E0B60847205 /* WindowOpener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137259ECF2964B9C45E28A9A /* WindowOpener.swift */; };
 		137259F9AE5E27BF4CC770DB /* EventStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725E833E12F34169DF1586 /* EventStore.swift */; };
@@ -104,6 +105,7 @@
 		13725545530FD7FD54F63ADD /* UserDefaultsPersistentTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsPersistentTests.swift; sourceTree = "<group>"; };
 		13725608F9C84D65F59D4D18 /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		1372566EC8FB853435BC69C0 /* CalendarManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarManager.swift; sourceTree = "<group>"; };
+		137257E4DC3276592D15ADB2 /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		137258093196ACFE0F75C326 /* SettingViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewModelTests.swift; sourceTree = "<group>"; };
 		13725838DE11B98A70186515 /* MomentimeApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MomentimeApp.swift; sourceTree = SOURCE_ROOT; };
 		13725904989422433EC7FA39 /* CalendarViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewModelTests.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				13725BB0CF96E909D05057C1 /* ErrorsTests.swift */,
 				137255B1431B30D0D4175849 /* Localization */,
 				137254A57DDED41D2AE2A217 /* DateHelperTests.swift */,
+				137257E4DC3276592D15ADB2 /* Status.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -603,6 +606,7 @@
 				1372555A7E8696C39536F8B5 /* CalendarViewModelTests.swift in Sources */,
 				13725D218CA6F3C323CC15B9 /* DateHelperTests.swift in Sources */,
 				13725D794CB3C9EA48015252 /* TestUtil.swift in Sources */,
+				1372575ABC380F6A170562E3 /* Status.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
