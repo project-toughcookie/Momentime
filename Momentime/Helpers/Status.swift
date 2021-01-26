@@ -7,12 +7,15 @@ import SwiftUI
 
 enum Opacity {
     case _15
+    case _20
     case _100
 
     func String() -> String {
         switch self {
         case ._15:
             return "15"
+        case ._20:
+            return "20"
         case ._100:
             return "100"
         }

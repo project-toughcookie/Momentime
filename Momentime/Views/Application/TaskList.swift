@@ -36,7 +36,7 @@ struct TaskList: View {
             List {
                 ForEach(cvm.todayTasks) { task in
                     TaskRow(task: task)
-                        .listRowInsets(.init(top: 0, leading: 12, bottom: 7, trailing: 12))
+                        .listRowInsets(.init(top: 0, leading: 12, bottom: 8, trailing: 12))
                 }
             }
             .padding([.top], 7)
