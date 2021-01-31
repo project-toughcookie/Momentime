@@ -19,14 +19,24 @@ extension NSTableView {
 struct TaskList: View {
     @EnvironmentObject var svm: SettingViewModel
     @EnvironmentObject var cvm: CalendarViewModel
+    @EnvironmentObject var pvm: PomodoroViewModal
+
+    func todaysTasksText(text: String) -> Text {
+        Text(text)
+            .font(.custom("Poppins-Regular", size: 12))
+    }
 
     var body: some View {
         VStack(spacing: 0) {
             HStack {
-                Text("Today’s tasks \(cvm.todayDoneTasks.count)/\(cvm.todayTasks.count)")
-                    .font(.custom("Poppins-Regular", size: 12))
-                    .frame(width: 162, height: 18, alignment: .topLeading)
-                    .padding([.leading], 20)
+                HStack(spacing: 0) {
+                    todaysTasksText(text: "Today's tasks ")
+                    todaysTasksText(text: "\(cvm.todayDoneTasks.count)")
+                        .foregroundColor(pvm.status.ColorWithOpacity(opacity: ._100))
+                    todaysTasksText(text: "/\(cvm.todayTasks.count)")
+                }
+                .frame(width: 162, height: 18, alignment: .topLeading)
+                .padding([.leading], 20)
 
                 Spacer()
                 Text("Hide")
@@ -66,5 +76,6 @@ struct TaskList_Previews: PreviewProvider {
         TaskList()
             .environmentObject(SettingViewModel(settingManager: settingManager))
             .environmentObject(CalendarViewModel(calendarManager: calendarManager, settingManager: settingManager))
+            .environmentObject(PomodoroViewModal(settingManager: settingManager))
     }
 }
