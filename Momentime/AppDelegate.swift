@@ -14,7 +14,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     private func initializePopover() {
-        let rootView = ContentView()
+        let rootView = ApplicationView()
             .environmentObject(modelData.svm)
             .environmentObject(modelData.cvm)
             .environmentObject(modelData.pvm)

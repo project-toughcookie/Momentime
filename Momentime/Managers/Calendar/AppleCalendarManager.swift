@@ -32,4 +32,8 @@ class AppleCalendarManager: CalendarManager {
     func getTodayTasks(calendarId: String) throws -> [Task] {
         try store.getTodayTasks(calendarId: calendarId)
     }
+
+    func toggleTaskDone(taskId: String) throws {
+        try store.toggleTaskDone(taskId: taskId)
+    }
 }

@@ -8,4 +8,5 @@ protocol CalendarManager {
     func getStore() -> EventStore
     func getCalendars() -> [TaskCalendar]
     func getTodayTasks(calendarId: String) throws -> [Task]
+    func toggleTaskDone(taskId: String) throws
 }

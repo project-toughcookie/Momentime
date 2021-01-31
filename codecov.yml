@@ -5,11 +5,6 @@ ignore:
   - "Momentime/AppDelegate.swift"
   - "Momentime/Assets.xcassets"
 
-coverage:
-  range: 60..80
-  round: down
-  precision: 2
-
 comment:
   layout: "reach, diff, flags, files"
   behavior: default

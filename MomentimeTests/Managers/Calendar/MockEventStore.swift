@@ -43,4 +43,6 @@ class MockEventStore: EventStore {
         ]
         return tasks
     }
+
+    func toggleTaskDone(taskId _: String) throws {}
 }

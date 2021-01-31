@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct TaskRow: View {
-    @EnvironmentObject var pvm: PomodoroViewModal
     var task: Task
+
+    @EnvironmentObject var pvm: PomodoroViewModal
+    @EnvironmentObject var cvm: CalendarViewModel
 
     func dateToString(date: Date) -> String {
         let dateFormatter = DateFormatter()
@@ -27,6 +29,7 @@ struct TaskRow: View {
         }
 
         return defaultText
+            .foregroundColor(Color("Black100"))
     }
 
     func checkImage() -> some View {
@@ -48,12 +51,12 @@ struct TaskRow: View {
         }
         let defaultText = Text(text).font(.custom("Poppins-Regular", size: 12))
 
-        if task.done {
-            return defaultText.foregroundColor(Color("Black20"))
+        if isInProgress() {
+            return defaultText.foregroundColor(pvm.status.MainColor())
         }
 
-        if task.isAllDay {
-            return defaultText.foregroundColor(pvm.status.ColorWithOpacity(opacity: ._100))
+        if task.done {
+            return defaultText.foregroundColor(Color("Black20"))
         }
 
         return defaultText.foregroundColor(Color("Black40"))
@@ -65,7 +68,13 @@ struct TaskRow: View {
                 .fill(Color(red: 1, green: 1, blue: 1))
                 .frame(width: 280, height: 56)
             HStack(spacing: 0) {
-                Button(action: /*@START_MENU_TOKEN@*/ {}/*@END_MENU_TOKEN@*/, label: {
+                Button(action: {
+                    do {
+                        try cvm.toggleTaskDone(taskId: task.id)
+                    } catch {
+                        print(error)
+                    }
+                }, label: {
                     checkImage()
                 })
                     .buttonStyle(PlainButtonStyle())
@@ -89,12 +98,16 @@ struct TaskRow: View {
 
 struct TaskRow_Previews: PreviewProvider {
     static var previews: some View {
+        let calendarManager = AppleCalendarManager(store: MockEventStore())
         let settingManager = SettingManager(persistent: MemoryPersistent())
         Group {
             TaskRow(task: Task(id: "test", title: "Create Unit test", isAllDay: false, start: Date(), end: Date(), notes: "[완료][Done]"))
                 .environmentObject(PomodoroViewModal(settingManager: settingManager))
+                .environmentObject(CalendarViewModel(calendarManager: calendarManager, settingManager: settingManager))
+
             TaskRow(task: Task(id: "test", title: "Test Unit test", isAllDay: true, start: Date(), end: Date(), notes: ""))
                 .environmentObject(PomodoroViewModal(settingManager: settingManager))
+                .environmentObject(CalendarViewModel(calendarManager: calendarManager, settingManager: settingManager))
         }
     }
 }

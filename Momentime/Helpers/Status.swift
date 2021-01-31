@@ -28,6 +28,19 @@ enum Status {
     case play
     case `break`
 
+    func MainColor() -> Color {
+        switch self {
+        case .stop:
+            return Color("Black60")
+        case .pause:
+            return Color("Black60")
+        case .play:
+            return Color("Red100")
+        case .break:
+            return Color("Green100")
+        }
+    }
+
     func ColorWithOpacity(opacity: Opacity) -> Color {
         switch self {
         case .stop:
@@ -54,12 +67,15 @@ enum Status {
         }
     }
 
-    func TimerLabel() -> String {
+    func TimerLabel(_ prevStatus: Status?) -> String {
         switch self {
         case .stop:
-            return "Stopping"
+            return "Get ready to start!🍅️"
         case .pause:
-            return "Pausing"
+            if prevStatus == .play || prevStatus == .break {
+                return prevStatus!.TimerLabel(nil)
+            }
+            return "Pausing..."
         case .play:
             return "It's Time to Focus⚡️"
         case .break:

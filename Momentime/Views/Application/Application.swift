@@ -19,9 +19,7 @@ struct ApplicationView: View {
                 Spacer()
                 VStack(spacing: 0) {
                     TimerHeader()
-                    //                        .border(Color.yellow)
                     TaskList()
-                    //                        .border(Color.red)
                 }
                 .frame(
                     width: Constants.MENUBAR_WIDTH,
