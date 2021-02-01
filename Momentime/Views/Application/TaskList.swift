@@ -65,13 +65,12 @@ struct TaskList: View {
                 ForEach(showingTasks()) { task in
                     if #available(OSX 11.0, *) {
                         TaskRow(task: task)
-                            .listRowInsets(.init(top: 0, leading: 12, bottom: 8, trailing: 12))
                             .help("\(task.title)")
                     } else {
                         TaskRow(task: task)
-                            .listRowInsets(.init(top: 0, leading: 12, bottom: 8, trailing: 12))
                     }
                 }
+                .padding(.horizontal, 12.0)
             }
             .padding([.top], 7)
             .listStyle(PlainListStyle())
