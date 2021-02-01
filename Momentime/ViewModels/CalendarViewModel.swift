@@ -80,4 +80,12 @@ class CalendarViewModel: ObservableObject {
             task.done
         }
     }
+
+    func toggleTaskDone(taskId: String) throws {
+        do {
+            try calendarManager.toggleTaskDone(taskId: taskId)
+        } catch {
+            print("failed")
+        }
+    }
 }

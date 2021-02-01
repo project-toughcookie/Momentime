@@ -10,6 +10,7 @@ protocol EventStore {
     func requestAccess(handler: @escaping (Bool, Error?) -> Void)
     func getCalendars() -> [TaskCalendar]
     func getTodayTasks(calendarId: String) throws -> [Task]
+    func toggleTaskDone(taskId: String) throws
 }
 
 extension EKEventStore: EventStore {
@@ -66,5 +67,30 @@ extension EKEventStore: EventStore {
                 notes: ekEvent.notes
             )
         }
+    }
+
+    func toggleTaskDone(taskId: String) throws {
+        let store = EKEventStore()
+
+        if let event = store.event(withIdentifier: taskId) {
+            if event.notes == nil {
+                event.notes = ""
+            }
+
+            if event.notes!.contains("[Done] ") {
+                event.notes = event.notes?.replacingOccurrences(of: "[Done] ", with: "")
+            } else {
+                event.notes = "[Done] " + event.notes!
+            }
+
+            do {
+                try store.save(event, span: EKSpan.thisEvent)
+            } catch {
+                throw CookieError.TaskUpdateFailed
+            }
+            return
+        }
+
+        throw CookieError.TaskUpdateFailed
     }
 }

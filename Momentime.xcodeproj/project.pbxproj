@@ -13,7 +13,6 @@
 		13725395FCDB80F080270AD0 /* UserDefaultsPersistent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725DF0B7733556E17E62E5 /* UserDefaultsPersistent.swift */; };
 		1372539C5779528E798B07F6 /* GradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725479B819BA634D02CF59 /* GradientBackground.swift */; };
 		137253E98F412B298B6C36F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137251D85E2AA2DB9627E3DD /* AppDelegate.swift */; };
-		1372540F9A7C4260D703E7BF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725A5CE405F51F9F5B2413 /* ContentView.swift */; };
 		13725439432A889E610EAABE /* PomodoroViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137253C7E6F4C2A7B2530739 /* PomodoroViewModal.swift */; };
 		137254C8BE18C1C0641A3A55 /* codecov.yml in Resources */ = {isa = PBXBuildFile; fileRef = 13725B3B14F442E4D311F39C /* codecov.yml */; };
 		1372555A422A6341890F4A91 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 137254F557028739C7CAF3A7 /* .gitignore */; };
@@ -111,7 +110,6 @@
 		13725904989422433EC7FA39 /* CalendarViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewModelTests.swift; sourceTree = "<group>"; };
 		1372592AA7C3430925023154 /* Setting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		137259ECF2964B9C45E28A9A /* WindowOpener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowOpener.swift; sourceTree = "<group>"; };
-		13725A5CE405F51F9F5B2413 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		13725AAB083B9CF7E7ACBF7C /* SettingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingManager.swift; sourceTree = "<group>"; };
 		13725B3B14F442E4D311F39C /* codecov.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = codecov.yml; sourceTree = "<group>"; };
 		13725B487EBA7886A1E721D1 /* Persistent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistent.swift; sourceTree = "<group>"; };
@@ -291,7 +289,6 @@
 				273DC1EE259F6F6A00438BDA /* Application */,
 				1372548D9317652C3BDE801F /* Tutorial */,
 				27B415D0259DD7A600269E37 /* Setting */,
-				13725A5CE405F51F9F5B2413 /* ContentView.swift */,
 				137259ECF2964B9C45E28A9A /* WindowOpener.swift */,
 				137255B6A2B1D21C54B1FC88 /* Helper */,
 			);
@@ -557,7 +554,6 @@
 				137253E98F412B298B6C36F7 /* AppDelegate.swift in Sources */,
 				273DC1F8259F729D00438BDA /* SettingContextMenu.swift in Sources */,
 				2784FE8125A371EB0075FD57 /* CalendarViewModel.swift in Sources */,
-				1372540F9A7C4260D703E7BF /* ContentView.swift in Sources */,
 				277E4240259DB27200E8979B /* SettingView.swift in Sources */,
 				27F2675A25BD9F490008C7BD /* TaskRow.swift in Sources */,
 				2736F31825B2C555002E00EC /* VisualEffectView.swift in Sources */,
@@ -689,7 +685,9 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = (
+					"\"-Xlinker -interposable\"",
+				);
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -745,7 +743,9 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = (
+					"\"-Xlinker -interposable\"",
+				);
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";

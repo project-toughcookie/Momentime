@@ -25,7 +25,6 @@ struct GradientBackground: View {
             .background(Color("Gray05"))
             Spacer()
         }
-        .cornerRadius(12)
         .frame(
             width: Constants.MENUBAR_WIDTH,
             height: Constants.MENUBAR_HEIGHT

@@ -8,6 +8,7 @@ enum CookieError: Error {
     case NotExists(target: String)
     case UnAuthorized
     case DateCannotBeConverted
+    case TaskUpdateFailed
 }
 
 enum ErrorHandler {
@@ -19,6 +20,8 @@ enum ErrorHandler {
             printError("unathorized")
         case CookieError.DateCannotBeConverted:
             printError("date cannot be converted")
+        case CookieError.TaskUpdateFailed:
+            printError("failed to update task")
         default:
             printError("unknown error")
         }

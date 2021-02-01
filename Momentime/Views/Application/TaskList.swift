@@ -17,37 +17,70 @@ extension NSTableView {
 }
 
 struct TaskList: View {
+    @State var showAll: Bool = true
+
     @EnvironmentObject var svm: SettingViewModel
     @EnvironmentObject var cvm: CalendarViewModel
+    @EnvironmentObject var pvm: PomodoroViewModal
+
+    func todaysTasksText(text: String) -> Text {
+        Text(text)
+            .font(.custom("Poppins-Medium", size: 12))
+    }
+
+    func showingTasks() -> [Task] {
+        if showAll {
+            return cvm.todayTasks
+        }
+
+        return cvm.todayTasks.filter { $0.done ? false : true }
+    }
 
     var body: some View {
         VStack(spacing: 0) {
             HStack {
-                Text("Today’s tasks \(cvm.todayDoneTasks.count)/\(cvm.todayTasks.count)")
-                    .font(.custom("Poppins-Regular", size: 12))
-                    .frame(width: 162, height: 18, alignment: .topLeading)
-                    .padding([.leading], 20)
+                HStack(spacing: 0) {
+                    todaysTasksText(text: "Today's tasks ")
+                        .foregroundColor(Color("Black40"))
+                    todaysTasksText(text: "\(cvm.todayDoneTasks.count)")
+                        .foregroundColor(pvm.status.MainColor())
+                    todaysTasksText(text: "/\(cvm.todayTasks.count)")
+                        .foregroundColor(Color("Black40"))
+                }
+                .frame(width: 162, height: 18, alignment: .topLeading)
+                .padding([.leading], 20)
 
                 Spacer()
-                Text("Hide")
-                    .font(.custom("Poppins-Regular", size: 12))
-                    .padding([.trailing], 20)
+                Button(action: {
+                    showAll = !showAll
+                }) {
+                    Text("\(showAll ? "Hide" : "Show All")")
+                        .font(.custom("Poppins-Medium", size: 12))
+                        .foregroundColor(Color("Black20"))
+                        .padding([.trailing], 20)
+                }
+                .buttonStyle(PlainButtonStyle())
             }
             List {
-                ForEach(cvm.todayTasks) { task in
-                    TaskRow(task: task)
-                        .listRowInsets(.init(top: 0, leading: 12, bottom: 7, trailing: 12))
+                ForEach(showingTasks()) { task in
+                    if #available(OSX 11.0, *) {
+                        TaskRow(task: task)
+                            .listRowInsets(.init(top: 0, leading: 12, bottom: 8, trailing: 12))
+                            .help("\(task.title)")
+                    } else {
+                        TaskRow(task: task)
+                            .listRowInsets(.init(top: 0, leading: 12, bottom: 8, trailing: 12))
+                    }
                 }
             }
             .padding([.top], 7)
             .listStyle(PlainListStyle())
         }
         .onAppear {
-            cvm.fetchCalendars()
             do {
-                try cvm.fetchTodayTasks(calendarId: svm.defaultCalendar)
+                try cvm.sync()
             } catch {
-                // TODO: 오늘 테스크 불러오기 실패 예외처리
+                print(error)
             }
         }
         .frame(
@@ -66,5 +99,6 @@ struct TaskList_Previews: PreviewProvider {
         TaskList()
             .environmentObject(SettingViewModel(settingManager: settingManager))
             .environmentObject(CalendarViewModel(calendarManager: calendarManager, settingManager: settingManager))
+            .environmentObject(PomodoroViewModal(settingManager: settingManager))
     }
 }

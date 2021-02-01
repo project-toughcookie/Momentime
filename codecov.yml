@@ -3,6 +3,7 @@ ignore:
   - "Momentime/Views/**/*"
   - "Momentime/Managers/Calendar/EventStore.swift"
   - "Momentime/AppDelegate.swift"
+  - "Momentime/Assets.xcassets"
 
 comment:
   layout: "reach, diff, flags, files"

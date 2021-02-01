@@ -22,10 +22,12 @@ class StatusTests: XCTestCase {
     }
 
     func testStatusTimerLabel() {
-        XCTAssertEqual(Status.stop.TimerLabel(), "Stopping")
-        XCTAssertEqual(Status.pause.TimerLabel(), "Pausing")
-        XCTAssertEqual(Status.play.TimerLabel(), "It's Time to Focus⚡️")
-        XCTAssertEqual(Status.break.TimerLabel(), "Break Time... 😌")
+        XCTAssertEqual(Status.stop.TimerLabel(nil), "Get ready to start!🍅️")
+        XCTAssertEqual(Status.pause.TimerLabel(Status.play), "It's Time to Focus⚡️")
+        XCTAssertEqual(Status.pause.TimerLabel(Status.break), "Break Time... 😌")
+        XCTAssertEqual(Status.pause.TimerLabel(nil), "Pausing...")
+        XCTAssertEqual(Status.play.TimerLabel(nil), "It's Time to Focus⚡️")
+        XCTAssertEqual(Status.break.TimerLabel(nil), "Break Time... 😌")
     }
 
     func testStatusTimerButton() {
