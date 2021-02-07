@@ -17,17 +17,6 @@ struct modelData {
 var appDelegate = AppDelegate()
 
 @main
-enum AppSelector {
-    static func main() {
-        if #available(OSX 11.0, *) {
-            UpToBigSurApp.main()
-        } else {
-            OldApp.main()
-        }
-    }
-}
-
-@available(OSX 11.0, *)
 struct UpToBigSurApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
 
@@ -45,14 +34,5 @@ struct UpToBigSurApp: App {
         WindowGroup {
             Empty()
         }
-    }
-}
-
-enum OldApp {
-    static func main() {
-        NSApplication.shared.setActivationPolicy(.regular)
-        NSApp.delegate = appDelegate
-        NSApp.activate(ignoringOtherApps: true)
-        NSApp.run()
     }
 }

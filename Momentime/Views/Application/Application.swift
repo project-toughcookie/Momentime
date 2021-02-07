@@ -20,6 +20,7 @@ struct ApplicationView: View {
                 VStack(spacing: 0) {
                     TimerHeader()
                     TaskList()
+                    Footer()
                 }
                 .frame(
                     width: Constants.MENUBAR_WIDTH,

@@ -19,7 +19,7 @@ struct GradientBackground: View {
                             endPoint: .trailing
                         ))
                         .frame(width: metrics.size.width * pvm.remainRatio)
-                    if pvm.remainRatio != 1{
+                    if pvm.remainRatio != 1 {
                         Spacer()
                     }
                 }

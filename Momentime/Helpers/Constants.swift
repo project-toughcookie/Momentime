@@ -14,6 +14,7 @@ struct Constants {
     static let CONTENT_HEIGHT: CGFloat = 402
     static let TIMERHEADER_HEIGHT: CGFloat = 74
     static let TASKLIST_HEIGHT: CGFloat = 264
+    static let FOOTER_HEIGHT: CGFloat = 64
 
     static let SETTING_WIDTH: CGFloat = 300
     static let SETTING_HEIGHT: CGFloat = 200

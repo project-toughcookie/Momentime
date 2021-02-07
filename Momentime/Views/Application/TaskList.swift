@@ -63,12 +63,8 @@ struct TaskList: View {
             }
             List {
                 ForEach(showingTasks()) { task in
-                    if #available(OSX 11.0, *) {
-                        TaskRow(task: task)
-                            .help("\(task.title)")
-                    } else {
-                        TaskRow(task: task)
-                    }
+                    TaskRow(task: task)
+                        .help("\(task.title)")
                 }
                 .padding(.horizontal, 12.0)
             }
