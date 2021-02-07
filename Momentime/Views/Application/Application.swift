@@ -41,6 +41,7 @@ struct ApplicationView: View {
         }
         .frame(width: Constants.MENUBAR_WIDTH,
                height: Constants.MENUBAR_HEIGHT)
+        .cornerRadius(12)
     }
 }
 

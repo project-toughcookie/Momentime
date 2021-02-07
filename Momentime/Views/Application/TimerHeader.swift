@@ -58,7 +58,7 @@ struct TimerHeader: View {
                 .frame(height: 22)
                 .foregroundColor(.white)
                 .background(pvm.status.MainColor())
-                .cornerRadius(100)
+                .cornerRadius(12)
                 .padding([.trailing], 20)
                 .padding([.top], 31)
         }
