@@ -10,8 +10,17 @@ import SwiftUI
 struct Footer: View {
     var body: some View {
         HStack(alignment: .top, spacing: 0) {
-            Text("Footer")
+            Button(action: {}, label: {
+                Image("icon_setting")
+            })
+                .buttonStyle(PlainButtonStyle())
+            Spacer()
+            Button(action: {}, label: {
+                Image("icon_add_task")
+            })
+                .buttonStyle(PlainButtonStyle())
         }
+        .padding(20)
         .frame(
             width: Constants.MENUBAR_WIDTH,
             height: Constants.FOOTER_HEIGHT,
