@@ -13,17 +13,16 @@ struct ApplicationView: View {
     @EnvironmentObject var pvm: PomodoroViewModal
 
     var body: some View {
-        ZStack {
+        ZStack(alignment: .trailing) {
             GradientBackground()
             VStack {
-                Spacer()
                 VStack(spacing: 0) {
                     TimerHeader()
                     TaskList()
                     Footer()
                 }
                 .frame(
-                    width: Constants.MENUBAR_WIDTH,
+                    width: Constants.CONTENT_WIDTH,
                     height: Constants.CONTENT_HEIGHT,
                     alignment: .top
                 )
@@ -31,10 +30,11 @@ struct ApplicationView: View {
                     material: NSVisualEffectView.Material.popover,
                     blendingMode: NSVisualEffectView.BlendingMode.withinWindow
                 ))
-                .cornerRadius(12)
             }
-            .frame(width: Constants.MENUBAR_WIDTH,
-                   height: Constants.MENUBAR_HEIGHT)
+            .border(Color(CGColor(red: 0, green: 0, blue: 0, alpha: 0.05)), width: 1)
+            .frame(width: Constants.CONTENT_WIDTH,
+                   height: Constants.CONTENT_HEIGHT)
+            .cornerRadius(12)
         }
         .onAppear {
             cvm.requestAccess()
@@ -42,7 +42,6 @@ struct ApplicationView: View {
         }
         .frame(width: Constants.MENUBAR_WIDTH,
                height: Constants.MENUBAR_HEIGHT)
-        .cornerRadius(12)
     }
 }
 

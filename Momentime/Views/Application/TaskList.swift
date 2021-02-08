@@ -63,10 +63,9 @@ struct TaskList: View {
             }
             List {
                 ForEach(showingTasks()) { task in
-                    TaskRow(task: task)
-                        .help("\(task.title)")
+                    TaskRow(task: task).help("\(task.title)")
                 }
-                .padding(.horizontal, 12.0)
+                .padding(.horizontal, 12)
             }
             .padding([.top], 7)
             .listStyle(PlainListStyle())
@@ -79,7 +78,7 @@ struct TaskList: View {
             }
         }
         .frame(
-            width: Constants.MENUBAR_WIDTH,
+            width: Constants.CONTENT_WIDTH,
             height: Constants.TASKLIST_HEIGHT,
             alignment: .topLeading
         )

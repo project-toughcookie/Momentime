@@ -22,7 +22,7 @@ struct Footer: View {
         }
         .padding(20)
         .frame(
-            width: Constants.MENUBAR_WIDTH,
+            width: Constants.CONTENT_WIDTH,
             height: Constants.FOOTER_HEIGHT,
             alignment: .topLeading
         )
