@@ -29,24 +29,6 @@ final class SettingViewModel: ObservableObject {
         breakSeconds = settingManager.breakSeconds
     }
 
-    func set(_ setting: Setting) {
-        settingManager.eventTitleChangedIfDone = setting.eventTitleChangedIfDone
-        settingManager.timerSoundEnabled = setting.timerSoundEnabled
-        settingManager.timerAutoStarted = setting.timerAutoStarted
-        settingManager.defaultCalendar = setting.defaultCalendar
-        settingManager.tutorialShown = setting.tutorialShown
-        settingManager.playSeconds = setting.playSeconds
-        settingManager.breakSeconds = setting.breakSeconds
-
-        eventTitleChangedIfDone = setting.eventTitleChangedIfDone
-        timerSoundEnabled = setting.timerSoundEnabled
-        timerAutoStarted = setting.timerAutoStarted
-        defaultCalendar = setting.defaultCalendar
-        tutorialShown = setting.tutorialShown
-        playSeconds = setting.playSeconds
-        breakSeconds = setting.breakSeconds
-    }
-
     func setDefaultCalendar(_ defaultCalendar: String) {
         settingManager.defaultCalendar = defaultCalendar
         self.defaultCalendar = defaultCalendar

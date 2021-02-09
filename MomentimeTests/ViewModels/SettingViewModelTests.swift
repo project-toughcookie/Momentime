@@ -6,30 +6,12 @@
 import XCTest
 
 class SettingViewModelTests: XCTestCase {
-    func testSettingViewModelInitAndSet() {
+    func testSettingViewModelInitShouldSucceed() {
         let settingManager = SettingManager(persistent: MemoryPersistent())
         let settingViewModel = SettingViewModel(settingManager: settingManager)
         XCTAssertEqual(settingViewModel.eventTitleChangedIfDone, Setting.default.eventTitleChangedIfDone)
         XCTAssertEqual(settingViewModel.timerAutoStarted, Setting.default.timerAutoStarted)
         XCTAssertEqual(settingViewModel.timerSoundEnabled, Setting.default.timerSoundEnabled)
-
-        let mockCalendarId = "mock calendar id"
-        settingViewModel.set(Setting(
-            eventTitleChangedIfDone: false,
-            timerSoundEnabled: false,
-            timerAutoStarted: false,
-            defaultCalendar: mockCalendarId,
-            tutorialShown: false,
-            playSeconds: 30,
-            breakSeconds: 2
-        ))
-        XCTAssertEqual(settingViewModel.eventTitleChangedIfDone, false)
-        XCTAssertEqual(settingViewModel.timerAutoStarted, false)
-        XCTAssertEqual(settingViewModel.timerSoundEnabled, false)
-        XCTAssertEqual(settingViewModel.defaultCalendar, mockCalendarId)
-        XCTAssertEqual(settingViewModel.tutorialShown, false)
-        XCTAssertEqual(settingViewModel.playSeconds, 30)
-        XCTAssertEqual(settingViewModel.breakSeconds, 2)
     }
 
     func testSetDefaultCalendar() {
