@@ -17,6 +17,11 @@ struct TutorialView: View {
                 Button(action: {
                     svm.setDefaultCalendar(calendar.id)
                     svm.setTutorialShown(true)
+                    do {
+                        try tvm.sync()
+                    } catch {
+                        print(error)
+                    }
                 }) {
                     Text("\(calendar.title)")
                 }

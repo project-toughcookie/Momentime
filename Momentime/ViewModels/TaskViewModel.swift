@@ -47,8 +47,7 @@ class TaskViewModel: ObservableObject {
                 do {
                     try self.sync()
                 } catch {
-                    // TODO: error published 변수 추가
-                    print(error)
+                    print(error) // TODO: error published 변수 추가
                 }
             }
         }.store(in: &cancellable)
@@ -80,11 +79,20 @@ class TaskViewModel: ObservableObject {
         }
     }
 
+    func getDefaultCalendar() -> String {
+        for calendar in calendars {
+            if settingManager.defaultCalendar == calendar.id {
+                return calendar.title
+            }
+        }
+        return "???"
+    }
+
     func toggleTaskDone(taskId: String) throws {
         do {
             try calendarManager.toggleTaskDone(taskId: taskId)
         } catch {
-            print("failed")
+            print("failed") // TODO: 예외 처리
         }
     }
 }

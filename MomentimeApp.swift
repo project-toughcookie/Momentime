@@ -17,7 +17,7 @@ struct modelData {
 var appDelegate = AppDelegate()
 
 @main
-struct UpToBigSurApp: App {
+struct Application: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
 
     struct Empty: View {
