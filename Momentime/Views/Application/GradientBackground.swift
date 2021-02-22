@@ -12,21 +12,22 @@ struct GradientBackground: View {
         VStack {
             GeometryReader { metrics in
                 HStack(spacing: 0) {
-                    Rectangle()
-                        .fill(LinearGradient(
-                            gradient: pvm.status.ColorGradient(),
-                            startPoint: .leading,
-                            endPoint: .trailing
-                        ))
-                        .frame(width: metrics.size.width * pvm.remainRatio)
-                    if pvm.remainRatio != 1 {
-                        Spacer()
+                    VStack(spacing: 0) {
+                        if pvm.remainRatio != 1 {
+                            Spacer()
+                        }
+                        Rectangle()
+                            .fill(LinearGradient(
+                                gradient: pvm.status.ColorGradient(),
+                                startPoint: .top,
+                                endPoint: .bottom
+                            ))
+                            .frame(width: 24, height: metrics.size.height * pvm.remainRatio)
                     }
+                    Spacer()
                 }
             }
-            .frame(width: Constants.MENUBAR_WIDTH, height: 60)
             .background(Color("Gray05"))
-            Spacer()
         }
         .frame(
             width: Constants.MENUBAR_WIDTH,

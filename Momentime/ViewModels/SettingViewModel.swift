@@ -8,8 +8,6 @@
 import Foundation
 
 final class SettingViewModel: ObservableObject {
-    private let settingManager: SettingManager
-
     @Published var eventTitleChangedIfDone: Bool
     @Published var timerSoundEnabled: Bool
     @Published var timerAutoStarted: Bool
@@ -17,6 +15,8 @@ final class SettingViewModel: ObservableObject {
     @Published var tutorialShown: Bool
     @Published var playSeconds: Int
     @Published var breakSeconds: Int
+
+    private let settingManager: SettingManager
 
     init(settingManager: SettingManager = SettingManager()) {
         self.settingManager = settingManager
@@ -27,24 +27,6 @@ final class SettingViewModel: ObservableObject {
         tutorialShown = settingManager.tutorialShown
         playSeconds = settingManager.playSeconds
         breakSeconds = settingManager.breakSeconds
-    }
-
-    func set(_ setting: Setting) {
-        settingManager.eventTitleChangedIfDone = setting.eventTitleChangedIfDone
-        settingManager.timerSoundEnabled = setting.timerSoundEnabled
-        settingManager.timerAutoStarted = setting.timerAutoStarted
-        settingManager.defaultCalendar = setting.defaultCalendar
-        settingManager.tutorialShown = setting.tutorialShown
-        settingManager.playSeconds = setting.playSeconds
-        settingManager.breakSeconds = setting.breakSeconds
-
-        eventTitleChangedIfDone = setting.eventTitleChangedIfDone
-        timerSoundEnabled = setting.timerSoundEnabled
-        timerAutoStarted = setting.timerAutoStarted
-        defaultCalendar = setting.defaultCalendar
-        tutorialShown = setting.tutorialShown
-        playSeconds = setting.playSeconds
-        breakSeconds = setting.breakSeconds
     }
 
     func setDefaultCalendar(_ defaultCalendar: String) {

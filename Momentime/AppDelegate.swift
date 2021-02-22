@@ -16,7 +16,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     private func initializePopover() {
         let rootView = ApplicationView()
             .environmentObject(modelData.svm)
-            .environmentObject(modelData.cvm)
+            .environmentObject(modelData.tvm)
             .environmentObject(modelData.pvm)
         if !modelData.svm.tutorialShown {
             WindowOpener.openTutorialWindow()

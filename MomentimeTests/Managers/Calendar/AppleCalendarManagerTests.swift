@@ -6,17 +6,26 @@
 import XCTest
 
 class AppleCalendarManagerTests: XCTestCase {
-    func testGetCalendars() {
+    func testGetCalendarsShouldSucceed() {
         let calendarManager = AppleCalendarManager(store: MockEventStore())
         let calendars = calendarManager.getCalendars()
         XCTAssertEqual(2, calendars.count)
     }
 
-    func testGetTodayTasks() {
+    func testGetTodayTasksShouldSucceed() {
         let calendarManager = AppleCalendarManager(store: MockEventStore())
         do {
             let tasks = try calendarManager.getTodayTasks(calendarId: "")
             XCTAssertEqual(2, tasks.count)
+        } catch {
+            XCTFail("error must not be occurred")
+        }
+    }
+
+    func testToggleTaskDone() {
+        let calendarManager = AppleCalendarManager(store: MockEventStore())
+        do {
+            try calendarManager.toggleTaskDone(taskId: "1")
         } catch {
             XCTFail("error must not be occurred")
         }

@@ -6,7 +6,6 @@ import EventKit
 import Foundation
 
 protocol EventStore {
-    func eventAuthorizationStatus() -> EKAuthorizationStatus
     func requestAccess(handler: @escaping (Bool, Error?) -> Void)
     func getCalendars() -> [TaskCalendar]
     func getTodayTasks(calendarId: String) throws -> [Task]
@@ -14,10 +13,6 @@ protocol EventStore {
 }
 
 extension EKEventStore: EventStore {
-    func eventAuthorizationStatus() -> EKAuthorizationStatus {
-        EKEventStore.authorizationStatus(for: .event)
-    }
-
     func requestAccess(handler: @escaping (Bool, Error?) -> Void) {
         EKEventStore().requestAccess(to: EKEntityType.event, completion: handler)
     }

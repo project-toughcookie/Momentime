@@ -10,14 +10,14 @@ import SwiftUI
 
 struct modelData {
     static var svm = SettingViewModel()
-    static var cvm = CalendarViewModel()
+    static var tvm = TaskViewModel()
     static var pvm = PomodoroViewModal()
 }
 
 var appDelegate = AppDelegate()
 
 @main
-struct UpToBigSurApp: App {
+struct Application: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
 
     struct Empty: View {

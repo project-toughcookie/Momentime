@@ -63,7 +63,7 @@ struct TimerHeader: View {
                 .padding([.top], 31)
         }
         .frame(
-            width: Constants.MENUBAR_WIDTH,
+            width: Constants.CONTENT_WIDTH,
             height: Constants.TIMERHEADER_HEIGHT,
             alignment: .topLeading
         )

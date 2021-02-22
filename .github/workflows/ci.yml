@@ -1,19 +1,19 @@
-on: 
+on:
   push:
     branches:
-      - 'master'
+      - "master"
   pull_request:
-    branches: 
-      - 'master'
+    branches:
+      - "master"
 
 name: CI
 jobs:
   test:
     name: Unit Test
-    runs-on: macos-latest
+    runs-on: macos-11.0
     strategy:
-        matrix:
-          destination: ['platform=macOS,arch=x86_64']
+      matrix:
+        destination: ["platform=macOS,arch=x86_64"]
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -23,5 +23,5 @@ jobs:
         run: |
           xcodebuild -project Momentime.xcodeproj -enableCodeCoverage YES -scheme Momentime -destination "${destination}" ONLY_ACTIVE_ARCH=YES VALID_ARCHS=x86_64 CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO build test
           bash <(curl -s https://codecov.io/bash) -t b5d8eba3-62ac-4d0a-bec4-59dde08cbd02
-        env: 
-         destination: ${{ matrix.destination }}
+        env:
+          destination: ${{ matrix.destination }}
