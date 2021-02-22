@@ -10,16 +10,16 @@ import EventKit
 import Foundation
 import os
 
-class CalendarViewModel: ObservableObject {
-    private let calendarManager: CalendarManager
-    private let settingManager: SettingManager
-    private let permission: Permission
-    private var cancellables = Set<AnyCancellable>()
-
+class TaskViewModel: ObservableObject {
     @Published var granted = false
     @Published var calendars: [TaskCalendar] = []
     @Published var todayTasks: [Task] = []
     @Published var todayDoneTasks: [Task] = []
+
+    private let calendarManager: CalendarManager
+    private let settingManager: SettingManager
+    private let permission: Permission
+    private var cancellable = Set<AnyCancellable>()
 
     init(calendarManager: CalendarManager = AppleCalendarManager(), settingManager: SettingManager = SettingManager()) {
         self.calendarManager = calendarManager
@@ -42,23 +42,22 @@ class CalendarViewModel: ObservableObject {
     }
 
     func subscribeEvents() {
-        NotificationCenter.default.publisher(for: .EKEventStoreChanged)
-            .sink { _ in
-                DispatchQueue.main.async {
-                    do {
-                        try self.sync()
-                    } catch {
-                        // TODO: error published 변수 추가
-                        print(error)
-                    }
+        NotificationCenter.default.publisher(for: .EKEventStoreChanged).sink { _ in
+            DispatchQueue.main.async {
+                do {
+                    try self.sync()
+                } catch {
+                    // TODO: error published 변수 추가
+                    print(error)
                 }
-            }.store(in: &cancellables)
+            }
+        }.store(in: &cancellable)
     }
 
     func sync() throws {
         fetchCalendars()
         if modelData.svm.defaultCalendar != "" {
-            try fetchTodayTasks(calendarId: modelData.svm.defaultCalendar)
+            try fetchTodayTasks(calendarId: settingManager.defaultCalendar)
             return
         }
 

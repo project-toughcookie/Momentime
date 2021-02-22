@@ -10,7 +10,7 @@ import SwiftUI
 
 struct modelData {
     static var svm = SettingViewModel()
-    static var cvm = CalendarViewModel()
+    static var tvm = TaskViewModel()
     static var pvm = PomodoroViewModal()
 }
 

@@ -11,7 +11,7 @@ struct TaskRow: View {
     var task: Task
 
     @EnvironmentObject var pvm: PomodoroViewModal
-    @EnvironmentObject var cvm: CalendarViewModel
+    @EnvironmentObject var tvm: TaskViewModel
 
     func dateToString(date: Date) -> String {
         let dateFormatter = DateFormatter()
@@ -70,7 +70,7 @@ struct TaskRow: View {
             HStack(spacing: 0) {
                 Button(action: {
                     do {
-                        try cvm.toggleTaskDone(taskId: task.id)
+                        try tvm.toggleTaskDone(taskId: task.id)
                     } catch {
                         print(error)
                     }
@@ -103,11 +103,11 @@ struct TaskRow_Previews: PreviewProvider {
         Group {
             TaskRow(task: Task(id: "test", title: "Create Unit test", isAllDay: false, start: Date(), end: Date(), notes: "[완료][Done]"))
                 .environmentObject(PomodoroViewModal(settingManager: settingManager))
-                .environmentObject(CalendarViewModel(calendarManager: calendarManager, settingManager: settingManager))
+                .environmentObject(TaskViewModel(calendarManager: calendarManager, settingManager: settingManager))
 
             TaskRow(task: Task(id: "test", title: "Test Unit test", isAllDay: true, start: Date(), end: Date(), notes: ""))
                 .environmentObject(PomodoroViewModal(settingManager: settingManager))
-                .environmentObject(CalendarViewModel(calendarManager: calendarManager, settingManager: settingManager))
+                .environmentObject(TaskViewModel(calendarManager: calendarManager, settingManager: settingManager))
         }
     }
 }

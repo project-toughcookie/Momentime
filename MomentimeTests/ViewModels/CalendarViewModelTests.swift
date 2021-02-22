@@ -9,7 +9,7 @@ class CalendarViewModelTests: XCTestCase {
     func testRequestAccess() {
         let settingManager = SettingManager(persistent: MemoryPersistent())
         let calendarManager = AppleCalendarManager(store: MockEventStore())
-        let calendarViewModel = CalendarViewModel(calendarManager: calendarManager, settingManager: settingManager)
+        let calendarViewModel = TaskViewModel(calendarManager: calendarManager, settingManager: settingManager)
         calendarViewModel.requestAccess()
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             XCTAssertTrue(calendarViewModel.granted)
@@ -19,7 +19,7 @@ class CalendarViewModelTests: XCTestCase {
     func testSync() {
         let settingManager = SettingManager(persistent: MemoryPersistent())
         let calendarManager = AppleCalendarManager(store: MockEventStore())
-        let calendarViewModel = CalendarViewModel(calendarManager: calendarManager, settingManager: settingManager)
+        let calendarViewModel = TaskViewModel(calendarManager: calendarManager, settingManager: settingManager)
         do {
             try calendarViewModel.sync()
         } catch {
@@ -34,7 +34,7 @@ class CalendarViewModelTests: XCTestCase {
     func testFetchCalendars() {
         let settingManager = SettingManager(persistent: MemoryPersistent())
         let calendarManager = AppleCalendarManager(store: MockEventStore())
-        let calendarViewModel = CalendarViewModel(calendarManager: calendarManager, settingManager: settingManager)
+        let calendarViewModel = TaskViewModel(calendarManager: calendarManager, settingManager: settingManager)
         calendarViewModel.fetchCalendars()
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             XCTAssertEqual(1, calendarViewModel.calendars.count)
@@ -44,7 +44,7 @@ class CalendarViewModelTests: XCTestCase {
     func testFetchTodayTasks() {
         let settingManager = SettingManager(persistent: MemoryPersistent())
         let calendarManager = AppleCalendarManager(store: MockEventStore())
-        let calendarViewModel = CalendarViewModel(calendarManager: calendarManager, settingManager: settingManager)
+        let calendarViewModel = TaskViewModel(calendarManager: calendarManager, settingManager: settingManager)
         do {
             try calendarViewModel.fetchTodayTasks(calendarId: "")
         } catch {

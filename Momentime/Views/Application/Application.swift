@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ApplicationView: View {
     @EnvironmentObject var svm: SettingViewModel
-    @EnvironmentObject var cvm: CalendarViewModel
+    @EnvironmentObject var tvm: TaskViewModel
     @EnvironmentObject var pvm: PomodoroViewModal
 
     var body: some View {
@@ -37,8 +37,8 @@ struct ApplicationView: View {
             .cornerRadius(12)
         }
         .onAppear {
-            cvm.requestAccess()
-            cvm.fetchCalendars()
+            tvm.requestAccess()
+            tvm.fetchCalendars()
         }
         .frame(width: Constants.MENUBAR_WIDTH,
                height: Constants.MENUBAR_HEIGHT)
@@ -52,7 +52,7 @@ struct ApplicationView_Previews: PreviewProvider {
 
         ApplicationView()
             .environmentObject(SettingViewModel(settingManager: settingManager))
-            .environmentObject(CalendarViewModel(calendarManager: calendarManager, settingManager: settingManager))
+            .environmentObject(TaskViewModel(calendarManager: calendarManager, settingManager: settingManager))
             .environmentObject(PomodoroViewModal(settingManager: settingManager))
     }
 }

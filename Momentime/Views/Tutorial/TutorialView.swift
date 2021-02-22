@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct TutorialView: View {
-    @EnvironmentObject var cvm: CalendarViewModel
+    @EnvironmentObject var tvm: TaskViewModel
     @EnvironmentObject var svm: SettingViewModel
 
     var body: some View {
         VStack {
-            List(cvm.calendars, id: \.id) { calendar in
+            List(tvm.calendars, id: \.id) { calendar in
                 Button(action: {
                     svm.setDefaultCalendar(calendar.id)
                     svm.setTutorialShown(true)
@@ -27,7 +27,7 @@ struct TutorialView: View {
                height: Constants.TUTORIAL_HEIGHT,
                alignment: .leading)
         .onAppear {
-            cvm.fetchCalendars()
+            tvm.fetchCalendars()
         }
     }
 }
@@ -38,7 +38,7 @@ struct TutorialView_Previews: PreviewProvider {
         let calendarManager = AppleCalendarManager(store: MockEventStore())
 
         TutorialView()
-            .environmentObject(CalendarViewModel(calendarManager: calendarManager, settingManager: settingManager))
+            .environmentObject(TaskViewModel(calendarManager: calendarManager, settingManager: settingManager))
             .environmentObject(SettingViewModel(settingManager: settingManager))
     }
 }

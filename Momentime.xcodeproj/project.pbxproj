@@ -35,6 +35,7 @@
 		13725EF4AD30E29F5B3B01D1 /* MomentimeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725838DE11B98A70186515 /* MomentimeApp.swift */; };
 		13725F0E4FFA237512BDC6C3 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725608F9C84D65F59D4D18 /* Status.swift */; };
 		13725F39159C8C98AC3C1637 /* AppleCalendarManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137250E36CA996054B4FCAEA /* AppleCalendarManagerTests.swift */; };
+		13725FABBB2FCB763A54C574 /* TaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137256D9BB1216E6DAEA48EA /* TaskViewModel.swift */; };
 		2732A13D25A1A2A600F596AB /* I18N.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2732A13C25A1A2A600F596AB /* I18N.swift */; };
 		2732A15025A1A74500F596AB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2732A15225A1A74500F596AB /* Localizable.strings */; };
 		2732A15C25A1AA3700F596AB /* I18NTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13725BB8BEA677ECA9E16175 /* I18NTests.swift */; };
@@ -49,10 +50,8 @@
 		277E4240259DB27200E8979B /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277E423F259DB27200E8979B /* SettingView.swift */; };
 		2784FE4B25A346770075FD57 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2784FE4A25A346770075FD57 /* Task.swift */; };
 		2784FE5325A346D30075FD57 /* AppleCalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2784FE5225A346D30075FD57 /* AppleCalendarManager.swift */; };
-		2784FE5B25A347BF0075FD57 /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2784FE5A25A347BF0075FD57 /* TaskManager.swift */; };
 		2784FE6525A3573A0075FD57 /* TaskCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2784FE6425A3573A0075FD57 /* TaskCalendar.swift */; };
 		2784FE7725A3699F0075FD57 /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2784FE7625A3699F0075FD57 /* SettingViewModel.swift */; };
-		2784FE8125A371EB0075FD57 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2784FE8025A371EB0075FD57 /* CalendarViewModel.swift */; };
 		27ABC5C025B1F36C008620F7 /* MockEventStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ABC5B325B1F2CA008620F7 /* MockEventStore.swift */; };
 		27D7528625D00ADA0011013B /* Footer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D7528525D00ADA0011013B /* Footer.swift */; };
 		27EFD82825B5C9240049B108 /* TimerHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27EFD82725B5C9240049B108 /* TimerHeader.swift */; };
@@ -105,6 +104,7 @@
 		13725545530FD7FD54F63ADD /* UserDefaultsPersistentTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsPersistentTests.swift; sourceTree = "<group>"; };
 		13725608F9C84D65F59D4D18 /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		1372566EC8FB853435BC69C0 /* CalendarManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarManager.swift; sourceTree = "<group>"; };
+		137256D9BB1216E6DAEA48EA /* TaskViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskViewModel.swift; sourceTree = "<group>"; };
 		137257E4DC3276592D15ADB2 /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		137258093196ACFE0F75C326 /* SettingViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewModelTests.swift; sourceTree = "<group>"; };
 		13725838DE11B98A70186515 /* MomentimeApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MomentimeApp.swift; sourceTree = SOURCE_ROOT; };
@@ -139,10 +139,8 @@
 		277E423F259DB27200E8979B /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		2784FE4A25A346770075FD57 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		2784FE5225A346D30075FD57 /* AppleCalendarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleCalendarManager.swift; sourceTree = "<group>"; };
-		2784FE5A25A347BF0075FD57 /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
 		2784FE6425A3573A0075FD57 /* TaskCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCalendar.swift; sourceTree = "<group>"; };
 		2784FE7625A3699F0075FD57 /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
-		2784FE8025A371EB0075FD57 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
 		27ABC5B325B1F2CA008620F7 /* MockEventStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEventStore.swift; sourceTree = "<group>"; };
 		27B41601259DE1B100269E37 /* MomentimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MomentimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B41605259DE1B100269E37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -207,14 +205,6 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		1372545DE41FCFA42DE893FF /* Task */ = {
-			isa = PBXGroup;
-			children = (
-				2784FE5A25A347BF0075FD57 /* TaskManager.swift */,
-			);
-			path = Task;
-			sourceTree = "<group>";
-		};
 		1372548D9317652C3BDE801F /* Tutorial */ = {
 			isa = PBXGroup;
 			children = (
@@ -271,7 +261,6 @@
 			children = (
 				2784FE4F25A346A90075FD57 /* Calendar */,
 				27B415C1259DB71100269E37 /* Setting */,
-				1372545DE41FCFA42DE893FF /* Task */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -293,6 +282,7 @@
 				27B415D0259DD7A600269E37 /* Setting */,
 				137259ECF2964B9C45E28A9A /* WindowOpener.swift */,
 				137255B6A2B1D21C54B1FC88 /* Helper */,
+				137256D9BB1216E6DAEA48EA /* TaskViewModel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -403,7 +393,6 @@
 			isa = PBXGroup;
 			children = (
 				2784FE7625A3699F0075FD57 /* SettingViewModel.swift */,
-				2784FE8025A371EB0075FD57 /* CalendarViewModel.swift */,
 				137253C7E6F4C2A7B2530739 /* PomodoroViewModal.swift */,
 			);
 			path = ViewModels;
@@ -556,7 +545,6 @@
 			files = (
 				137253E98F412B298B6C36F7 /* AppDelegate.swift in Sources */,
 				273DC1F8259F729D00438BDA /* SettingContextMenu.swift in Sources */,
-				2784FE8125A371EB0075FD57 /* CalendarViewModel.swift in Sources */,
 				277E4240259DB27200E8979B /* SettingView.swift in Sources */,
 				27D7528625D00ADA0011013B /* Footer.swift in Sources */,
 				27F2675A25BD9F490008C7BD /* TaskRow.swift in Sources */,
@@ -574,7 +562,6 @@
 				13725395FCDB80F080270AD0 /* UserDefaultsPersistent.swift in Sources */,
 				2784FE7725A3699F0075FD57 /* SettingViewModel.swift in Sources */,
 				13725ADE9C22EE9B093BF5CA /* Errors.swift in Sources */,
-				2784FE5B25A347BF0075FD57 /* TaskManager.swift in Sources */,
 				13725BC9551E191142D50DC5 /* MemoryPersistent.swift in Sources */,
 				273DC1E5259F61CE00438BDA /* TutorialView.swift in Sources */,
 				273DC1F0259F6F8000438BDA /* Application.swift in Sources */,
@@ -589,6 +576,7 @@
 				13725439432A889E610EAABE /* PomodoroViewModal.swift in Sources */,
 				27F2675225BD98D60008C7BD /* TaskList.swift in Sources */,
 				13725F0E4FFA237512BDC6C3 /* Status.swift in Sources */,
+				13725FABBB2FCB763A54C574 /* TaskViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

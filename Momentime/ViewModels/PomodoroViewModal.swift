@@ -6,12 +6,12 @@ import Foundation
 import SwiftUI
 
 class PomodoroViewModal: ObservableObject {
-    private let settingManager: SettingManager
-
     @Published var prevStatus: Status
     @Published var status: Status
     @Published var remainSeconds: Int
     @Published var remainRatio: CGFloat
+
+    private let settingManager: SettingManager
 
     init(settingManager: SettingManager = SettingManager()) {
         self.settingManager = settingManager

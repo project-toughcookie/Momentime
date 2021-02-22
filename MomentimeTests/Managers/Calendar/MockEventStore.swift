@@ -9,10 +9,6 @@ import EventKit
 import Foundation
 
 class MockEventStore: EventStore {
-    func eventAuthorizationStatus() -> EKAuthorizationStatus {
-        .authorized
-    }
-
     func requestAccess(handler: @escaping (Bool, Error?) -> Void) {
         handler(true, nil)
     }

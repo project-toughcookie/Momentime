@@ -8,8 +8,6 @@
 import Foundation
 
 final class SettingViewModel: ObservableObject {
-    private let settingManager: SettingManager
-
     @Published var eventTitleChangedIfDone: Bool
     @Published var timerSoundEnabled: Bool
     @Published var timerAutoStarted: Bool
@@ -17,6 +15,8 @@ final class SettingViewModel: ObservableObject {
     @Published var tutorialShown: Bool
     @Published var playSeconds: Int
     @Published var breakSeconds: Int
+
+    private let settingManager: SettingManager
 
     init(settingManager: SettingManager = SettingManager()) {
         self.settingManager = settingManager
